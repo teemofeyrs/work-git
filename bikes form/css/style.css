@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+.clearfix {
+    content: "";
+    display: block;
+    clear: both;
+}
+a {
+    text-decoration: none;
+    line-height: 35px;
+    color: #00ADDD;
+}
+ul {
+    width: 100%;
+}
+li {
+    float:right;
+}
+.heder {
+    position: absolute;
+    width: 100%;
+    background: rgb(0, 78, 146);
+}
+li a {
+    display: inline-block;
+    padding: 10px;
+}
+h1 {
+    color:white;
+    border-bottom: 2px solid white;
+    line-height: 60px;
+    text-align: center;
+}
+
+.wrapper {
+    
+    background-image: url(../img/Backimg.jpg);
+}
+.form {
+    position: absolute;
+    max-width: 560px;
+    background: rgba(0, 0, 0, 0.63);
+    bottom: 40%;
+    right: 40%;
+}
