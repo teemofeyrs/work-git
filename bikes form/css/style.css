@@ -6,6 +6,18 @@
     display: block;
     clear: both;
 }
+
+html, body, .wrapper {
+    height: 100%;
+}
+.wrapper {
+    background-image: url(../img/Backimg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 40px;
+    border-bottom: 1px solid transparent;
+    font-family:Arial, sans-serif;
+}
 a {
     text-decoration: none;
     line-height: 35px;
@@ -22,25 +34,112 @@ li {
     width: 100%;
     background: rgb(0, 78, 146);
 }
+li.img-style {
+    position: relative;
+    border-left: 1px solid #00ADDD;
+}
+img {
+    display: block;
+    position: absolute;
+    top:25%;
+    left: 5px;
+}
+li.img-style a {
+    padding-left: 30px;
+    color: white;
+}
 li a {
     display: inline-block;
     padding: 10px;
 }
-h1 {
+li:hover a{
+    background: #00ADDD;
     color:white;
-    border-bottom: 2px solid white;
-    line-height: 60px;
-    text-align: center;
 }
-
-.wrapper {
-    
-    background-image: url(../img/Backimg.jpg);
+h2 {
+    color:white;
+    border-bottom: 1px solid #BEC6B8;
+    line-height: 60px;
+    font-size: 26px;
+    text-align: center;
 }
 .form {
     position: absolute;
-    max-width: 560px;
+    width: 40%;
+    transform: translate(-50%, 0);
+    margin: 0 auto;
     background: rgba(0, 0, 0, 0.63);
-    bottom: 40%;
-    right: 40%;
+    top: 100px;
+    left: 50%;
+    color: white;
+}
+input {
+    display: block;
+    margin-left: 25%;
+    margin-bottom: 10px;
+    max-width: 50%;
+    line-height: 30px;
+    outline: none;
+    background: #070707;
+    border: 2px solid transparent;
+    border-bottom: 2px solid #494947;
+    cursor: pointer;
+    color:white;
+}
+input[type="button"] {
+    margin-top: 20px;
+    width: 100%;
+    background-image: url(../img/Layer%203.jpg);
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    border-bottom: none;
+}
+input[type="text"] {
+    padding-left: 20px;
+}
+input[type="password"] {
+    padding-left: 20px;
+}
+input[type="text"]:focus {
+  background: #00518B;
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(19, 239, 210, 0.86);
+  -moz-box-shadow:    0px 0px 20px 0px rgba(19, 239, 210, 0.86);
+  box-shadow:         0px 0px 20px 0px rgba(16, 208, 224, 0.86);
+}
+input[type="password"]:focus {
+  background: #00518B;
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(19, 239, 210, 0.86);
+  -moz-box-shadow:    0px 0px 20px 0px rgba(19, 239, 210, 0.86);
+  box-shadow:         0px 0px 20px 0px rgba(16, 208, 224, 0.86);
+}
+.form input[type="submit"] {
+    margin: 0 auto;
+    outline:none;
+    background: #0083CC;
+    font-size: 14px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    border-bottom: none;
+    text-align: center;
+}
+input[type="checkbox"] {
+    display: inline;
+    width: none;
+}
+span {
+    font-size: 10px;
+}
+.form>p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #9A9A9A;
+}
+p {
+    margin: 0 auto;
+    text-align:center;
+    font-size: 10px;
+    padding-top: 10px;
+    padding-bottom: 20px;
 }
