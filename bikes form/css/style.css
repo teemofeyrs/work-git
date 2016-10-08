@@ -75,7 +75,7 @@ h2 {
 }
 input {
     display: block;
-    margin-left: 25%;
+    margin: 0 auto;
     margin-bottom: 10px;
     max-width: 50%;
     line-height: 30px;
@@ -88,6 +88,7 @@ input {
 }
 input[type="button"] {
     margin-top: 20px;
+    margin-bottom: 10px;
     width: 100%;
     background-image: url(../img/Layer%203.jpg);
     -webkit-border-radius: 8px;
@@ -124,17 +125,16 @@ input[type="password"]:focus {
     border-bottom: none;
     text-align: center;
 }
+label {
+    display: block;
+   padding:0 25%;
+}
 input[type="checkbox"] {
     display: inline;
-    width: none;
 }
 span {
+    padding-left: 5px;
     font-size: 10px;
-}
-.form>p {
-    margin-top: 10px;
-    font-size: 14px;
-    color: #9A9A9A;
 }
 p {
     margin: 0 auto;
