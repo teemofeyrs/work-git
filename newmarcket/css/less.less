@@ -16,7 +16,7 @@
     clear: both;
 }
 .header {
-    padding: 20px 12%;
+    padding: 20px 10% 20px 12%;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -24,25 +24,27 @@
         display: block;
     }
     .search {
-        width: 30%;
-       border: 1px solid #ECECEC;
-        i {
-            right: 5px;
-            color: #ECECEC;
-        }
-        input{   
-            width: 90%;
-            border: none;
-        }}
+        width: 44%;
+        border: 1px solid #ECECEC;
+        margin-left: 10px;
+            i {
+                right: 5px;
+                color: #ECECEC;
+            }
+            input{   
+                width: 90%;
+                border: none;
+            }}
     .basket {
         display: flex;
         align-items: center;
-            & img{display: block;}
-        & p {
-            font-family: @BebasNeue;
-            font-weight: bold;
-            font-size: 22px;
-            color: #A1A1A1;}
+            & img{display: block;
+                margin-right: 20px;}
+            & p {
+                font-family: @BebasNeue;
+                font-weight: bold;
+                font-size: 22px;
+                color: #A1A1A1;}
         
     }
 }
@@ -50,17 +52,18 @@
 .headerMenu {
      background-color: @colorHeaderMenu;
         ul{ 
-            padding: 0px 12%;
+            padding: 0px 10%;
             li {
                  float: left;
-                 padding: 15px 0 15px 0;
+                 padding: 8px 0;
                 &:not(:nth-child(1)) a{
                             border-left: 1px solid white;}
                     a {
                     display: block;
-                    padding: 0 15px;
+                    padding: 0 22px;
                     color: @colorWhite;
                     line-height: 20px;
+                    font-size: 21px;
                     font-family: @BebasNeue;
                     text-decoration: none;                    
                     }}}
