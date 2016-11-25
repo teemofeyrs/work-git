@@ -24,26 +24,32 @@
         display: block;
     }
     .search {
-        width: 44%;
+        position: relative;
+        width: 45%;
+        height: 34px;
         border: 1px solid #ECECEC;
         margin-left: 10px;
             i {
-                right: 5px;
+               position: absolute;
+                right: 7px;
                 color: #ECECEC;
+                height: 100%;
+                font-size:27px;
             }
             input{   
                 width: 90%;
+                height: 100%;
                 border: none;
             }}
     .basket {
         display: flex;
         align-items: center;
+        margin-bottom: 10px;
             & img{display: block;
                 margin-right: 20px;}
             & p {
                 font-family: @BebasNeue;
-                font-weight: bold;
-                font-size: 22px;
+                font-size: 32px;
                 color: #A1A1A1;}
         
     }
@@ -65,6 +71,7 @@
                     line-height: 20px;
                     font-size: 21px;
                     font-family: @BebasNeue;
+                    font-weight: 400;
                     text-decoration: none;                    
                     }}}
 }
@@ -76,10 +83,12 @@
     align-items: center;
     position: relative;
     color:@colorWhite;
-    img {
-        margin-left: 20px;
-        display: block;
-    }
+    .gost
+            img {
+                    margin-left: 20px;
+                    display: block;
+                    height: 400px;
+                }
     .upper {
         font-family: @BebasNeue;
         
