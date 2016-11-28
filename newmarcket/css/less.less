@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
 @font-face {
     font-family: BebasNeue;
     src: url(../fonts/BebasNeue.otf);
 }
+@OpenSans:'Open Sans', sans-serif;
 @BebasNeue: BebasNeue,sans-serif;
 @colorWhite: white;
 @colorBaner: #3DC5B5;
@@ -10,15 +11,25 @@
 *{
     box-sizing: border-box;
 }
+img {
+        display: block;
+}
+.font{
+    font-family: @BebasNeue;
+    color:@colorWhite;
+}
 .clearfix:after {
     content: "";
     display: table;
     clear: both;
 }
-.header {
-    padding: 16px 10.5% 16px 12%;
+.positionFlex {
     display: flex;
     justify-content: space-between;
+}
+.header {
+    padding: 16px 10.5% 16px 12%;
+    .positionFlex;
     align-items: flex-end;
     .logo {
        margin-bottom: 5px;
@@ -51,9 +62,9 @@
             & img{display: block;
                 margin-right: 18px;}
             & p {
-                font-family: @BebasNeue;
-                font-size: 32px;
+                .font;
                 color: #A1A1A1;
+                font-size: 32px;
                 padding-top: 10px;}
         
     }
@@ -69,12 +80,11 @@
                 &:not(:nth-child(1)) a{
                             border-left: 1px solid white;}
                     a {
+                    .font;
                     display: block;
-                    padding: 0 22px 0 19px;
-                    color: @colorWhite;
+                    padding: 0 22px 0 19px;  
                     line-height: 20px;
                     font-size: 21px;
-                    font-family: @BebasNeue;
                     font-weight: 400;
                     text-decoration: none;                    
                     }}}
@@ -83,39 +93,43 @@
     padding: 60px 12% 55px 12%;
     background-color: @colorBaner;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     position: relative;
     color:@colorWhite;
-    .gost
+    .gost {
+        margin-left: 38px;
             img {
                     margin-left: 20px;
                     display: block;
                     height: 330px;
                 }
-    .upper {
-        font-family: @BebasNeue;
-        
-        font-size: 80px;
-    }
-    .lower {
-        font-family: @BebasNeue;
-        font-size: 20px;
-        font-weight: lighter;
-        font-variant: small-caps;
-    }
-    .button {
-        padding: 20px;
-        display: inline-block;
-        border-radius: 10px 10px 10px 10px;
-        -moz-border-radius: 10px 10px 10px 10px;
-        -webkit-border-radius: 10px 10px 10px 10px;
-        border: 2px solid #ffffff;
+        }
+    .description {
+        margin-bottom: 28px;
+        margin-left: 90px;
+            .upper {
+                .font;
+                font-size: 60px;
+            }
+            &.lower {
+               font-family: @OpenSans;
+                font-size: 18px;
+
+            }
+            .button {
+                .font;
+                font-size: 30px;
+                padding: 10px 25px;
+                display: inline-block;
+                border-radius: 9px 9px 9px 9px;
+                -moz-border-radius: 9px 9px 9px 9px;
+                -webkit-border-radius: 9px 9px 9px 9px;
+                border: 3px solid #ffffff;
+            }
     }
     .scroll{
         position: absolute;
-        right: 36%;
-        bottom: 100px;
+        right: 45%;
+        bottom: 20px;
             p{
             float: left;
             margin-right: 10px;
@@ -123,7 +137,115 @@
             border-radius: 100%;
             -moz-border-radius: 100%;
             -webkit-border-radius: 100%;
-            border: 4px solid #ffffff;
+            border: 5px solid #ffffff;
+            }
+        }
+    
+}
+.categories {
+    padding: 0 5% 0 5%;
+    .positionFlex;
+    align-items: center;
+    position: relative;
+    .shapeOne {
+        position: absolute;
+        left: 30px;
+    }
+     .shapeTwo {
+        position: absolute;
+        right: 30px;
+    }
+    .border {
+        padding: 0 60px;
+        border-left: 1px solid #E7E7E7;
+        border-right: 1px solid #E7E7E7;
+    }
+    div {
+        .positionFlex;
+        align-items: center;
+        font-family: @BebasNeue;
+        padding: 25px 60px;
+        font-size: 20px;
+        color:#B4B4B4;
+        button {
+            margin-top: 20px;
+            padding: 9px 15px;
+            .font;
+            font-size: 15px;
+            background-color:@colorBaner;
+            border-radius: 5px 5px 5px 5px;
+            -moz-border-radius: 5px 5px 5px 5px;
+            -webkit-border-radius: 5px 5px 5px 5px;
+            border: 0px solid #000000;
+        }
+        p {
+            margin-left: 60px;
         }
     }
+    
+}
+.featuredProducts {
+    background-color: @colorBaner;
+    p {
+        padding: 20px 12% 20px 12%;
+        .font;
+        font-size: 20px;
+    }
+}
+.otherProducts {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    .products {
+        margin: 50px 50px 70px 50px;
+        height: 250px;
+        width: 250px;
+        border: 1px solid #B4B4B4;
+        border-bottom: 5px solid #3CC395;
+        padding: 30px 40px;
+        .font;
+        color: #AFAFAF;
+        img {margin: 0 auto;}
+        p {
+            margin-top: 18px;
+            padding-left: 20%;
+            font-size: 18px;
+                button {
+                margin-left: 5px;
+                padding: 5px;
+                .font;
+                font-size: 15px;
+                background-color:@colorBaner;
+                border-radius: 5px 5px 5px 5px;
+                -moz-border-radius: 5px 5px 5px 5px;
+                -webkit-border-radius: 5px 5px 5px 5px;
+                border: 0px solid #000000;
+                    }
+            }
+        }
+}
+.branded {
+    padding: 40px 10%;
+    .positionFlex;
+    background-color: #3CC3B5;
+    div {
+        p{
+            .font;
+            font-size: 18px;
+        }
+        ul li {
+            font-family: @OpenSans;
+            line-height: 16px;
+            font-size: 9px;
+            color: @colorWhite;
+        }
+    }
+}
+.footer {
+    background-color: #2DA89B;
+    text-align: center;
+    line-height: 40px;
+    font-size: 11px;
+    font-family: @OpenSans;
+    color: @colorWhite;
 }
