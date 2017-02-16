@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Exo+2:400,700&subset=cyrillic');
+@headHeight:688px;
+
+body {
+    color:white;
+    font-family: 'Exo 2', serif;
+    h2 {
+        padding-top:10%;
+        font-size: 34px;
+    }
+    h4 {
+        font-size: 16px;
+    }
+}
+.tinted-image {
+  height: @headHeight;
+  background: 
+    /* top, transparent red, faked with gradient */ 
+    linear-gradient(
+      rgba(116,119,153, 0.45), 
+      rgba(116,119,153, 0.45)
+    ),
+    /* bottom, image */
+    url(../img/head.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.border {
+    width: 25%;
+    height: 165px;
+    background-image: url(../img/border.png);
+    background-size: cover;
+}
