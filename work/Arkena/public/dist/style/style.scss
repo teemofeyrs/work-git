@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600');
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body
+{
+  font-family: 'Montserrat', sans-serif;
+  .wrapper
+  {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 auto;
+  }
+  .clearfix
+  {
+    clear: both;
+  }
+  section.main{
+    height: 900px;
+    background: url("../img/hero_Image.jpg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    color: #fff;
+      header
+      {
+        width: 100%;
+        position: relative;
+        padding-top: 130px;
+        display: inline-block;
+          .logo
+          {
+            display: inline;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 24px;
+          }
+        .toogleMenu
+        {
+          display: none;
+          position: relative;
+          float: right;
+          width: 40px;
+          height: 40px;
+          cursor: pointer;
+          color: #fff;
+          text-align: center;
+          font-size: 30px;
+        }
+        .toogleMenu:before
+        {
+          content: '\f0c9';
+          position: absolute;
+          font-family: fontAwesome;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          color: #fff;
+          font-size: 40px;
+        }
+        .toogleMenu.active:before
+        {
+          content: '\f00d';
+        }
+        .menu
+        {
+          float: right;
+          ul {
+          float: right;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          li a {
+            display: block;
+            text-transform: uppercase;
+            padding: 2px 0;
+            padding-left: 28px;
+            font-weight: 400;
+            font-size: 20px;
+            color: #fff;
+          }
+          li a:hover {
+            text-decoration: none;
+          }
+        }
+        }
+        .menu.active
+        {
+          display: block;
+          position: absolute;
+          top: 100px;
+          padding: 50px;
+          width: 100%;
+          text-align: left;
+          background: rgba(0,0,0, 0.8);
+          ul
+          {
+            display: block;
+            width: 100%;
+              li a
+              {
+                padding: 10px;
+              }
+            li a:hover
+            {
+              background: #fff;
+              color: #000;
+            }
+          }
+        }
+      }
+    .content
+    {
+      margin-top: 195px;
+      h1
+      {
+        font-size: 60px;
+        font-weight: bold;
+      }
+      p
+      {
+        margin-top: 32px;
+        font-size: 24px;
+        font-weight: lighter;
+        span
+        {
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+      }
+      form
+      {
+        margin-top: 32px;
+        input#email
+        {
+          width: 280px;
+          height: 48px;
+          padding: 10px;
+          border: none;
+          outline: none;
+          border-radius: 5px;
+          margin-right: 20px;
+        }
+        button
+        {
+          width: 180px;
+          height: 48px;
+          border: none;
+          outline: none;
+          font-size: 16px;
+          color: #fff;
+          border-radius: 5px;
+          background: #f7564b;
+        }
+      }
+    }
+  }
+  section.stories
+  {
+    height: 900px;
+    padding: 100px 0 120px;
+    h2
+    {
+      margin-bottom: 120px;
+      padding: 0;
+      text-transform: uppercase;
+      font-size: 36px;
+      font-weight: bold;
+    }
+    .sliderStories
+    {
+      position: relative;
+      .img
+      {
+        width: 380px;
+        height: 400px;
+        overflow: hidden;
+        img
+        {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+      p
+      {
+        margin: 28px 0 25px;
+        max-width: 380px;
+        font-size: 21px;
+        font-weight: 300;
+        color: #CECDCD;
+      }
+      a
+      {
+        font-size: 16px;
+        color: #000;
+      }
+    }
+  }
+  section.contentAbout
+  {
+    height: 400px;
+    background: url("../img/hero_Image.jpg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    .contentSlider {
+      height: 400px;
+      padding: 135px;
+      position: relative;
+      p.textAbout,
+      p.textAuthor {
+        text-align: center;
+        color: #fff;
+        font-size: 24px;
+      }
+      p.textAbout {
+        font-weight: 300;
+        margin-bottom: 40px;
+      }
+      p.textAuthor {
+        font-weight: 700;
+        span {
+          display: block;
+          font-weight: 400;
+          color: #fff;
+        }
+      }
+    }
+  }
+  section.yourRequirement
+  {
+    h2
+    {
+        margin: 80px auto;
+        text-transform: uppercase;
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+        color: #666666;
+    }
+      .conteiner
+      {
+          display: flex;
+          margin-bottom: 80px;
+          .formAbout
+          {
+              width: 50%;
+              text-align: left;
+              padding-left: 20px;
+              h3
+              {
+                  margin-bottom: 30px;
+                  text-transform: uppercase;
+                  font-size: 24px;
+                  color: #595959;
+              }
+              input[type='text']
+              {
+                  padding: 0 15px;
+                  margin-bottom: 20px;
+                  margin-right: 20px;
+                  border: none;
+                  outline: none;
+                  width: 180px;
+                  height: 48px;
+                  line-height: 48px;
+                  border-radius: 5px;
+                  font-size: 14px;
+                  font-family: 'Montserrat', sans-serif;
+                  background: #EDEDED;
+              }
+              input[type='email']
+              {
+                  padding: 0 15px;
+                  border: none;
+                  outline: none;
+                  width: 180px;
+                  height: 48px;
+                  line-height: 48px;
+                  border-radius: 5px;
+                  font-size: 14px;
+                  font-family: 'Montserrat', sans-serif;
+                  background: #EDEDED;
+              }
+              textarea
+              {
+                  margin-bottom: 20px;
+                  padding: 15px;
+                  border: none;
+                  outline: none;
+                  width: 380px;
+                  height: 130px;
+                  line-height: 48px;
+                  border-radius: 5px;
+                  font-size: 14px;
+                  font-family: 'Montserrat', sans-serif;
+                  background: #EDEDED;
+              }
+              input[type='submit']
+              {
+                  padding: 0 15px;
+                  border: none;
+                  outline: none;
+                  width: 180px;
+                  height: 48px;
+                  line-height: 48px;
+                  border-radius: 5px;
+                  font-size: 16px;
+                  font-family: 'Montserrat', sans-serif;
+                  color: #fff;
+                  background: #F7564B;
+              }
+          }
+          .address
+          {
+              padding-right: 20px;
+              width: 50%;
+              text-align: right;
+              font-family: 'Montserrat', sans-serif;
+              h3
+              {
+                  text-transform: uppercase;
+                  font-size: 24px;
+                  margin-bottom: 30px;
+                  color: #555555;
+              }
+              p
+              {
+                  text-transform: uppercase;
+                  font-size: 20px;
+                  color: #888888;
+                  margin-bottom: 30px;
+              }
+              p:first-of-type
+              {
+                  margin-bottom: 35px;
+              }
+          }
+      }
+  }
+    footer
+    {
+        height: 70px;
+        background: #333333;
+        color: #fff;
+        .foot
+        {
+            height: 70px;
+            width: 100%;
+            display: flex;
+            p.copyright
+            {
+                display: inline-block;
+                width: 50%;
+                text-align: left;
+                line-height: 70px;
+                font-size: 15px;
+                span
+                {
+                    text-transform: uppercase;
+                }
+            }
+            p.author
+            {
+                display: inline-block;
+                width: 50%;
+                text-align: right;
+                line-height: 70px;
+                font-size: 15px;
+
+                span
+                {
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    .fa
+                    {
+                        color: #F4728F;
+                    }
+                }
+            }
+        }
+    }
+}
