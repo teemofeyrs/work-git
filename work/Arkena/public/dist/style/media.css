@@ -52,6 +52,50 @@
     {
         font-size: 20px;
     }
+    body section.yourRequirement .conteiner
+    {
+        display: block;
+    }
+    body section.yourRequirement h2
+    {
+        margin: 30px 10px;
+        font-size: 26px;
+    }
+    body section.yourRequirement .conteiner .formAbout
+    {
+        margin-left: 20px;
+    }
+    body section.yourRequirement .conteiner .formAbout textarea
+    {
+        width: 250px;
+        height: 80px;
+    }
+    body section.yourRequirement .conteiner .address
+    {
+        margin: 40px 0 40px 40px;
+        text-align: left;
+    }
+    body section.yourRequirement .conteiner .address p
+    {
+        font-size: 18px;
+    }
+    body footer
+    {
+        padding: 0 20px;
+        height: 70px;
+        line-height: 35px;
+    }
+    body footer .foot
+    {
+        display: block;
+    }
+    body footer .foot p.copyright,
+    body footer .foot p.author
+    {
+        text-align: center;
+        line-height: 35px;
+        font-size: 10px;
+    }
 }
 /*// Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) and (max-width: 767px)
@@ -97,6 +141,35 @@
     {
         padding: 100px 50px 40px;
         text-align: center;
+    }
+    body section.yourRequirement .conteiner
+    {
+        display: block;
+    }
+    body section.yourRequirement .conteiner .formAbout
+    {
+        margin-left: 20px;
+    }
+    body section.yourRequirement .conteiner .address
+    {
+        margin: 40px 0 40px 40px;
+        text-align: left;
+    }
+    body footer
+    {
+        padding: 0 20px;
+        height: 70px;
+        line-height: 35px;
+    }
+    body footer .foot
+    {
+        display: block;
+    }
+    body footer .foot p.copyright,
+    body footer .foot p.author
+    {
+        text-align: center;
+        line-height: 35px;
     }
 }
 /* Medium devices (tablets, 768px and up)*/
@@ -149,6 +222,19 @@
         padding: 100px 60px;
         text-align: center;
     }
+    body section.yourRequirement .conteiner
+    {
+        display: block;
+    }
+    body section.yourRequirement .conteiner .address
+    {
+        margin: 40px 0 40px 40px;
+        text-align: left;
+    }
+    footer
+    {
+        padding: 0 20px;
+    }
 }
 /* Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) and (max-width: 1199px)
@@ -176,6 +262,11 @@
         margin: 0 40px;
         justify-content: space-around;
 
+    }
+
+    footer
+    {
+        padding: 0 20px;
     }
 }
 /*Extra large devices (large desktops, 1200px and up)*/

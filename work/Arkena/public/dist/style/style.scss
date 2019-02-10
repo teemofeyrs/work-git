@@ -274,6 +274,7 @@ body
               input[type='email']
               {
                   padding: 0 15px;
+                  margin-bottom: 20px;
                   border: none;
                   outline: none;
                   width: 180px;
@@ -350,10 +351,9 @@ body
             height: 70px;
             width: 100%;
             display: flex;
+            justify-content: space-between;
             p.copyright
             {
-                display: inline-block;
-                width: 50%;
                 text-align: left;
                 line-height: 70px;
                 font-size: 15px;
@@ -364,8 +364,6 @@ body
             }
             p.author
             {
-                display: inline-block;
-                width: 50%;
                 text-align: right;
                 line-height: 70px;
                 font-size: 15px;

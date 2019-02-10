@@ -1,13 +1,20 @@
 $(document).ready(function() {
+
+    // add button for menu
     $('.toogleMenu').click(function() {
         $('.toogleMenu').toggleClass('active');
         $('.menu').toggleClass('active');
 
     });
+
+    //slider fro stories
+
     $('.sliderStories').slick({
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 3,
+        autoplay: true,
+        autoplaySpeed: 2000,
         dots: true,
         arrows: false,
         responsive: [
@@ -28,6 +35,9 @@ $(document).ready(function() {
             }
         ]
     });
+
+    //content slider
+
     $('.contentSlider').slick({
         infinite: true,
         arrows: false,
