@@ -1,13 +1,14 @@
 $(document).ready(function() {
 
     // add button for menu
+
     $('.toogleMenu').click(function() {
         $('.toogleMenu').toggleClass('active');
         $('.menu').toggleClass('active');
 
     });
 
-    //slider fro stories
+    //slider for stories
 
     $('.sliderStories').slick({
         infinite: true,

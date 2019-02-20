@@ -23,6 +23,9 @@ body
     -webkit-background-size: cover;
     background-size: cover;
     color: #fff;
+
+      /*style for header*/
+
       header
       {
         width: 100%;
@@ -157,6 +160,9 @@ body
       }
     }
   }
+
+    /*style for stories slider*/
+
   section.stories
   {
     height: 900px;
@@ -199,6 +205,9 @@ body
       }
     }
   }
+
+    /*style for content slider*/
+
   section.contentAbout
   {
     height: 400px;
@@ -229,6 +238,9 @@ body
       }
     }
   }
+
+    /*style for yourRequirement section*/
+
   section.yourRequirement
   {
     h2
@@ -341,6 +353,9 @@ body
           }
       }
   }
+
+    /*style for footer*/
+
     footer
     {
         height: 70px;
