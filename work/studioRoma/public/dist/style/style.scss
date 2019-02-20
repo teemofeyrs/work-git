@@ -1,0 +1,16 @@
+$Paragon530: 'Parangon 530C';
+$white: white;
+body{
+
+    .baner {
+        height: 810px;
+        font-family: $Paragon530;
+        background: rgba(107, 95, 142, 0.2);
+        background-image: url("../img/mainBg.jpg");
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        color: #fff;
+    }
+}
