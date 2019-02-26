@@ -1,13 +1,15 @@
 $Paragon530: 'Parangon 530C';
 $PTSans: 'PTSans';
+$Roboto: 'Roboto';
 $white: white;
 body{
     font-size: 14px;
 .h810
 {
-    height: 810px;
+    min-height: 810px;
 }
     .baner {
+        margin-bottom: 0;
         padding-top: 14em;
         position: relative;
         top: 0;
@@ -25,7 +27,7 @@ body{
             p
             {
                 margin-top: 52px;
-                font-family: $PTSans, sans-serif;
+                font-family: $Roboto, sans-serif;
                 font-weight: 400;
                 font-size: 1.8em;
             }
@@ -34,8 +36,9 @@ body{
                 margin-top: 68px;
                 .box
                 {
+                    margin: 0 auto;
                     position: relative;
-                    max-width: 291px;
+                    width: 291px;
                     height: 160px;
                     border-right: 2px solid $white;
                     border-left: 2px solid $white;
