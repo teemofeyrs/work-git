@@ -2,11 +2,19 @@ $Paragon530: 'Parangon 530C';
 $PTSans: 'PTSans';
 $Roboto: 'Roboto';
 $white: white;
+$yellow: #f6ae48;
+$black: #000;
+$blueIcon: #00b9e7;
+
 body{
     font-size: 14px;
 .h810
 {
     min-height: 810px;
+}
+.iconBlue
+{
+    color: $blueIcon;
 }
     .baner {
         margin-bottom: 0;
@@ -21,7 +29,7 @@ body{
         color: $white;
             h1
             {
-                font-size: 3.1em;
+                font-size: 4em;
                 font-family: $PTSans, sans-serif;
             }
             p
@@ -99,5 +107,142 @@ body{
         width: 100%;
         height: 100%;
         background-color: rgba(107, 95, 142, 0.6);
+    }
+
+    /*navigation section*/
+    section.navigation
+    {
+        border-bottom: 1px solid #adadad;
+        .navbar-light .navbar-nav .active>.nav-link
+        {
+            color: $yellow;
+        }
+        .navbar-light .navbar-nav .nav-link
+        {
+            margin-left: 43px;
+            font-size: 24px;
+            font-weight: 600;
+            color: $black;
+            transition: 0.3s;
+        }
+        .navbar-light .navbar-nav .nav-link:hover
+        {
+            color: $yellow;
+        }
+    }
+
+    /*section studio*/
+
+    section.studio
+    {
+        position: relative;
+        padding: 170px 0 0;
+        .row {
+            margin-bottom: 220px;
+            .studioHeader h2 {
+                font-size: 3.8em;
+            }
+            .studioContnt p {
+                font-size: 20px;
+                color: #585858;
+            }
+        }
+        .row
+        {
+            margin-bottom: 250px;
+            .studioBox
+            {
+                padding: 10px 25px 0;
+                min-height: 343px;
+                transition: 0.4s;
+                span i.fa
+                {
+                    font-size: 40px;
+                    color: $blueIcon;
+                }
+                h3
+                {
+                    font-size: 20px;
+                    margin: 18px 0;
+                }
+                p{
+                    font-size: 1.1em;
+                }
+                .getMore
+                {
+                    margin-bottom: 20px;
+                    .price
+                    {
+                        margin-top: 26px;
+                        padding-left: 15px;
+                        border: 2px solid $white;
+                        width: 130px;
+                        line-height: 36px;
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: $white;
+                    }
+                    a i.fa
+                    {
+                        margin-right: 40px;
+                        font-size: 18px;
+                        color: $white;
+                    }
+                }
+            }
+            .studioBox:hover
+            {
+                background-color: $yellow;
+                color: $white;
+                span i.fa
+                {
+                    color: $white;
+                }
+            }
+        }
+    }
+    section.studio:before
+    {
+        content: 'WE';
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-height: 500px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 800;
+        color: #f4f4f4;
+        font-size: 340px;
+        z-index: -1;
+    }
+    section.credo
+    {
+        position: relative;
+        min-height: 565px;
+        color: $white;
+        background-image: url(../img/secondBg.jpg);
+        -webkit-background-size: cover;
+        background-size: cover;
+        h2
+        {
+            font-size: 50px;
+            margin-bottom: 70px;
+        }
+        .credoText
+        {
+            font-size: 20px;
+        }
+    }
+    section.credo:before
+    {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(107, 95, 142, 0.6);
     }
 }

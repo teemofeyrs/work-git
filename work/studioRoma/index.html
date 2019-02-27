@@ -8,16 +8,18 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!--font-awesome icons-->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
           integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!--main css-->
     <link rel="stylesheet" href="public/dist/style/main.css">
     <title>Hello, world!</title>
 </head>
 <body>
 
-  <!--main section-->
+<!--main section-->
 
-  <div class="jumbotron jumbotron-fluid h810 baner align-items-center">
+<div class="jumbotron jumbotron-fluid h810 baner align-items-center">
     <div class="container">
         <div class="row justify-content-center">
             <h1 class="col">Наши сайты заставляют работать<br> ваш бизнес</h1>
@@ -36,7 +38,7 @@
             </div>
             <div class="col col-sm-6 col-lg-4 banerBox">
                 <div class="box">
-                    <span><i class="fa fa-check-square-o" aria-hidden="true"></i></i></span>
+                    <span><i class="fa fa-check-square-o" aria-hidden="true"></i></span>
                     <h2>345</h2>
                     <p>проэктов</p>
                 </div>
@@ -52,38 +54,32 @@
     </div>
 </div>
 
-  <!--navigation section-->
+<!--navigation section-->
 
 <section class="navigation">
     <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light">
+        <nav class="navbar navbar-expand-lg navbar-light aling-content-baseline m-0">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse my-2 my-lg-0" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
+                <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#">Главная <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
+                        <a class="nav-link" href="#">О Нас</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Disabled</a>
+                        <a class="nav-link disabled" href="#">Услуги</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Наши работы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Контакты</a>
                     </li>
                 </ul>
             </div>
@@ -91,9 +87,80 @@
     </div>
 </section>
 
+<!--section studio-->
+<section class="studio">
+    <div class="container">
+        <div class="row">
+            <div class="d-flex col col-md-4 studioHeader">
+                <h2 class="align-self-center font-weight-bold">Студия</h2>
+            </div>
+            <div class="col col-md-8 studioContnt">
+                <p>Основная специализация — проектирование сайов и landing page.
+                    Наша команда, состоящая из дизайнеров, маркетологов и программистов,
+                    поддерживает каждый проект на протяжении всей его жизни. Студия
+                    занимается разработкой индивидуального дизайна, оптимизацией
+                    скорости работы продукта, предоставляет услуги по продвижению сайтов.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-md-4 studioBox">
+                <span class="my-3"><i class="fa fa-rocket iconBlue" aria-hidden="true"></i></span>
+                <h3 class="font-weight-bold">Старт</h3>
+                <p>Вы хотите получать больше клиентов
+                    и прибыли из интернета?С нуля разработаем
+                    сайт любой сложности,учитывая индивидуальные
+                    особенности вашего бизнеса. Стоимость создания
+                    сайта в каждом конкретном случае индивидуальна
+                    и рассчитывается исходя из пожеланий и
+                    требований клиента.</p>
+                <div class="d-inline-flex align-items-center w-100 getMore">
+                    <p class="price"> от 1600 руб.</p>
+                    <a href="#" class="ml-auto"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="col col-md-4 studioBox">
+                <span class="my-3"><i class="fa fa-tablet iconBlue" aria-hidden="true"></i></span>
+                <h3 class="font-weight-bold">Продвижение</h3>
+                <p>Одним из важнейших этапов продвижения
+                    сайта является поисковая оптимизация (SEO),
+                    которая представляет собой комплекс мер по
+                    повышению позиции сайта в поисковых
+                    системах, и, таким образом, позволяет
+                    увеличить его целевую посещаемость.</p>
+                <div class="d-inline-flex align-items-center w-100 getMore">
+                    <p class="price"> от 1600 руб.</p>
+                    <a href="#" class="ml-auto"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="col col-md-4 studioBox">
+                <span class="my-3"><i class="fa fa-heartbeat iconBlue" aria-hidden="true"></i></span>
+                <h3 class="font-weight-bold">Поддержка</h3>
+                <p>У Вас уже работающий бизнес и Вы
+                    регулярно нуждаетесь в услугах веб-студии
+                    но брать сотрудника в штат и оборудовать
+                    дополнительное рабочее место не выгодно?
+                    Мы готовы взять эти проблемы на себя и
+                    предоставлять нужные услуги удаленно.</p>
+                <div class="d-inline-flex align-items-center w-100 getMore">
+                    <p class="price"> от 1600 руб.</p>
+                    <a href="#" class="ml-auto"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-
-
+<!--section credo our companie-->
+<section class="credo">
+    <div class="container align-self-center">
+        <div class="row align-items-center text-center">
+            <h2 class="col-12 text-center font-weight-bold">Кредо нашей компании</h2>
+            <p class="col-12 credoText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam architecto
+                asperiores atque culpa cumque, doloribus expedita illum inventore ipsa molestiae molestias nihil non
+                officia quae quaerat, recusandae, reiciendis saepe sint sit totam vero voluptas!</p>
+        </div>
+    </div>
+</section>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
