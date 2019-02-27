@@ -1,7 +1,14 @@
+/*fonts var*/
 $Paragon530: 'Parangon 530C';
 $PTSans: 'PTSans';
 $Roboto: 'Roboto';
-$white: white;
+$Exo2: 'Exo2';
+$Futura: 'Futura';
+$HelveticaBold: 'Helvetica Bold';
+$HelveticaRoman: 'Helvetica Roman';
+
+/*color var*/
+$white: #fff;
 $yellow: #f6ae48;
 $black: #000;
 $blueIcon: #00b9e7;
@@ -30,12 +37,12 @@ body{
             h1
             {
                 font-size: 4em;
-                font-family: $PTSans, sans-serif;
+                font-family: $Paragon530, sans-serif;
             }
             p
             {
                 margin-top: 52px;
-                font-family: $Roboto, sans-serif;
+                font-family: $PTSans, sans-serif;
                 font-weight: 400;
                 font-size: 1.8em;
             }
@@ -72,6 +79,7 @@ body{
                     {
                         margin-top: 1.8em;
                         font-size: 1em;
+                        font-family: $PTSans;
                     }
                 }
                 .box:before
@@ -141,20 +149,23 @@ body{
             margin-bottom: 220px;
             .studioHeader h2 {
                 font-size: 3.8em;
+                font-family: $HelveticaBold;
             }
             .studioContnt p {
                 font-size: 20px;
                 color: #585858;
+                font-family: $PTSans;
             }
         }
         .row
         {
-            margin-bottom: 250px;
+            margin-bottom: 150px;
             .studioBox
             {
                 padding: 10px 25px 0;
                 min-height: 343px;
                 transition: 0.4s;
+                font-family: 'Arial', sans-serif;
                 span i.fa
                 {
                     font-size: 40px;
@@ -219,6 +230,7 @@ body{
     }
     section.credo
     {
+        padding-top: 133px;
         position: relative;
         min-height: 565px;
         color: $white;
@@ -229,10 +241,12 @@ body{
         {
             font-size: 50px;
             margin-bottom: 70px;
+            font-family: $Exo2;
         }
         .credoText
         {
             font-size: 20px;
+            font-family: $HelveticaRoman;
         }
     }
     section.credo:before

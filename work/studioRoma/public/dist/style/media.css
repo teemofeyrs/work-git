@@ -9,11 +9,51 @@
     {
         padding-top: 4em;
     }
+    /*baner section*/
     body .baner p
     {
         margin-top: 1em;
         font-size: 1.5em;
     }
+    /* navigaton section*/
+    .navbar-light .navbar-toggler
+    {
+        border: none;
+        color: #000000;
+    }
+    .navbar-collapse.collapse.show .navbar-nav
+    {
+        display: flex;
+    }
+    div nav button.navbar-light span.navbar-toggler-icon
+    {
+        font-size: 22px;
+    }
+
+    /* studio section*/
+    body section.studio
+    {
+        padding: 40px 15px;
+    }
+    body section.studio .row
+    {
+        margin-bottom: 50px;
+    }
+    body section.studio .row .studioHeader h2
+    {
+        margin-bottom: 20px;
+    }
+    body section.studio:before
+    {
+        font-size: 180px;
+    }
+
+    /*credo section*/
+    body section.credo
+    {
+        padding-top: 30px;
+    }
+
 }
 
 /*Small devices (landscape phones, 576px and up)*/
@@ -23,6 +63,7 @@
     {
         font-size: 14px;
     }
+    /*baner section*/
     body .baner
     {
         padding-top: 6em;
@@ -31,12 +72,60 @@
     {
         font-size: 1.5em;
     }
+   /* navigaton section*/
+    .navbar-light .navbar-toggler
+    {
+        border: none;
+        color: #000000;
+    }
+    .navbar-collapse.collapse.show .navbar-nav
+    {
+        display: flex;
+    }
+    div nav button.navbar-light span.navbar-toggler-icon
+    {
+        font-size: 24px !important;
+    }
+
+
+    /* studio section*/
+    body section.studio
+    {
+        padding: 40px 15px;
+    }
+    body section.studio .row
+    {
+        margin-bottom: 50px;
+    }
+    body section.studio .row .studioHeader h2
+    {
+        margin-bottom: 20px;
+    }
+    body section.studio:before
+    {
+        font-size: 240px;
+    }
+
+    /*credo section*/
+    body section.credo
+    {
+        padding-top: 30px;
+    }
 }
 
 /*Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) and (max-width: 991.98px)
 {
+    /* navigaton section*/
+    .navbar-light .navbar-toggler
+    {
+        border: none;
+        color: #000000;
+    }
+    .navbar-expand-lg .navbar-collapse
+    {
 
+    }
 }
 
 /*Large devices (desktops, 992px and up)*/
