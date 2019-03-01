@@ -19,6 +19,10 @@ body{
 {
     min-height: 810px;
 }
+    section#ourWork div.box div.getMore p.price.border-info
+{
+    border: 2px solid $yellow;
+}
 .iconBlue
 {
     color: $blueIcon;
@@ -258,5 +262,58 @@ body{
         width: 100%;
         height: 100%;
         background: rgba(107, 95, 142, 0.6);
+    }
+
+    /*section our work*/
+    section.ourWork
+    {
+        position: relative;
+        .developBaner
+        {
+            position: absolute;
+            top: -45px;
+            left: 0;
+            width: 666px;
+            height: 525px;
+            //background-color: $yellow;
+            background-image: url(../img/settings48.png), url(../img/cogfig.png);
+            background-repeat: no-repeat;
+            -webkit-background-size: auto, cover;
+            background-size: auto, cover;
+            h3
+            {
+                margin-top: 130px;
+                font-family: $Paragon530;
+                font-size: 50px;
+                color: $white;
+            }
+        }
+        .row
+        {
+            margin-top: 200px;
+            .containerBox
+            {
+                max-width: 366px;
+                height: 315px;
+            }
+            .containerBox:nth-child(1)
+             {
+                background-image: url(../img/ourWorkFirst.jpg);
+                -webkit-background-size: cover;
+                background-size: cover;
+             }
+            .containerBox:nth-child(2)
+            {
+                background-image: url(../img/webSite.png);
+                -webkit-background-size: cover;
+                background-size: cover;
+            }
+            .containerBox:nth-child(3)
+            {
+                background-image: url(../img/order.png);
+                -webkit-background-size: cover;
+                background-size: cover;
+            }
+        }
     }
 }
