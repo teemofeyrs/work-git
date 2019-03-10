@@ -290,7 +290,11 @@ body{
         }
         .row.firstRow
         {
+<<<<<<< HEAD
           padding-top: 200px;
+=======
+            padding-top: 200px;
+>>>>>>> c3fd9acee5f4fb25429a5bc988cec832b15cc874
           .containerBox
           {
             position: relative;
@@ -320,8 +324,13 @@ body{
                 margin-top: 44px;
                 .price
                 {
+<<<<<<< HEAD
                   padding: 10px 15px;
                   font-size: 1.2rem;
+=======
+                  padding: 7px 15px;
+                  font-size: 1.1rem;
+>>>>>>> c3fd9acee5f4fb25429a5bc988cec832b15cc874
                   font-family: $Paragon530;
                 }
                 i.fa
@@ -405,6 +414,7 @@ body{
         }
         .beFirstImg
         {
+          margin-bottom: 120px;
           img {
             margin: 0 auto;
             width: 200px;
@@ -415,4 +425,74 @@ body{
         }
       }
     }
+
+  /*section last projects*/
+  section.lastProjects
+  {
+    .lastProjectsHeader, .lastProjectsFooter
+    {
+      height: 120px;
+      background: #303263;
+      position: relative;
+    }
+    .lastProjectsHeader
+    {
+      h2
+      {
+        font-family: $Paragon530;
+        color:  #ffffff;
+        font-size: 36px;
+        line-height: 36px;
+        font-weight: 400;
+        z-index: 100;
+      }
+    }
+    .lastProjectsHeader:before
+    {
+      content: 'our projects';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -60%);
+      color:  rgba(255,255,255, 0.5);
+      text-transform: uppercase;
+      font-size: 96.36px;
+      font-weight: 700;
+      letter-spacing: 4.818px;
+      line-height: 120px;
+      text-align: center;
+    }
+    .wrapperBoxFirst
+    {
+      height: auto;
+      img
+      {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .wrapperBoxSec
+    {
+      height: auto;
+      img
+      {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .lastProjectsFooter
+    {
+      .btnMore
+      {
+        width: 240px;
+        height: 66px;
+        border-radius: 6px;
+        background: #696A8C;
+        color: $white;
+        text-transform: uppercase;
+        font-size: 25px;
+        font-weight: bold;
+      }
+    }
+  }
 }
