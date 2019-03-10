@@ -379,13 +379,14 @@ body{
           h2
           {
             font-family: $Paragon530;
-            font-size: 2.2rem;
+            font-size: 2.2em;
           }
           p
           {
             font-family: 'Arial', sans-serif;
-            font-size: 1.5rem;
+            font-size: 1.5em;
             line-height: 40px;
+            font-weight: 500;
           }
         }
         .beFirst:before
@@ -394,7 +395,7 @@ body{
           position: absolute;
           top: 0;
           left: 0;
-          width: 100%;
+          //width: 100%;
           height: auto;
           padding: 0;
           font-size: 56px;
@@ -445,12 +446,11 @@ body{
       top: 50%;
       left: 50%;
       transform: translate(-50%, -60%);
-      color:  rgba(255,255,255, 0.5);
+      color:  rgba(255,255,255, 0.3);
       text-transform: uppercase;
-      font-size: 96.36px;
+      font-size: 4em;
       font-weight: 700;
-      letter-spacing: 4.818px;
-      line-height: 120px;
+      letter-spacing: 6px;
       text-align: center;
     }
     .wrapperBoxFirst,
@@ -506,5 +506,99 @@ body{
         font-weight: bold;
       }
     }
+  }
+
+  /*section adaptate*/
+  section.adaptate
+  {
+    padding: 10% 0 10% 10%;
+    .adaptateContent
+    {
+
+      h2
+      {
+        margin-bottom: 40px;
+        padding-top: 2em;
+        position: relative;
+        font-family: $Paragon530;
+        font-size: 2.5em;
+        font-weight: bold;
+      }
+      h2:before
+      {
+        content: 'Adaptate';
+        position: absolute;
+        top: 15px;
+        left: 0;
+        transform: translate(-10%, 10%);
+        text-transform: uppercase;
+        font-family: 'Tahoma',sans-serif;
+        font-size: 2.5em;
+        font-weight: 700;
+        letter-spacing: 2px;
+        color: #dedede;
+        z-index: -1;
+      }
+      p
+      {
+        padding-right: 10em;
+        font-family: 'Arial', sans-serif;
+        font-size: 1.2em;
+        font-weight: 500;
+        line-height: 40px;
+      }
+    }
+    .adaptateImg
+    {
+      figure
+      {
+        margin: 0 auto;
+      }
+      figure:last-child
+      {
+        margin: 0;
+      }
+    }
+  }
+
+  /*section trade-in*/
+  section.tradeIn
+  {
+    position: relative;
+    min-height: 672px;
+    background-image: url(../img/trade-in.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: $white;
+
+    .tradeInHeader
+    {
+      margin: 4em 0;
+      h2
+      {
+        font-family: $Paragon530;
+        font-size: 3em;
+        z-index: 100;
+      }
+    }
+    .tradeInContent
+    {
+
+    }
+    .tradeInButton
+    {
+
+    }
+  }
+  section.tradeIn:before
+  {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
   }
 }

@@ -3,7 +3,7 @@
 {
     body
     {
-        font-size: 12px;
+        font-size: 10px;
     }
     body .baner
     {
@@ -52,6 +52,67 @@
     body section.credo
     {
         padding-top: 30px;
+    }
+    body section.credo h2
+    {
+        font-size: 48px;
+        margin: 35px 0;
+    }
+    body section.credo .credoText
+    {
+        padding: 20px 30px;
+        font-size: 1.2rem;
+        text-align: justify;
+    }
+
+    /*section our work*/
+    body section.ourWork .developBaner
+    {
+        width: 100%;
+    }
+    body section.ourWork .row.secondRow
+    {
+        margin-top: 40px;
+    }
+    body section.ourWork .row.secondRow .beFirst:before
+    {
+        top: 20px;
+        left: 20px;
+        font-size: 4em;
+    }
+    body section.ourWork .row.secondRow .beFirst p
+    {
+        line-height: 30px;
+    }
+
+    /*section last projects*/
+    body section.lastProjects .lastProjectsHeader:before
+    {
+        font-size: 3.2em;
+        letter-spacing: 1px;
+    }
+    body section.lastProjects .lastProjectsHeader h2
+    {
+        font-size: 24px;
+    }
+    body section.lastProjects .lastProjectsFooter .btnMore
+    {
+        width: 140px;
+        height: 40px;
+        font-size: 1.4em;
+    }
+
+    /*section adaptate*/
+    body section.adaptate .adaptateContent h2::before
+    {
+        top: 30px;
+        font-size: 2em;
+    }
+    body section.adaptate .adaptateContent p
+    {
+        padding-right: 1em;
+        line-height: 30px;
+        text-align: justify;
     }
 
 }
@@ -111,6 +172,68 @@
     {
         padding-top: 30px;
     }
+    body section.credo h2
+    {
+        font-size: 48px;
+        margin: 35px 0;
+    }
+    body section.credo .credoText
+    {
+        padding: 20px 30px;
+        font-size: 1.2rem;
+        text-align: justify;
+    }
+
+    /*section our work*/
+    body section.ourWork .developBaner
+    {
+        width: 100%;
+    }
+    body section.ourWork .row.secondRow
+    {
+        margin-top: 40px;
+    }
+    body section.ourWork .row.secondRow .beFirst:before
+    {
+        top: 20px;
+        left: 20px;
+        font-size: 4em;
+    }
+    body section.ourWork .row.secondRow .beFirst p
+    {
+        line-height: 30px;
+    }
+
+
+    /*section last projects*/
+    body section.lastProjects .lastProjectsHeader:before
+    {
+        font-size: 3em;
+        letter-spacing: 1px;
+    }
+    body section.lastProjects .lastProjectsHeader h2
+    {
+        font-size: 24px;
+    }
+    body section.lastProjects .lastProjectsFooter .btnMore
+    {
+        width: 160px;
+        height: 50px;
+        font-size: 1.4em;
+    }
+
+    /*section adaptate*/
+    body section.adaptate .adaptateContent h2:before
+    {
+        top: 30px;
+        font-size: 2.5em;
+    }
+    body section.adaptate .adaptateContent p
+    {
+        padding-right: 2em;
+        line-height: 30px;
+        text-align: justify;
+    }
 }
 
 /*Medium devices (tablets, 768px and up)*/
@@ -126,12 +249,43 @@
     {
 
     }
+
+
+    /*section last projects*/
+    body section.lastProjects .lastProjectsHeader:before
+    {
+        font-size: 3.5em;
+        letter-spacing: 1px;
+    }
+    body section.lastProjects .lastProjectsFooter .btnMore
+    {
+        width: 160px;
+        height: 50px;
+        font-size: 1.4em;
+    }
+
+    body section.adaptate .adaptateContent h2:before
+    {
+        top: 25px;
+        font-size: 2.5em;
+    }
+    body section.adaptate .adaptateContent p
+    {
+        padding-right: 2em;
+        line-height: 30px;
+        text-align: justify;
+    }
 }
 
 /*Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) and (max-width: 1199.98px)
 {
-
+    /*section last projects*/
+    body section.lastProjects .lastProjectsHeader:before
+    {
+        font-size: 3.5em;
+        letter-spacing: 6px;
+    }
 }
 
 /*Extra large devices (large desktops, 1200px and up)*/
