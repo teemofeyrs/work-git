@@ -290,7 +290,7 @@ body{
         }
         .row.firstRow
         {
-            margin-top: 200px;
+          padding-top: 200px;
           .containerBox
           {
             position: relative;
@@ -320,7 +320,7 @@ body{
                 margin-top: 44px;
                 .price
                 {
-                  padding: 10px 20px;
+                  padding: 10px 15px;
                   font-size: 1.2rem;
                   font-family: $Paragon530;
                 }
@@ -383,7 +383,7 @@ body{
           }
           p
           {
-            font-family: Arial;
+            font-family: 'Arial', sans-serif;
             font-size: 1.5rem;
             line-height: 40px;
           }
