@@ -92,7 +92,7 @@
     /*section last projects*/
     body section.lastProjects .lastProjectsHeader:before
     {
-        font-size: 3.2em;
+        font-size: 3em;
         letter-spacing: 1px;
     }
     body section.lastProjects .lastProjectsHeader h2
@@ -259,7 +259,7 @@
     /*section last projects*/
     body section.lastProjects .lastProjectsHeader:before
     {
-        font-size: 3em;
+        font-size: 3.2em;
         letter-spacing: 1px;
     }
     body section.lastProjects .lastProjectsHeader h2
