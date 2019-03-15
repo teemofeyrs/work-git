@@ -70,6 +70,7 @@
     body section.ourWork .developBaner
     {
         width: 100%;
+        top: -25%;
     }
     body section.ourWork .row.secondRow
     {
