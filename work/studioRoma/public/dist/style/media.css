@@ -52,11 +52,12 @@
     body section.credo
     {
         padding-top: 30px;
+        padding-bottom: 30px;
     }
     body section.credo h2
     {
-        font-size: 46px;
-        margin: 30px 0;
+        font-size: 36px;
+        margin: 20px 0;
     }
     body section.credo .credoText
     {
@@ -92,7 +93,7 @@
     /*section last projects*/
     body section.lastProjects .lastProjectsHeader:before
     {
-        font-size: 2.8em;
+        font-size: 2.5em;
         letter-spacing: 1px;
     }
     body section.lastProjects .lastProjectsHeader h2
