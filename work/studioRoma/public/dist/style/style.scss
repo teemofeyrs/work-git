@@ -6,6 +6,7 @@ $Exo2: 'Exo2';
 $Futura: 'Futura';
 $HelveticaBold: 'Helvetica Bold';
 $HelveticaRoman: 'Helvetica Roman';
+$Arial: 'ArialCyrMT';
 
 /*color var*/
 $white: #fff;
@@ -28,6 +29,7 @@ body{
 {
     color: $blueIcon;
 }
+
     .baner {
         margin-bottom: 0;
         padding-top: 14em;
@@ -170,7 +172,7 @@ body{
                 padding: 10px 25px 0;
                 min-height: 343px;
                 transition: 0.4s;
-                font-family: 'Arial', sans-serif;
+                font-family: $Arial, sans-serif;
                 span i.fa
                 {
                     font-size: 40px;
@@ -233,6 +235,8 @@ body{
         font-size: 340px;
         z-index: -1;
     }
+
+  /*section credo*/
     section.credo
     {
         padding-top: 133px;
@@ -383,7 +387,7 @@ body{
           }
           p
           {
-            font-family: 'Arial', sans-serif;
+            font-family: $Arial, sans-serif;
             font-size: 1.5em;
             line-height: 40px;
             font-weight: 500;
@@ -445,7 +449,7 @@ body{
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -60%);
+      transform: translate(-50%, -65%);
       color:  rgba(255,255,255, 0.3);
       text-transform: uppercase;
       font-size: 4em;
@@ -496,6 +500,8 @@ body{
     {
       .btnMore
       {
+        outline: none;
+        border: none;
         width: 240px;
         height: 66px;
         border-radius: 6px;
@@ -542,7 +548,7 @@ body{
       p
       {
         padding-right: 10em;
-        font-family: 'Arial', sans-serif;
+        font-family: $Arial, sans-serif;
         font-size: 1.2em;
         font-weight: 500;
         line-height: 40px;
@@ -574,9 +580,10 @@ body{
 
     .tradeInHeader
     {
-      margin: 4em 0;
+
       h2
       {
+        margin: 2em 0;
         font-family: $Paragon530;
         font-size: 3em;
         z-index: 100;
@@ -584,20 +591,21 @@ body{
     }
     .tradeInContent
     {
+      margin-bottom: 15px;
       .tradeInContentHead {
-        max-height: 75px;
+        max-height: 60px;
         margin-bottom: 20px;
         img.iconTradeIn {
           display: block;
           margin-right: 20px;
-          width: 72px;
-          max-height: 75px;
+          width: 69px;
+          max-height: 60px;
         }
         h3
         {
           position: relative;
           font-family: $Paragon530;
-          line-height: 75px;
+          line-height: 60px;
           font-size: 1.5em;
           font-weight: bold;
           margin-bottom: 40px;
@@ -612,6 +620,23 @@ body{
     .tradeInButton
     {
 
+      .btn2
+      {
+        margin-bottom: 15px;
+        outline: none;
+        border: none;
+        width: 330px;
+        height: 65px;
+        border-radius: 10px;
+        background: $yellow;
+        color: $white;
+        text-align: center;
+        line-height: 65px;
+        font-family: $Paragon530;
+        font-size: 1.5em;
+        font-weight: bold;
+        z-index: 100;
+      }
     }
   }
   section.tradeIn:before
@@ -623,5 +648,183 @@ body{
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  /*section be careful*/
+  section.beCareful
+  {
+    padding: 10% 0 10% 10%;
+    .beCarefulContent
+    {
+
+      h2
+      {
+        margin-bottom: 40px;
+        padding-top: 2em;
+        position: relative;
+        font-family: $Paragon530;
+        font-size: 2.5em;
+        font-weight: bold;
+      }
+      h2:before
+      {
+        content: 'Be careful';
+        position: absolute;
+        top: 45px;
+        left: 10px;
+        transform: translate(-10%, 10%);
+        text-transform: uppercase;
+        font-family: 'Tahoma',sans-serif;
+        font-size: 1.6em;
+        font-weight: 700;
+        letter-spacing: 8px;
+        color: #dedede;
+        z-index: -1;
+      }
+      p
+      {
+
+        font-family: $Arial, sans-serif;
+        font-size: 1.2em;
+        font-weight: 500;
+        line-height: 35px;
+      }
+    }
+    .beCarefulImg
+    {
+      figure
+      {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  /*section contact us*/
+  section.contactUS
+  {
+    padding-top: 133px;
+    position: relative;
+    min-height: 566px;
+    background-image: url("../img/contactUsBG.jpg");
+    background-size: cover;
+    color: $white;
+    .contactUsContent h3
+    {
+      font-size: 2em;
+      font-family: $Paragon530;
+      margin-bottom: 50px;
+    }
+    .contactUsContent p
+    {
+      font-family: $Arial;
+      font-size: 1.1em;
+      line-height: 30px;
+    }
+    .contactUsForm
+    {
+      form
+      {
+        position: relative;
+        margin-bottom: 50px;
+        input, textarea {
+          background: transparent;
+          padding-left: 16px;
+          outline: none;
+          border: none;
+          box-sizing: border-box;
+          font-size: 1.1em;
+          font-family: $Arial;
+          color: $white;
+        }
+        input[type='text']
+        {
+          margin: 0;
+          padding-left: 16px;
+          width: 50%;
+          height: 40px;
+          line-height: 40px;
+          border-top: 4px solid $white;
+          border-left: 4px solid $white;
+        }
+        input[type='text']:nth-of-type(2)
+        {
+          position: absolute;
+          top: 0;
+          right: 0;
+          border-right: 4px solid $white;
+          width: 50%;
+        }
+        input[type='email']
+        {
+          height: 40px;
+          line-height: 40px;
+          border: 4px solid $white;
+          border-bottom: none;
+        }
+        textarea
+        {
+          padding-top: 15px;
+          border: 4px solid $white;
+        }
+        p{
+          max-width: 70%;
+          display: inline-block;
+          padding-left: 16px;
+          font-size: 0.9em;
+        }
+        input[type='submit']
+        {
+          position: absolute;
+          bottom: -25px;
+          right: 0;
+          width: 142px;
+          height: 45px;
+          border-radius: 6px;
+          line-height: 45px;
+          background: $yellow;
+          font-family: $Paragon530;
+          text-transform: uppercase;
+          cursor: pointer;
+          z-index: 100;
+        }
+        input::-webkit-input-placeholder,
+        textarea::-webkit-input-placeholder
+        {
+          color: $white;
+        }
+        input:-moz-placeholder,
+        textarea:-moz-placeholder
+        {
+          color: $white;
+        }
+        input::-moz-placeholder,
+        textarea::-moz-placeholder
+        {
+          color: $white;
+        }
+        input:-ms-input-placeholder,
+        textarea:-ms-input-placeholder
+        {
+          color: $white;
+        }
+      }
+    }
+  }
+  section.contactUS:before
+  {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(107, 95, 142, 0.6);
+  }
+
+  /*footer*/
+  footer
+  {
+    height: 108px;
+    background: $yellow;
   }
 }

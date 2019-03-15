@@ -3,7 +3,7 @@
 {
     body
     {
-        font-size: 10px;
+        font-size: 12px;
     }
     body .baner
     {
@@ -74,11 +74,15 @@
     {
         margin-top: 40px;
     }
+    body section.ourWork .row.secondRow .beFirst h2
+    {
+        font-size: 2em;
+    }
     body section.ourWork .row.secondRow .beFirst:before
     {
-        top: 20px;
+        top: 14px;
         left: 20px;
-        font-size: 4em;
+        font-size: 3em;
     }
     body section.ourWork .row.secondRow .beFirst p
     {
@@ -102,11 +106,25 @@
         font-size: 1.4em;
     }
 
-    /*section adaptate*/
-    body section.adaptate .adaptateContent h2::before
+    /*section trade In */
+    body section.tradeIn .tradeInButton .btn2
     {
-        top: 30px;
+        width: 250px;
+        height: 50px;
+        font-size: 1.2em;
+        line-height: 50px;
+        font-weight: 500;
+    }
+
+    /*section adaptate*/
+    body section.adaptate .adaptateContent h2
+    {
         font-size: 2em;
+    }
+    body section.adaptate .adaptateContent h2:before
+    {
+        top: 31px;
+        font-size: 1.6em;
     }
     body section.adaptate .adaptateContent p
     {
@@ -115,6 +133,39 @@
         text-align: justify;
     }
 
+    /*section be careful */
+    body section.beCareful .beCarefulContent h2
+    {
+        font-size: 2em;
+    }
+    body section.beCareful .beCarefulContent h2:before
+    {
+        top: 31px;
+        font-size: 1.6em;
+        letter-spacing: 1px;
+    }
+
+    /*section contact us */
+    body section.contactUS
+    {
+        padding-top: 50px;
+    }
+    body section.contactUS .contactUsContent h3
+    {
+        margin-bottom: 30px;
+    }
+    body section.contactUS .contactUsForm form p
+    {
+        max-width: 60%;
+    }
+    body section.contactUS .contactUsForm form input[type='submit']
+    {
+        bottom: -15px;
+    }
+
+    body footer{
+        height: 40px;
+    }
 }
 
 /*Small devices (landscape phones, 576px and up)*/
@@ -234,6 +285,20 @@
         line-height: 30px;
         text-align: justify;
     }
+
+    /*section contact us*/
+    body section.contactUS
+    {
+        padding-top: 50px;
+    }
+    body section.contactUS .contactUsContent h3
+    {
+        margin-bottom: 30px;
+    }
+
+    body footer{
+        height: 50px;
+    }
 }
 
 /*Medium devices (tablets, 768px and up)*/
@@ -249,8 +314,6 @@
     {
 
     }
-
-
     /*section last projects*/
     body section.lastProjects .lastProjectsHeader:before
     {
@@ -275,6 +338,22 @@
         line-height: 30px;
         text-align: justify;
     }
+
+    /*section trade-in*/
+    body section.tradeIn .tradeInContent .tradeInContentHead h3
+    {
+        font-size: 1.1em;
+    }
+
+    /*section contact us*/
+    body section.contactUS .contactUsContent h3
+    {
+        margin-bottom: 35px;
+    }
+
+    body footer{
+        height: 50px;
+    }
 }
 
 /*Large devices (desktops, 992px and up)*/
@@ -285,6 +364,18 @@
     {
         font-size: 3.5em;
         letter-spacing: 6px;
+    }
+
+    /*section trade-in*/
+    body section.tradeIn .tradeInContent .tradeInContentHead h3
+    {
+        font-size: 1.3em;
+    }
+
+    /*section carefull*/
+    body section.beCareful .beCarefulContent h2:before
+    {
+        letter-spacing: 4px;
     }
 }
 
