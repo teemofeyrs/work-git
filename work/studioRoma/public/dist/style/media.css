@@ -61,8 +61,8 @@
     }
     body section.credo .credoText
     {
-        padding: 10px 20px;
-        font-size: 1.2rem;
+        padding: 10px 25px;
+        font-size: 16px;
         text-align: justify;
     }
 
@@ -94,8 +94,7 @@
     /*section last projects*/
     body section.lastProjects .lastProjectsHeader:before
     {
-        font-size: 2.5em;
-        letter-spacing: 1px;
+        display: none;
     }
     body section.lastProjects .lastProjectsHeader h2
     {
