@@ -1,2 +1,6 @@
 #ignore folder
 .idea/
+# log file
+*.log
+#node modules
+node_modules
