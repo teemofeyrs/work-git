@@ -1,0 +1,16 @@
+{
+  "name": "club",
+  "version": "0.0.1",
+  "description": "'for portfolio'",
+  "main": "app.js",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "http-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Artem Shmatchenko",
+  "license": "ISC"
+}
