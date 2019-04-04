@@ -105,6 +105,18 @@ var hello = function hello(name) {
 hello('Artem');
 hello('world');
 Object(_module__WEBPACK_IMPORTED_MODULE_0__["default"])();
+$(document).ready(function () {
+  $('#arrowDown').on('click', function (e) {
+    e.preventDefault();
+    $("html, body").animate({
+      scrollTop: 800
+    }, 600);
+  });
+  $('.drop').on('click', function (e) {
+    e.preventDefault();
+    $('.drop').toggleClass('submenu');
+  });
+});
 
 /***/ }),
 

@@ -1,5 +1,8 @@
 /*fonts*/
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,600i');
+*{
+  transition: 0.5s;
+}
 
 /*variable*/
 $OpenSans: 'Open Sans', sans-serif;
@@ -7,6 +10,8 @@ $BLUE: #72d0f4;
 $SocialBlue: #00bff0;
 $RED: #ff0000;
 $WHITE: #fff;
+$GREY: #505961;
+$LIGHTGrey: #8b9297;
 body{
   font-family: $OpenSans;
 /*section header*/
@@ -107,7 +112,14 @@ body{
     {
       border: 1px solid $WHITE;
     }
-    .navbar .navbar-nav .nav-item.submenu{
+    .navbar .navbar-nav .nav-item.drop
+    {
+      .sub-nav
+      {
+        display: none;
+      }
+    }
+    .navbar .navbar-nav .nav-item.drop.submenu{
       background: $WHITE;
       .nav-link
       {
@@ -118,16 +130,168 @@ body{
         content: ">";
         position: absolute;
         height: 100%;
-        width: 10px;
+        width: 30px;
         top: 0;
-        left: -100%;
+        left: -1px;
         color: $BLUE;
+        transform: rotate(90deg);
+        transition: transform 0.5s;
+        transition-delay: 0.5s;
+      }
+      .sub-nav{
+        display: block;
+        position: absolute;
+        top: 80px;
+        height: 110px;
+        width: 200px;
+        border-radius: 4px;
+        line-height: 35px;
+        background: $WHITE;
+        z-index: 100;
+        .sub-link
+        {
+          display: block;
+          width: 90%;
+          margin:0 auto;
+          font-weight: 600;
+          font-size: 13px;
+          color: $BLUE;
+          position: relative;
+        }
+        .sub-link:hover
+        {
+          background: $BLUE;
+          color: $WHITE;
+        }
+        .sub-link:hover:before{
+          color: $WHITE;
+        }
+        .sub-link:before{
+          content: ">";
+          position: absolute;
+          height: 100%;
+          width: 20px;
+          top: 0;
+          left: -1px;
+          color: $BLUE;
+        }
+      }
+      .sub-nav:before{
+        content: '';
+        position: absolute;
+        height: 10px;
+        width: 10px;
+        top: -5px;
+        left: 10px;
+        background-color: $WHITE;
         transform: rotate(45deg);
       }
     }
     .navbar-collapse.show
     {
       background: $BLUE;
+    }
+  }
+  /*section intro*/
+  section.intro
+  {
+    .aboutGym
+    {
+      padding: 60px 0;
+      h1
+      {
+        margin: 20px;
+        font-size: 38px;
+        color: $GREY;
+      }
+      p
+      {
+        font-size: 16px;
+        color: $LIGHTGrey;
+      }
+    }
+    .live
+    {
+      max-height: 250px;
+      position: relative;
+      margin-bottom: 75px;
+      .liveHeader
+      {
+        height: 50px;
+        line-height: 50px;
+        background-color: $BLUE;
+        p
+        {
+          padding: 0 20px;
+          font-size: 16px;
+          font-weight: 600;
+          color: $WHITE;
+          span
+          {
+            font-style: italic;
+          }
+        }
+        p:nth-child(2){
+          font-size: 11px;
+
+        }
+      }
+      .liveCam video
+      {
+        display: block;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        -o-object-fit: cover;
+        border-bottom: 4px solid $SocialBlue;
+      }
+    }
+    .classes
+    {
+      h2
+      {
+        color: $BLUE;
+      }
+      .wrapper
+      {
+        background-color: $SocialBlue;
+        padding: 20px 20px 20px 30px;
+        .firstList, .secondList
+        {
+          width: calc(50% - 30px);
+          p
+          {
+            border-bottom: 1px solid $WHITE;
+            line-height: 30px;
+            span
+            {
+              margin-right: 15px;
+              font-size: 1.3em;
+              color: $WHITE;
+            }
+            span:nth-child(2)
+            {
+              display: inline-block;
+              width: 40%;
+            }
+          }
+        }
+        .secondList
+        {
+          position: relative;
+          margin-left: 30px;
+        }
+        .secondList:before
+        {
+          content: '';
+          position: absolute;
+          width: 1px;
+          height: 80%;
+          top: 10%;
+          left: -15px;
+          background: $WHITE;
+        }
+      }
     }
   }
 }
