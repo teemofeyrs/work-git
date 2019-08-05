@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="dist/main.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Sport club</title>
 </head>
 <body>
@@ -115,7 +116,7 @@
                     <p class="ml-auto">Room 2</p>
                 </div>
                 <div class="liveCam">
-                    <video autoplay>
+                    <video id="videoCam1">
                         <source src="dist/live/spinning.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -127,7 +128,7 @@
                     <p class="ml-auto">Room 2</p>
                 </div>
                 <div class="liveCam">
-                    <video autoplay>
+                    <video id="videoCam2">
                         <source src="dist/live/liveGym.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -139,7 +140,7 @@
                     <p class="ml-auto">Room 2</p>
                 </div>
                 <div class="liveCam">
-                    <video autoplay>
+                    <video id="videoCam3">
                         <source src="dist/live/pilates.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -151,17 +152,113 @@
                 <h2 class="text-uppercase text-center">All Classes</h2>
                 <div class="wrapper d-flex">
                     <div class="firstList">
-                        <p><span><i class="fa fa-clock-o" aria-hidden="true"></i></span><span class="text-uppercase">Cardio fitness</span><span><i class="fa fa-calendar-o" aria-hidden="true"></i></span><span></span><span></span><span></span></p>
-                        <p><span><i class="fa fa-clock-o" aria-hidden="true"></i></span><span class="text-uppercase">Spinning</span><span><i class="fa fa-calendar-o" aria-hidden="true"></i></span><span></span><span></span><span></span></p>
-                        <p><span><i class="fa fa-clock-o" aria-hidden="true"></i></span><span class="text-uppercase">Pilates</span><span><i class="fa fa-calendar-o" aria-hidden="true"></i></span><span></span><span></span><span></span></p>
-                        <p><span><i class="fa fa-clock-o" aria-hidden="true"></i></span><span class="text-uppercase">Boxing</span><span><i class="fa fa-calendar-o" aria-hidden="true"></i></span><span></span><span></span><span></span></p>
+                        <p><span><i class="fa fa-clock-o" aria-hidden="true"></i></span><span class="text-uppercase">Cardio fitness</span><span
+                                data-toggle="tooltip" data-placement="top" title="TIMETIBLE"><i
+                                class="fa fa-calendar-o" aria-hidden="true"></i></span><span data-toggle="tooltip"
+                                                                                             data-placement="top"
+                                                                                             title="SEND TO"><i
+                                class="fa fa-envelope-o"
+                                aria-hidden="true"></i></span><span data-toggle="tooltip" data-placement="top"
+                                                                    title="LIKE IT"><i class="fa fa-heart-o"
+                                                                                       aria-hidden="true"></i></span><span
+                                data-toggle="tooltip" data-placement="top" title="SHARE"><i class="fa fa-share"
+                                                                                            aria-hidden="true"></i></span>
+                        </p>
+                        <p><span><i class="fa fa-clock-o" aria-hidden="true"></i></span><span class="text-uppercase">Spinning</span><span
+                                data-toggle="tooltip" data-placement="top" title="TIMETIBLE"><i
+                                class="fa fa-calendar-o" aria-hidden="true"></i></span><span data-toggle="tooltip"
+                                                                                             data-placement="top"
+                                                                                             title="SEND TO"><i
+                                class="fa fa-envelope-o"
+                                aria-hidden="true"></i></span><span data-toggle="tooltip" data-placement="top"
+                                                                    title="LIKE IT"><i class="fa fa-heart-o"
+                                                                                       aria-hidden="true"></i></span><span
+                                data-toggle="tooltip" data-placement="top" title="SHARE"><i class="fa fa-share"
+                                                                                            aria-hidden="true"></i></span>
+                        </p>
+                        <p><span><i class="fa fa-clock-o" aria-hidden="true"></i></span><span class="text-uppercase">Pilates</span><span
+                                data-toggle="tooltip" data-placement="top" title="TIMETIBLE"><i
+                                class="fa fa-calendar-o" aria-hidden="true"></i></span><span data-toggle="tooltip"
+                                                                                             data-placement="top"
+                                                                                             title="SEND TO"><i
+                                class="fa fa-envelope-o"
+                                aria-hidden="true"></i></span><span data-toggle="tooltip" data-placement="top"
+                                                                    title="LIKE IT"><i class="fa fa-heart-o"
+                                                                                       aria-hidden="true"></i></span><span
+                                data-toggle="tooltip" data-placement="top" title="SHARE"><i class="fa fa-share"
+                                                                                            aria-hidden="true"></i></span>
+                        </p>
+                        <p><span><i class="fa fa-clock-o" aria-hidden="true"></i></span><span class="text-uppercase">Boxing</span><span
+                                data-toggle="tooltip" data-placement="top" title="TIMETIBLE"><i
+                                class="fa fa-calendar-o" aria-hidden="true"></i></span><span data-toggle="tooltip"
+                                                                                             data-placement="top"
+                                                                                             title="SEND TO"><i
+                                class="fa fa-envelope-o"
+                                aria-hidden="true"></i></span><span data-toggle="tooltip" data-placement="top"
+                                                                    title="LIKE IT"><i class="fa fa-heart-o"
+                                                                                       aria-hidden="true"></i></span><span
+                                data-toggle="tooltip" data-placement="top" title="SHARE"><i class="fa fa-share"
+                                                                                            aria-hidden="true"></i></span>
+                        </p>
                     </div>
                     <div class="secondList">
-                        <p><span><i class="fa fa-clock-o" aria-hidden="true"></i></span><span class="text-uppercase">Aerobic</span><span><i class="fa fa-calendar-o" aria-hidden="true"></i></span><span></span><span></span><span></span></p>
-                        <p><span><i class="fa fa-clock-o" aria-hidden="true"></i></span><span class="text-uppercase">Kik Boxing</span><span><i class="fa fa-calendar-o" aria-hidden="true"></i></span><span></span><span></span><span></span></p>
-                        <p><span><i class="fa fa-clock-o" aria-hidden="true"></i></span><span class="text-uppercase">Crossfit</span><span><i class="fa fa-calendar-o" aria-hidden="true"></i></span><span></span><span></span><span></span></p>
-                        <p><span><i class="fa fa-clock-o" aria-hidden="true"></i></span><span class="text-uppercase">Yoga</span><span><i class="fa fa-calendar-o" aria-hidden="true"></i></span><span></span><span></span><span></span></p>
+                        <p><span><i class="fa fa-clock-o" aria-hidden="true"></i></span><span class="text-uppercase">Aerobic</span><span
+                                data-toggle="tooltip" data-placement="top" title="TIMETIBLE"><i
+                                class="fa fa-calendar-o" aria-hidden="true"></i></span><span data-toggle="tooltip"
+                                                                                             data-placement="top"
+                                                                                             title="SEND TO"><i
+                                class="fa fa-envelope-o"
+                                aria-hidden="true"></i></span><span data-toggle="tooltip" data-placement="top"
+                                                                    title="LIKE IT"><i class="fa fa-heart-o"
+                                                                                       aria-hidden="true"></i></span><span
+                                data-toggle="tooltip" data-placement="top" title="SHARE"><i class="fa fa-share"
+                                                                                            aria-hidden="true"></i></span>
+                        </p>
+                        <p><span><i class="fa fa-clock-o" aria-hidden="true"></i></span><span class="text-uppercase">Kik Boxing</span><span
+                                data-toggle="tooltip" data-placement="top" title="TIMETIBLE"><i
+                                class="fa fa-calendar-o" aria-hidden="true"></i></span><span data-toggle="tooltip"
+                                                                                             data-placement="top"
+                                                                                             title="SEND TO"><i
+                                class="fa fa-envelope-o"
+                                aria-hidden="true"></i></span><span data-toggle="tooltip" data-placement="top"
+                                                                    title="LIKE IT"><i class="fa fa-heart-o"
+                                                                                       aria-hidden="true"></i></span><span
+                                data-toggle="tooltip" data-placement="top" title="SHARE"><i class="fa fa-share"
+                                                                                            aria-hidden="true"></i></span>
+                        </p>
+                        <p><span><i class="fa fa-clock-o" aria-hidden="true"></i></span><span class="text-uppercase">Crossfit</span><span
+                                data-toggle="tooltip" data-placement="top" title="TIMETIBLE"><i
+                                class="fa fa-calendar-o" aria-hidden="true"></i></span><span data-toggle="tooltip"
+                                                                                             data-placement="top"
+                                                                                             title="SEND TO"><i
+                                class="fa fa-envelope-o"
+                                aria-hidden="true"></i></span><span data-toggle="tooltip" data-placement="top"
+                                                                    title="LIKE IT"><i class="fa fa-heart-o"
+                                                                                       aria-hidden="true"></i></span><span
+                                data-toggle="tooltip" data-placement="top" title="SHARE"><i class="fa fa-share"
+                                                                                            aria-hidden="true"></i></span>
+                        </p>
+                        <p><span><i class="fa fa-clock-o" aria-hidden="true"></i></span><span class="text-uppercase">Yoga</span><span
+                                data-toggle="tooltip" data-placement="top" title="TIMETIBLE"><i
+                                class="fa fa-calendar-o" aria-hidden="true"></i></span><span data-toggle="tooltip"
+                                                                                             data-placement="top"
+                                                                                             title="SEND TO"><i
+                                class="fa fa-envelope-o"
+                                aria-hidden="true"></i></span><span data-toggle="tooltip" data-placement="top"
+                                                                    title="LIKE IT"><i class="fa fa-heart-o"
+                                                                                       aria-hidden="true"></i></span><span
+                                data-toggle="tooltip" data-placement="top" title="SHARE"><i class="fa fa-share"
+                                                                                            aria-hidden="true"></i></span>
+                        </p>
                     </div>
+                </div>
+            </div>
+            <div class="col col-md-4 membership">
+                <h2 class="text-uppercase text-center">Membership <span class="font-italic font-weight-light">Prices</span></h2>
+                <div class="align-middle membershipPrices">
+                    <h3 class="text-uppercase text-center">25% discount for all members</h3>
+                    <p class="text-center font-weight-light">Discount on services and<br> treatments at the GymBase for<br> all membership cards holders.</p>
+                    <button class="memberBtn">more</button>
                 </div>
             </div>
         </div>

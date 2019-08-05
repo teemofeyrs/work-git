@@ -16,5 +16,18 @@ $(document).ready(function () {
         e.preventDefault();
         $('.drop').toggleClass('submenu')
     });
-
+    /*init tooltips */
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    });
 });
+/* video muted*/
+const videoCam1 = document.getElementById("videoCam1");
+videoCam1.muted = true;
+videoCam1.autoplay = true;
+const videoCam2 = document.getElementById("videoCam2");
+videoCam2.muted = true;
+videoCam2.autoplay = true;
+const videoCam3 = document.getElementById("videoCam3");
+videoCam3.muted = true;
+videoCam3.autoplay = true;

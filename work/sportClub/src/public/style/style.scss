@@ -1,17 +1,63 @@
 /*fonts*/
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,600i');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,700&display=swap');
 *{
   transition: 0.5s;
 }
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i,700&display=swap&subset=latin-ext');
 
 /*variable*/
 $OpenSans: 'Open Sans', sans-serif;
+$OpenSansCodens: 'Open Sans Condensed', sans-serif;
 $BLUE: #72d0f4;
 $SocialBlue: #00bff0;
 $RED: #ff0000;
 $WHITE: #fff;
 $GREY: #505961;
 $LIGHTGrey: #8b9297;
+
+.tooltip-main {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  font-weight: 700;
+  background: #fff;
+  border: 2px solid #fff;
+  color: $SocialBlue;
+  margin: 4px 10px 0 5px;
+  float: left;
+  text-align: left !important;
+}
+.tooltip-qm {
+  float: right;
+  margin: -2px 0px 3px 4px;
+  font-size: 12px;
+  background: #fff;
+}
+
+.tooltip-inner {
+  margin-left: 40px;
+  max-width: 236px !important;
+  height: 20px;
+  font-size: 12px;
+  padding: 0 10px;
+  background: #FFFFFF;
+  color: $SocialBlue;
+  border: none;
+  text-align: left;
+}
+
+.tooltip.show {
+  opacity: 1;
+}
+.bs-tooltip-auto[x-placement^=top] .arrow::before, .bs-tooltip-top .arrow::before {
+  border-top-color: #fff;
+}
+.bs-tooltip-auto[x-placement^=bottom] .arrow::before,
+.bs-tooltip-bottom .arrow::before {
+  border-top-color: #f8f9fa;
+  /* Red */
+}
+
 body{
   font-family: $OpenSans;
 /*section header*/
@@ -251,11 +297,14 @@ body{
       h2
       {
         color: $BLUE;
+        font-family: $OpenSansCodens;
       }
       .wrapper
       {
         background-color: $SocialBlue;
         padding: 20px 20px 20px 30px;
+        font-family: $OpenSans;
+        height: 212px;
         .firstList, .secondList
         {
           width: calc(50% - 30px);
@@ -265,14 +314,22 @@ body{
             line-height: 30px;
             span
             {
-              margin-right: 15px;
-              font-size: 1.3em;
+              margin-left: 10px;
+              font-size: 12px;
               color: $WHITE;
+              cursor: pointer;
+            }
+            span:nth-child(1){
+              margin: 0;
             }
             span:nth-child(2)
             {
+              margin: 0;
               display: inline-block;
               width: 40%;
+
+              margin-left: 5px;
+              margin-right: 40px;
             }
           }
         }
@@ -290,6 +347,53 @@ body{
           top: 10%;
           left: -15px;
           background: $WHITE;
+        }
+      }
+    }
+    .membership
+    {
+      h2
+      {
+        color: $BLUE;
+        font-family: $OpenSansCodens;
+
+      }
+      .membershipPrices
+      {
+        background-color: $SocialBlue;
+        padding: 20px 20px 20px 0px;
+        height: 212px;
+        font-family: $OpenSansCodens;
+        color: $WHITE;
+        h3
+        {
+          margin-top: 30px;
+          margin-bottom: 20px;
+          font-size: 18px;
+
+        }
+        p
+        {
+          margin: 0 auto;
+          font-family: $OpenSans;
+          font-size: 12px;
+        }
+        button.memberBtn
+        {
+          display: block;
+          margin: 15px auto;
+          padding: 5px 20px;
+          background: $SocialBlue;
+          color: $WHITE;
+          border: 1px solid $WHITE;
+          border-radius: 3px;
+          outline: none;
+          cursor: pointer;
+        }
+        button.memberBtn:hover
+        {
+          background: $WHITE;
+          color: $SocialBlue;
         }
       }
     }
