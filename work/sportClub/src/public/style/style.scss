@@ -203,6 +203,7 @@ body{
           font-size: 13px;
           color: $BLUE;
           position: relative;
+          cursor: pointer;
         }
         .sub-link:hover
         {
@@ -383,6 +384,7 @@ body{
           display: block;
           margin: 15px auto;
           padding: 5px 20px;
+          font-size: 14px;
           background: $SocialBlue;
           color: $WHITE;
           border: 1px solid $WHITE;
