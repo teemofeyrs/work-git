@@ -33,13 +33,12 @@ body{
       padding: 0;
       border-bottom: 1px solid white;
       list-style: none;
-      li
+      li.todo-item
       {
         position: relative;
         height: 40px;
         line-height: 40px;
         margin: 0 auto;
-
         .checkbox{
           display: inline;
           margin: 0 20px;
@@ -57,7 +56,7 @@ body{
         .edit
         {
           margin: 0 10px;
-          height: 40px;
+          height: 35px;
           background: inherit;
           border: none;
           line-height: 40px;
@@ -73,7 +72,7 @@ body{
         .delete
         {
           margin: 0 10px;
-          height: 40px;
+          height: 35px;
           background: inherit;
           border: none;
           line-height: 40px;
@@ -82,6 +81,50 @@ body{
           cursor: pointer;
         }
       }
+      li.todo-item.complited
+      {
+        position: relative;
+        height: 40px;
+        line-height: 40px;
+        margin: 0 auto;
+        background: #c6c6c6;
+        .title
+        {
+          text-decoration: line-through;
+        }
+        .edit
+        {
+          opacity: 0.1;
+        }
+        .edit:hover
+        {
+          opacity: 0.9;
+        }
+        .delete
+        {
+          opacity: 0.1;
+        }
+        .delete:hover
+        {
+          opacity: 0.9;
+        }
+      }
+      li.todo-item.editin
+      {
+      .title
+      {
+        display: none;
+      }
+      .textfield
+      {
+        display: inline-block;
+        min-width: 35vw;
+        line-height: 20px;
+        outline: yellow;
+        border: none;
+        border-radius: 3px;
+      }
+    }
     }
     form#todo-form
     {

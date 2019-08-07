@@ -25,23 +25,23 @@ body {
       padding: 0;
       border-bottom: 1px solid white;
       list-style: none; }
-      body main #todo-list li {
+      body main #todo-list li.todo-item {
         position: relative;
         height: 40px;
         line-height: 40px;
         margin: 0 auto; }
-        body main #todo-list li .checkbox {
+        body main #todo-list li.todo-item .checkbox {
           display: inline;
           margin: 0 20px; }
-        body main #todo-list li .title {
+        body main #todo-list li.todo-item .title {
           min-width: 35vw;
           font-size: 22px;
           font-weight: normal; }
-        body main #todo-list li .textfield {
+        body main #todo-list li.todo-item .textfield {
           display: none; }
-        body main #todo-list li .edit {
+        body main #todo-list li.todo-item .edit {
           margin: 0 10px;
-          height: 40px;
+          height: 35px;
           background: inherit;
           border: none;
           line-height: 40px;
@@ -49,17 +49,42 @@ body {
           color: #333;
           opacity: 0.5;
           cursor: pointer; }
-        body main #todo-list li .edit:hover {
+        body main #todo-list li.todo-item .edit:hover {
           opacity: 1; }
-        body main #todo-list li .delete {
+        body main #todo-list li.todo-item .delete {
           margin: 0 10px;
-          height: 40px;
+          height: 35px;
           background: inherit;
           border: none;
           line-height: 40px;
           font-size: 12px;
           color: #333;
           cursor: pointer; }
+      body main #todo-list li.todo-item.complited {
+        position: relative;
+        height: 40px;
+        line-height: 40px;
+        margin: 0 auto;
+        background: #c6c6c6; }
+        body main #todo-list li.todo-item.complited .title {
+          text-decoration: line-through; }
+        body main #todo-list li.todo-item.complited .edit {
+          opacity: 0.1; }
+        body main #todo-list li.todo-item.complited .edit:hover {
+          opacity: 0.9; }
+        body main #todo-list li.todo-item.complited .delete {
+          opacity: 0.1; }
+        body main #todo-list li.todo-item.complited .delete:hover {
+          opacity: 0.9; }
+      body main #todo-list li.todo-item.editin .title {
+        display: none; }
+      body main #todo-list li.todo-item.editin .textfield {
+        display: inline-block;
+        min-width: 35vw;
+        line-height: 20px;
+        outline: yellow;
+        border: none;
+        border-radius: 3px; }
     body main form#todo-form {
       padding: 15px 10px; }
       body main form#todo-form h5 {
