@@ -1,0 +1,22 @@
+
+$BLACK: #000;
+$WHITE: #fff;
+nav.navBar
+{
+  height: 100vh;
+  width: 5%;
+  background: $BLACK;
+  background: linear-gradient(#696969, #000);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: $WHITE;
+  i.toggleBar
+  {
+    margin: 0 auto;
+  }
+  ul.menu
+  {
+    display: none;
+  }
+}
