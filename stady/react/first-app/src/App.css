@@ -38,14 +38,3 @@
     }
 }
 
-nav.navBar{
-    background-color: #282c34;
-    min-height: 5vh;
-    font-size: calc(10px + 2vmin);
-    color: white;
-}
-nav.navBar ul {
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
-}
