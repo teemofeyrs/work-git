@@ -1,15 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router } from "react-router-dom";
 import './App.css';
 import Nav from './Components/Navigation/Nav';
-import Content from './Content';
+import Content from './Components/Content/Content';
 
 const App = () => {
-  return (
-    <div className="App">
-      <Nav />
-      <Content />
-    </div>
-  );
+    return (
+        <Router>
+            <div className="App">
+                <Nav/>
+                <Content/>
+            </div>
+        </Router>
+    );
 };
 export default App;

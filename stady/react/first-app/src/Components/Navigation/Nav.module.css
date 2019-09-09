@@ -1,11 +1,35 @@
 nav.navBar{
+    position: relative;
     background-color: #282c34;
-    min-height: 5vh;
+    /*min-height: 5vh;*/
     font-size: calc(10px + 2vmin);
     color: white;
 }
-nav.navBar ul {
-    display: flex;
+nav.navBar div.wrapper
+{
+    text-align: center;
+}
+nav.navBar div.wrapper #toggleBar.fa.fa-bars
+{
+    margin: 10px 0;
+    font-size: 28px;
+}
+nav.navBar .menu
+{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 400px;
+    display: block;
+    padding: 15px;
+    background: #000;
     justify-content: space-around;
     list-style: none;
+    color: #fff;
+    z-index: 10;
+}
+nav.navBar .menu a{
+    text-decoration: none;
+    color: white;
+
 }
