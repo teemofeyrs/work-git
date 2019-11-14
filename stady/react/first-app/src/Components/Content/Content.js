@@ -9,7 +9,7 @@ import Contacts from "./contacts/Contacts";
 const Content = () => {
     return (
         <div>
-            <Route path="/main" exact component={Main} />
+            <Route path="/" exact component={Main} />
             <Route path="/about" exact component={About} />
             <Route path="/skills" exact component={Skills} />
             <Route path="/portfolio" exact component={Portfolio} />

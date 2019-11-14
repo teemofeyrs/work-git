@@ -5,7 +5,7 @@ class Main extends Component {
     constructor(props) {
         super(props);
         this.sate = {
-            videoURL: 'https://media.istockphoto.com/videos/abstract-backgroundblue-color-video-id821135272'
+            videoURL: 'https://media.istockphoto.com/videos/code-programming-video-id854270548',
         }
     }
 
@@ -18,9 +18,15 @@ class Main extends Component {
                 </video>
 
                 <div className={classes.content}>
-                    <h1>Heading</h1>
-                    <p>Lorem ipsum...</p>
-                    <button id={classes.myBtn}>Pause</button>
+                    <div>
+                        <img src="./../../../img/madeBY.png" alt='logo'/>
+                    </div>
+                    <h1>
+                        I'm<br/>
+                        Artem<br/>
+                        Shmetchenko<br/>
+                    </h1>
+                    <p>junior front-end developer</p>
                 </div>
             </div>
         )

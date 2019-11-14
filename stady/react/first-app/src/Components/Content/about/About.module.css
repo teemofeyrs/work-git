@@ -2,5 +2,81 @@
 {
     height: 100%;
     width: 100%;
-    background: #51bfff;
+    background: rgb(42,42,42);
+    background: linear-gradient(215deg, rgba(42,42,42,1) 0%, rgba(0,0,0,1) 40%);
+    display: grid;
+    grid-template-columns: [first] 100px [line2] auto [line3] 50px [col4-start] 500px [five] 70px [end];
+    grid-template-rows: [row1-start] 200px [row1-end] auto [third-line] 100px [last-line];
 }
+.description
+{
+    grid-column: 2;
+    grid-row: 2;
+    padding: 30px;
+}
+.description h2
+{
+    margin: 20px 0;
+    font-size: 5rem;
+    font-weight: bold;
+    color: #a99561;
+}
+.description p
+{
+    margin: 0 0 15px;
+    color: white;
+    font-size: 2rem;
+    text-align: justify;
+    line-height: 3rem;
+}
+.description a
+{
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    outline: none;
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    border-radius: 4px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.ava
+{
+    grid-column: 4;
+    grid-row: 2;
+    height: 450px;
+    width: 300px;
+    position: relative;
+    border: 1px solid white;
+    border-radius: 15px;
+}
+div.ava:before
+{
+    content: '';
+    position: absolute;
+    display: block;
+    height: 450px;
+    width: 300px;
+    top: -30px;
+    left: 30px;
+    background-image: url("./../../../img/ava.jpg");
+    background-repeat: no-repeat;
+    background-position: 70% 50%;
+    background-size: cover;
+    border: 1px solid white;
+    border-radius: 15px;
+}
+.information
+{
+    position: relative;
+    grid-column: 1 / span 5;
+    grid-row: third-line;
+    display: flex;
+    justify-content: space-around;
+    background: rgb(42,42,42);
+    background: linear-gradient(90deg, rgba(42,42,42,1) 0%, rgba(0,0,0,1) 100%);
+    color: white;
+}
+

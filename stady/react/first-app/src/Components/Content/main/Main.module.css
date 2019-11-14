@@ -1,9 +1,9 @@
-div.main
-{
+div.main {
     position: relative;
     height: 100%;
     width: 100%;
 }
+
 div.main #myVideo {
     position: relative;
     right: 0;
@@ -11,6 +11,7 @@ div.main #myVideo {
     min-width: 100%;
     min-height: 100%;
 }
+
 .content {
     position: fixed;
     bottom: 0;
@@ -21,18 +22,15 @@ div.main #myVideo {
     padding: 20px;
 }
 
-/* Style the button used to pause/play the video */
-#myBtn {
-    width: 200px;
-    font-size: 18px;
-    padding: 10px;
-    border: none;
-    background: #000;
-    color: #fff;
-    cursor: pointer;
+.content h1 {
+    margin-top: 10px;
+    height: 80%;
+    font-size: 15rem;
+    font-weight: bold;
+    color: white;
+    background: url('https://images.unsplash.com/photo-1529236183275-4fdcf2bc987e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1347&q=80') no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 1000;
 }
 
-#myBtn:hover {
-    background: #ddd;
-    color: black;
-}
