@@ -123,7 +123,46 @@ $(document).ready(function () {
 
   $(function () {
     $('[data-toggle="tooltip"]').tooltip();
-  });
+  }); //random trainer face
+
+  var url = 'https://randomuser.me/api/?results=10';
+
+  function fetchInformation(url) {
+    var trainersSlider = $('#trainersSlider');
+    /*let trainerCard = $('trainerCard');
+    let img = $('trainerFace');
+    let trainerName = $('trainerName');*/
+
+    fetch(url).then(function (respons) {
+      return respons.json();
+    }).then(function (data) {
+      console.log(data);
+      console.log(data.results);
+      data.results.forEach(function (person) {
+        function createEl(elem) {
+          return document.createElement(elem);
+        }
+
+        function appendEl(parent, elem) {
+          return parent.append(elem);
+        }
+
+        var img = createEl('img');
+        img.src = person.picture.medium;
+        var trainerName = createEl('h4');
+        trainerName.classList.add('trainerName');
+        trainerName.innerHTML = person.name.first + ' ' + person.name.last;
+        var trainerCard = createEl('div');
+        trainerCard.classList.add('trainerCard');
+        trainerCard.append(img);
+        trainerCard.append(trainerName);
+        trainersSlider.append(trainerCard);
+      });
+      return trainersSlider;
+    });
+  }
+
+  fetchInformation(url);
 });
 /* video muted*/
 
@@ -135,16 +174,7 @@ videoCam2.muted = true;
 videoCam2.autoplay = true;
 var videoCam3 = document.getElementById("videoCam3");
 videoCam3.muted = true;
-videoCam3.autoplay = true; //random trainer face
-
-$.ajax({
-  url: 'https://randomuser.me/api/',
-  dataType: 'json',
-  success: function success(data) {
-    $('trainerFace').attr('src', data.results['0'].picture.medium);
-    $('rainerName').valueOf(data.results['0'].name);
-  }
-});
+videoCam3.autoplay = true;
 
 /***/ }),
 
