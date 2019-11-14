@@ -3,15 +3,19 @@
   "version": "0.0.1",
   "description": "'for portfolio'",
   "main": "app.js",
-  "dependencies": {},
+  "dependencies": {
+    "sass": "^1.23.1",
+    "yuicompressor": "^2.4.8"
+  },
   "devDependencies": {
     "@babel/core": "^7.4.3",
     "@babel/preset-env": "^7.4.3",
     "babel-loader": "^8.0.5",
     "eslint": "^5.16.0",
     "eslint-loader": "^2.1.2",
-    "webpack": "^4.29.6",
-    "webpack-cli": "^3.3.0"
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.9.0"
   },
   "scripts": {
     "webpack": "webpack -w",

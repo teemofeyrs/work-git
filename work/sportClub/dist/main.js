@@ -106,12 +106,15 @@ hello('Artem');
 hello('world');
 Object(_module__WEBPACK_IMPORTED_MODULE_0__["default"])();
 $(document).ready(function () {
+  //arrow in header
   $('#arrowDown').on('click', function (e) {
     e.preventDefault();
+    var screenTop = document.documentElement.clientHeight;
     $("html, body").animate({
-      scrollTop: 800
+      scrollTop: "".concat(screenTop)
     }, 600);
-  });
+  }); //section social, arrow in subMenu
+
   $('.drop').on('click', function (e) {
     e.preventDefault();
     $('.drop').toggleClass('submenu');
@@ -132,7 +135,16 @@ videoCam2.muted = true;
 videoCam2.autoplay = true;
 var videoCam3 = document.getElementById("videoCam3");
 videoCam3.muted = true;
-videoCam3.autoplay = true;
+videoCam3.autoplay = true; //random trainer face
+
+$.ajax({
+  url: 'https://randomuser.me/api/',
+  dataType: 'json',
+  success: function success(data) {
+    $('trainerFace').attr('src', data.results['0'].picture.medium);
+    $('rainerName').valueOf(data.results['0'].name);
+  }
+});
 
 /***/ }),
 
