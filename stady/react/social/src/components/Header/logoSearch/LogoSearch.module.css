@@ -1,0 +1,46 @@
+.logoSearch
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logoSearch img{
+    width: 50px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.logoSearch form
+{
+    width: 280px;
+    position: relative;
+}
+.logoSearch form input
+{
+    display: inline-block;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #fff;
+    height: 38px;
+    color: #b2b2b2;
+    font-size: 16px;
+    outline: none;
+    border: 0;
+    padding: 0 10px;
+}
+.logoSearch form button
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 5px;
+    background-color: #efefef;
+    width: 38px;
+    height: 100%;
+    border: 0;
+}
+.logoSearch form button i
+{
+    color: #e44d3a;
+    font-size: 20px;
+    font-weight: bold;
+}

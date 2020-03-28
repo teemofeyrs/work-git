@@ -1,0 +1,12 @@
+.header{
+    width: 100%;
+    background: #e44d3a;
+}
+.wrapper
+{
+     max-width: 1140px;
+     margin: 0 auto;
+     padding: 0 15px;
+     display: flex;
+     justify-content: space-around;
+}
