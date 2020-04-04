@@ -7,8 +7,8 @@
     margin-bottom: 15px;
     display: grid;
     grid-template-columns: 4fr 1fr;
-    justify-content: space-between;
-    align-content: center;
+    justify-items: space-between;
+    align-items: center;
     background-color: #fff;
     border-top: 4px solid #e44d3a;
     border-left: 1px solid #e4e4e4;
@@ -20,20 +20,23 @@
     border: 1px solid #e4e4e4;;
     outline: none;
     border-radius: 5px;
-    height: 50%;
-    padding: 10px;
+    max-height: 50%;
+    overflow: hidden;
+    padding: 5px;
+    margin: 10px;
 }
 .addPost button
 {
     display: block;
     border: none;
     outline: none;
+    border-radius: 5px;
     font-size: 16px;
-    display: inline-block;
     background-color: #e44d3a;
     color: #fff;
     height: 40px;
     padding: 0 15px;
     line-height: 40px;
     font-weight: 500;
+    cursor: pointer;
 }

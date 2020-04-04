@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: center;
 }
-ul li
+.navigation ul li
 {
     height: 100%;
     list-style: none;
@@ -15,7 +15,7 @@ ul li
    
     position: relative;
 }
-ul li:last-child
+.navigation ul li:last-child
 {
     margin-left: 13px;
     border-left: 1px solid #dd3e2b;
@@ -23,7 +23,7 @@ ul li:last-child
     box-sizing: border-box;
    
 }
-ul li img
+.navigation ul li img
 {
     display: inline-block;
     margin-right: 5px;
@@ -31,7 +31,7 @@ ul li img
     height: 45px;
     border-radius: 50%;
 }
-ul li a
+.navigation ul li a
 {
     display: block;
     width: 100%;
@@ -42,14 +42,14 @@ ul li a
     color: #fff;
     transition: 0.4s;
 }
-ul li a:hover,
-ul li a.activeLink
+.navigation ul li a:hover,
+.navigation ul li a.activeLink
 {
     text-decoration: none;
     color: #e44d3a;;
     background: #fff;
 }
-ul li:last-child
+.navigation ul li:last-child
 {
     padding: 10px;
     display: flex;

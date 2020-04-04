@@ -1,7 +1,7 @@
 .userProfile{
     margin: 0;
     padding: 0;
-    min-height: 450px;
+    max-height: 450px;
     min-width: 260px;
     background-color: #fff;
     margin-bottom: 20px;
@@ -72,6 +72,7 @@
 .details ul li
 {
     display: block;
+    text-align: center;
     height: 81px;
     border-bottom: 1px solid #e5e5e5;
     border-top: 1px solid #e5e5e5;
@@ -94,7 +95,7 @@
 }
 .details ul li:last-child
 {
-    padding: 0;
+    padding-top: 10px;
     height: 47px;
     border: none;
 }

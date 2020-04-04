@@ -7,6 +7,7 @@ const Posts = () => {
         <div>
             <AddPost/>
             <Post/>
+            <Post/>
         </div>
     );
 };

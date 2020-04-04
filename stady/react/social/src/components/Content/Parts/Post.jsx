@@ -7,20 +7,23 @@ const Post = () => {
             <div className={classesPost.profileDetails}>
                 <div className={classesPost.postTopbar}>
                     <div className={classesPost.profile}>
+                        <img
+                            src='https://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg'
+                            alt=""/>
                         <div>
                             <h3>John Doe</h3>
                             <span>3 min ago</span>
                         </div>
-                    </div>
-                    <div className={classesPost.toggle}>
-                        <a href="#" title="">...</a>
-                        <ul className={classesPost.ulToggle}>
-                            <li><a href="#" title="">Edit Post</a></li>
-                            <li><a href="#" title="">Unsaved</a></li>
-                            <li><a href="#" title="">Unbid</a></li>
-                            <li><a href="#" title="">Close</a></li>
-                            <li><a href="#" title="">Hide</a></li>
-                        </ul>
+                        <div className={classesPost.toggle}>
+                            <a href="#" title="">...</a>
+                            <ul className={classesPost.ulToggle}>
+                                <li><a href="#" title="">Edit Post</a></li>
+                                <li><a href="#" title="">Unsaved</a></li>
+                                <li><a href="#" title="">Unbid</a></li>
+                                <li><a href="#" title="">Close</a></li>
+                                <li><a href="#" title="">Hide</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -36,10 +39,17 @@ const Post = () => {
                         <span>Like</span>
                         <span>25</span>
                     </li>
-                    <li><span>Comment 15</span></li>
-                </ul>
-            </div>
+                    <li>
+                        <span>Comment</span>
+                        <span>15</span>
+                    </li>
+                    <li>
+                        <span>Views</span>
+                        <span>50</span>
+                    </li>
+            </ul>
         </div>
+        < /div>
     );
 };
 
