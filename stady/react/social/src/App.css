@@ -1,6 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap');
 .App {
   margin: 0 auto;
-  
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #f2f2f2;
+}
+.content
+{
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 60px 35px;
 }
 
  

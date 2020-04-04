@@ -42,7 +42,8 @@ ul li a
     color: #fff;
     transition: 0.4s;
 }
-ul li a:hover
+ul li a:hover,
+ul li a.activeLink
 {
     text-decoration: none;
     color: #e44d3a;;

@@ -1,0 +1,109 @@
+.userProfile{
+    margin: 0;
+    padding: 0;
+    min-height: 450px;
+    min-width: 260px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+.mainInfo
+{
+    min-height: 240px;
+    position: relative;
+}
+.mainInfo:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 40%;
+    width: 100%;
+    background: #e44d3a;
+}
+.mainInfo img
+{
+    display: inline-block;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 110px;
+    width: 110px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+}
+.title
+{
+    position: absolute;
+    min-height: 140px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    padding: 63px 0 27px 0;
+}
+.title h3
+{
+    color: #000000;
+    font-size: 24px;
+    text-transform: capitalize;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.title span
+{
+    color: #686868;
+    font-size: 14px;
+}
+.details
+{
+    position: relative;
+}
+.details ul
+{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+.details ul li
+{
+    display: block;
+    height: 81px;
+    border-bottom: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
+    padding: 15px 0;
+}
+.details ul li:first-child
+{
+    border-bottom: none;
+}
+.details ul li h4
+{
+    margin: 0 0 10px 0;
+    color: #686868;
+    font-size: 20px;
+}
+.details ul li span
+{
+    color: #000000;
+    font-size: 20px;
+}
+.details ul li:last-child
+{
+    padding: 0;
+    height: 47px;
+    border: none;
+}
+.details ul li a
+{
+    text-decoration: none;
+    outline: none;
+    color: #e44d3a;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 0;
+}
