@@ -1,0 +1,57 @@
+.dialogs
+{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #ffffff;
+    border-left: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    border-right: 1px solid #e4e4e4;
+}
+.dialogs .title
+{
+    height: calc(725px / 8);
+    padding: 36px 20px;
+    border-bottom: 1px solid #eeeeee;
+}
+.dialogs .title h3
+{
+    margin: 0;
+    color: #000000;
+    font-size: 18px;
+    font-weight: 600;
+}
+.dialogs .list
+{
+    margin-bottom: 0;
+}
+.dialogs .list .item
+{
+    width: 100%;
+    height: calc(725px / 8);
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    justify-items: start;
+    align-items: center;
+    border-bottom: 1px solid #eeeeee;
+    cursor: pointer;
+}
+.dialogs .list .item.active,
+.dialogs .list .item:hover
+{
+    background-color: #efefef;
+}
+.dialogs .list .item .userImg img
+{
+    display: block;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+.dialogs .list div .item .userName h3
+{
+    color: #000000;
+    font-size: 18px;
+    font-weight: 600;
+}

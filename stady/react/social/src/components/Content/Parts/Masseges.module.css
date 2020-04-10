@@ -1,4 +1,109 @@
 .masseges
 {
-    background: #ddbaff;
+    max-height: 725px;
+    position: relative;
+}
+.masseges .field
+{
+    width: 100%;
+    padding: 10px;
+    min-height: calc(725px - 120px);
+    display: grid;
+    background: #ffffff;
+    border-right: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    overflow: hidden;
+}
+p
+{
+    width: 60%;
+    font-size: 14px;
+    line-height: 22px;
+    padding: 10px 35px 10px 35px;
+    border-radius: 15px;
+}
+.field .myself
+{
+    margin-bottom: 15px;
+    padding: 10px;
+    justify-self: start;
+    display: grid;
+    grid-template-columns: 10% 90%;
+    justify-items: start;
+    align-items: start;
+}
+.field .myself img,
+.field .interlocutor img
+{
+    display: block;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+.field .myself p
+{
+    background-color: #efefef;
+    color: #686868;
+}
+.field .interlocutor
+{
+    margin-bottom: 15px;
+    justify-self: end;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    justify-items: end;
+    align-items: end;
+}
+.field .interlocutor img
+{
+    justify-self: center;
+}
+.field .interlocutor p
+{
+    background-color: #e44d3a;
+    color: #fff;
+}
+.sendArea
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-height: 120px;
+    background-color: #f3f5f7;
+    padding: 25px 20px 15px 20px;
+    border: 1px solid #eeeeee;
+}
+.sendArea form .field
+{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    background-color: #f3f5f7;
+    border: none;
+}
+.sendArea form input
+{
+    width: 80%;
+    background-color: #fff;
+    outline: none;
+    color: #b2b2b2;
+    font-size: 16px;
+    padding: 0 15px;
+    border: 1px solid #e6e6e6;
+    height: 45px;
+}
+.sendArea form button
+{
+    width: 17%;
+    background-color: #e44d3a;
+    height: 45px;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    border: 0;
+    margin-left: 15px;
+    cursor: pointer;
 }

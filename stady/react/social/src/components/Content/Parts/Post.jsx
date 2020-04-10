@@ -28,8 +28,10 @@ const Post = () => {
                 </div>
             </div>
             <div className={classesPost.postContent}>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                    the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+                    type
                     and scrambled it to make a type specimen book.</p>
                 <span>view more</span>
             </div>
@@ -47,10 +49,10 @@ const Post = () => {
                         <span>Views</span>
                         <span>50</span>
                     </li>
-            </ul>
+                </ul>
+            </div>
         </div>
-        < /div>
-    );
-};
+        );
+    };
 
 export default Post;
