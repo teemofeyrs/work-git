@@ -7,28 +7,21 @@
 {
     width: 100%;
     padding: 10px;
-    min-height: calc(725px - 120px);
+    height: 100%;
     display: grid;
     background: #ffffff;
     border-right: 1px solid #e4e4e4;
     border-bottom: 1px solid #e4e4e4;
-    overflow: hidden;
-}
-p
-{
-    width: 60%;
-    font-size: 14px;
-    line-height: 22px;
-    padding: 10px 35px 10px 35px;
-    border-radius: 15px;
+    overflow: paged-y-controls;
 }
 .field .myself
 {
-    margin-bottom: 15px;
+    width: 100%;
+    height: auto;
     padding: 10px;
     justify-self: start;
     display: grid;
-    grid-template-columns: 10% 90%;
+    grid-template-columns: 1fr 5fr;
     justify-items: start;
     align-items: start;
 }
@@ -42,11 +35,14 @@ p
 }
 .field .myself p
 {
+    align-self: flex-start;
     background-color: #efefef;
     color: #686868;
 }
 .field .interlocutor
 {
+    width: 100%;
+    height: auto;
     margin-bottom: 15px;
     justify-self: end;
     display: grid;
@@ -74,7 +70,7 @@ p
     padding: 25px 20px 15px 20px;
     border: 1px solid #eeeeee;
 }
-.sendArea form .field
+.sendArea form .form
 {
     padding: 0;
     margin: 0;
@@ -106,4 +102,12 @@ p
     border: 0;
     margin-left: 15px;
     cursor: pointer;
+}
+p
+{
+    width: 60%;
+    font-size: 14px;
+    line-height: 22px;
+    padding: 10px 35px 10px 35px;
+    border-radius: 15px;
 }

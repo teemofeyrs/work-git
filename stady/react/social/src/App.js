@@ -12,19 +12,21 @@ import Jobs from "./components/Content/contentElem/Jobs";
 import Mass from "./components/Content/contentElem/Mass";
 import Notification from "./components/Content/contentElem/Notification";
 
-const App = () => {
+const App = (props) => {
+
   return (
       <Router>
           <div className="App">
               <Header />
               <div className='content'>
                 <Switch>
-                    <Route path='/' exact><Home/></Route>
+                    <Route path='/' exact><Home posts={props.state.profilePage.posts}/></Route>
                     <Route path='/companies'><Companies/></Route>
                     <Route path='/projects'><Projects/></Route>
                     <Route path='/profiles'><Profiles/></Route>
                     <Route path='/jobs'><Jobs/></Route>
-                    <Route path='/messages'><Mass/></Route>
+                    <Route path='/messages'><Mass messagesData={props.state.messagePage.messageData}
+                                                  dialogs={props.state.messagePage.dialogs}/></Route>
                     <Route path='/notification'><Notification/></Route>
                 </Switch>
               </div>

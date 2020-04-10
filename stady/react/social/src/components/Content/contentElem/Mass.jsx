@@ -3,11 +3,11 @@ import classesMasseges from './Masseges.module.css';
 import Dialogs from "../Parts/Dialogs";
 import Masseges from "../Parts/Masseges";
 
-const Mass = () => {
+const Mass = (props) => {
     return(
         <div className={classesMasseges.masseges}>
-            <Dialogs/>
-            <Masseges/>
+            <Dialogs dialogs={props.dialogs}/>
+            <Masseges messagesData={props.messagesData}/>
         </div>
     );
 };

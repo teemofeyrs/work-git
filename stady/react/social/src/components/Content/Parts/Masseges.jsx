@@ -18,42 +18,9 @@ const MassegeOpon = (props) => {
     );
 };
 
-const Masseges = () => {
-    let messageData = [
-        {
-            id: 1,
-            img: 'https://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg',
-            massage: 'Lorem idivsum dolor sit amet, consectetur adidivisicing elit. Aliquid asdiveriores earum, fuga labore\n' +
-                '                        officia\n' +
-                '                        divorro divossimus divrovident quas quasi temdivoribus? Amet at eaque id mollitia natus nobis\n' +
-                '                        officiis quisquam\n' +
-                '                        sunt?'
-        },
-        {
-            id: 2,
-            img: 'https://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg',
-            massage: 'Lorem idivsum dolor sit amet, consectetur adidivisicing elit. Adidivisci, blanditiis debitis, harum,\n' +
-                '                        illo idivsa\n' +
-                '                        idivsum magnam molestiae molestias nostrum omnis quia quibusdam reiciendis voludivtas! Asdivernatur\n' +
-                '                        dolorem\n' +
-                '                        quibusdam vero? Libero, ullam.'
-        },
-        {
-            id: 2,
-            img: 'https://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg',
-            massage: 'Lorem idivsum dolor sit amet, consectetur adidivisicing elit. Adidivisci, blanditiis debitis, harum,\n' +
-                '                        illo idivsa\n' +
-                '                        idivsum magnam molestiae molestias nostrum omnis quia quibusdam reiciendis voludivtas! Asdivernatur\n' +
-                '                        dolorem\n' +
-                '                        quibusdam vero? Libero, ullam.'
-        },
-        {
-            id: 1,
-            img: 'https://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg',
-            massage: 'Lorem idivsum dolor sit amet, consectetur adidivisicing elit. Aliquid asdiveriores earum, fuga labore officia divorro divossimus divrovident quas quasi temdivoribus ? '
-        },
-    ];
- let messages = messageData.map(data => ((data.id === 1) ? <MassegeMy img={data.img} message={data.massage}/> :
+const Masseges = (props) => {
+
+ let messages = props.messagesData.map(data => ((data.id === 1) ? <MassegeMy img={data.img} message={data.massage}/> :
         <MassegeOpon img={data.img} message={data.massage}/> ));
 
     return (
@@ -63,7 +30,7 @@ const Masseges = () => {
             </div>
             <div className={classesMasseges.sendArea}>
                 <form>
-                    <div className={classesMasseges.field}>
+                    <div className={classesMasseges.form}>
                         <input type="text" name="message" placeholder="Type a message here"/>
                         <button type="submit">Send</button>
                     </div>

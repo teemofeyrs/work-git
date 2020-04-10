@@ -1,17 +1,16 @@
 import React from "react";
 import classesPost from './Post.module.css';
 
-const Post = () => {
+const Post = (props) => {
+    debugger;
     return (
         <div className={classesPost.post}>
             <div className={classesPost.profileDetails}>
                 <div className={classesPost.postTopbar}>
                     <div className={classesPost.profile}>
-                        <img
-                            src='https://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg'
-                            alt=""/>
+                        <img src={props.posts.img} alt="user"/>
                         <div>
-                            <h3>John Doe</h3>
+                            <h3>{props.posts.name}</h3>
                             <span>3 min ago</span>
                         </div>
                         <div className={classesPost.toggle}>
@@ -28,26 +27,22 @@ const Post = () => {
                 </div>
             </div>
             <div className={classesPost.postContent}>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                    the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
-                    type
-                    and scrambled it to make a type specimen book.</p>
+                <p>{props.posts.textPost}</p>
                 <span>view more</span>
             </div>
             <div className={classesPost.postStatus}>
                 <ul className={classesPost.likeCom}>
                     <li>
                         <span>Like</span>
-                        <span>25</span>
+                        <span>{props.posts.likes}</span>
                     </li>
                     <li>
                         <span>Comment</span>
-                        <span>15</span>
+                        <span>{props.posts.comments}</span>
                     </li>
                     <li>
                         <span>Views</span>
-                        <span>50</span>
+                        <span>{props.posts.views}</span>
                     </li>
                 </ul>
             </div>
