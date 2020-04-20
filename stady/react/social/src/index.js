@@ -1,14 +1,24 @@
+import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import state from './redux/state';
+import store from './redux/store';
 
 
-ReactDOM.render(
-  <React.StrictMode><App state={state}/></React.StrictMode>,
-  document.getElementById('root')
-);
+export let renderTree = (state) => {
+    return (
+        ReactDOM.render(
+            <React.StrictMode>
+                <App state={store.getState()}
+                     dispach={store.dispach.bind(store)}/>
+            </React.StrictMode>,
+            document.getElementById('root')
+        )
+    );
+};
+renderTree(store.getState());
+store.subscribe(renderTree);
 
 serviceWorker.unregister();

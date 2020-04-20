@@ -7,7 +7,9 @@ const Mass = (props) => {
     return(
         <div className={classesMasseges.masseges}>
             <Dialogs dialogs={props.dialogs}/>
-            <Masseges messagesData={props.messagesData}/>
+            <Masseges messagesData={props.messagesData}
+                      newMessageText={props.newMessageText}
+                      dispach={props.dispach}/>
         </div>
     );
 };

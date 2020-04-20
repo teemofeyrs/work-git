@@ -7,12 +7,12 @@
 {
     width: 100%;
     padding: 10px;
-    height: 100%;
+    height: auto;
     display: grid;
     background: #ffffff;
     border-right: 1px solid #e4e4e4;
     border-bottom: 1px solid #e4e4e4;
-    overflow: paged-y-controls;
+
 }
 .field .myself
 {
@@ -23,7 +23,6 @@
     display: grid;
     grid-template-columns: 1fr 5fr;
     justify-items: start;
-    align-items: start;
 }
 .field .myself img,
 .field .interlocutor img
@@ -48,7 +47,6 @@
     display: grid;
     grid-template-columns: 5fr 1fr;
     justify-items: end;
-    align-items: end;
 }
 .field .interlocutor img
 {
@@ -70,7 +68,7 @@
     padding: 25px 20px 15px 20px;
     border: 1px solid #eeeeee;
 }
-.sendArea form .form
+.sendArea .formWrapper .form
 {
     padding: 0;
     margin: 0;
@@ -80,7 +78,7 @@
     background-color: #f3f5f7;
     border: none;
 }
-.sendArea form input
+.sendArea .formWrapper input
 {
     width: 80%;
     background-color: #fff;
@@ -91,7 +89,7 @@
     border: 1px solid #e6e6e6;
     height: 45px;
 }
-.sendArea form button
+.sendArea .formWrapper button
 {
     width: 17%;
     background-color: #e44d3a;

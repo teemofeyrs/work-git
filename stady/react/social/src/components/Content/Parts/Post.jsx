@@ -2,7 +2,6 @@ import React from "react";
 import classesPost from './Post.module.css';
 
 const Post = (props) => {
-    debugger;
     return (
         <div className={classesPost.post}>
             <div className={classesPost.profileDetails}>

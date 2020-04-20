@@ -1,5 +1,6 @@
 import React from 'react';
 import classesMasseges from './Masseges.module.css';
+import {AddMessageCreator, OnMessageChangeCreator} from "../../../redux/messagesReduser";
 
 const MassegeMy = (props) => {
     return (
@@ -20,21 +21,29 @@ const MassegeOpon = (props) => {
 
 const Masseges = (props) => {
 
- let messages = props.messagesData.map(data => ((data.id === 1) ? <MassegeMy img={data.img} message={data.massage}/> :
-        <MassegeOpon img={data.img} message={data.massage}/> ));
-
+    let messages = props.messagesData.map(data => ((data.id === 1) ?
+        <MassegeMy img={data.img} message={data.massage}/> :
+        <MassegeOpon img={data.img} message={data.massage}/>));
+    const onMessageChange = (e) => {
+        let text = e.currentTarget.value;
+        props.dispach(OnMessageChangeCreator(text));
+    };
+    const addMessage = () => {
+        props.dispach(AddMessageCreator())
+    };
     return (
         <div className={classesMasseges.masseges}>
             <div className={classesMasseges.field}>
                 {messages}
             </div>
             <div className={classesMasseges.sendArea}>
-                <form>
+                <div className={classesMasseges.formWrapper}>
                     <div className={classesMasseges.form}>
-                        <input type="text" name="message" placeholder="Type a message here"/>
-                        <button type="submit">Send</button>
+                        <input onChange={onMessageChange} type="text" placeholder="Type a message here"
+                               value={props.newPostText}/>
+                        <button type="submit" onClick={addMessage}>Send</button>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
     );

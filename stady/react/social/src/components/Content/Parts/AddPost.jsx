@@ -1,10 +1,19 @@
 import React from "react";
 import classesAddPost from './AddPost.module.css';
-const AddPost = () => {
+import {AddPostCreator, OnPostChangeCreator} from "../../../redux/profileReduser";
+const AddPost = (props) => {
+    let textField = React.createRef();
+    let addPost = () => {
+       props.dispach(AddPostCreator());
+    };
+    let onChange = () => {
+        let text = textField.current.value;
+        props.dispach(OnPostChangeCreator(text));
+    };
     return (
         <div className={classesAddPost.addPost}>
-            <textarea></textarea>
-            <button>Add post</button>
+            <textarea onChange={onChange} ref={textField} value={props.newPostText}> </textarea>
+            <button  onClick={addPost}>Add post</button>
         </div>
     );
 };
