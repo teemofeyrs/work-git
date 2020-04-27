@@ -20,16 +20,12 @@ const App = (props) => {
               <div className='content'>
                 <Switch>
                     <Route path='/' exact><Home posts={props.state.profilePage.posts}
-                                                dispach={props.dispach}
-                                                newPostText={props.state.profilePage.newPostText}/></Route>
+                                                store={props.store}/></Route>
                     <Route path='/companies'><Companies/></Route>
                     <Route path='/projects'><Projects/></Route>
                     <Route path='/profiles'><Profiles/></Route>
                     <Route path='/jobs'><Jobs/></Route>
-                    <Route path='/messages'><Mass messagesData={props.state.messagePage.messageData}
-                                                  dialogs={props.state.messagePage.dialogs}
-                                                  newMessageText={props.state.messagePage.newMessageText}
-                                                  dispach={props.dispach}/>
+                    <Route path='/messages'><Mass store={props.store}/>
                     </Route>
                     <Route path='/notification'><Notification/></Route>
                 </Switch>

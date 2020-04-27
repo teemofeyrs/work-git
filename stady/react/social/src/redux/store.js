@@ -104,7 +104,7 @@ let store = {
     _callSubscriber() {
         console.log('State changed');
     },
-    dispach(action){
+    dispatch(action){
         this._state.profilePage = profileReduser(this._state.profilePage, action);
         this._state.messagePage = messagesReduser(this._state.messagePage, action);
         this._callSubscriber(this._state);

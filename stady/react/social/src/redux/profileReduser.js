@@ -6,9 +6,32 @@ export let AddPostCreator = () => {
 export let OnPostChangeCreator = (text) => {
     return {type: ON_POST_CHANGE, text: text};
 };
-
-
-const profileReduser = (state, action) => {
+let initialState = {
+    posts: [
+        {
+            img: 'https://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg',
+            name: 'John Doe',
+            textPost: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been\n' +
+                '                    the\n' +
+                '                    industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of\n' +
+                '                    type\n' +
+                '                    and scrambled it to make a type specimen book.',
+            likes: 25,
+            comments: 15,
+            views: 35
+        },
+        {
+            img: 'https://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg',
+            name: 'John Doe',
+            textPost: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been,',
+            likes: 25,
+            comments: 15,
+            views: 35
+        }
+    ],
+    newPostText: 'post text',
+};
+const profileReduser = (state = initialState, action) => {
 
     if(action.type === 'ADD-POST'){
         let newPost = {

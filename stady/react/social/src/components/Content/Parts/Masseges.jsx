@@ -1,6 +1,5 @@
 import React from 'react';
 import classesMasseges from './Masseges.module.css';
-import {AddMessageCreator, OnMessageChangeCreator} from "../../../redux/messagesReduser";
 
 const MassegeMy = (props) => {
     return (
@@ -20,16 +19,15 @@ const MassegeOpon = (props) => {
 };
 
 const Masseges = (props) => {
-
-    let messages = props.messagesData.map(data => ((data.id === 1) ?
+    let messages = props.state.messageData.map(data => ((data.id === 1) ?
         <MassegeMy img={data.img} message={data.massage}/> :
         <MassegeOpon img={data.img} message={data.massage}/>));
     const onMessageChange = (e) => {
         let text = e.currentTarget.value;
-        props.dispach(OnMessageChangeCreator(text));
+        props.messageChange(text);
     };
     const addMessage = () => {
-        props.dispach(AddMessageCreator())
+        props.addMessage();
     };
     return (
         <div className={classesMasseges.masseges}>

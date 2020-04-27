@@ -1,12 +1,12 @@
 import React from "react";
-import AddPost from "./AddPost";
 import Post from "./Post";
+import AddPostsContainer from "./AddPostsContainer";
 
 const Posts = (props) => {
-    let postEl = props.posts.map(data => <Post posts={data}/>);
+    let postEl = props.store.getState().profilePage.posts.map(data => <Post posts={data}/>);
     return (
         <div>
-            <AddPost dispach={props.dispach} newPostText={props.newPostText}/>
+            <AddPostsContainer store={props.store}/>
             {postEl}
         </div>
     );
