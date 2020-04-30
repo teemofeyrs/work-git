@@ -5,10 +5,11 @@ import Masseges from "../Parts/Masseges";
 import MessagesContainer from "../Parts/MassegesContainer";
 
 const Mass = (props) => {
+    debugger;
     return(
         <div className={classesMasseges.masseges}>
-            <Dialogs dialogs={props.store.getState().messagePage.dialogs}/>
-           <MessagesContainer store={props.store}/>
+            <Dialogs dialogs={props.state.messagePage.dialogs}/>
+           <MessagesContainer />
         </div>
     );
 };

@@ -5,23 +5,17 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import store from './redux/rudux-store';
+import Provider from "react-redux/lib/components/Provider";
 
-
-export let renderTree = (state) => {
-    return (
+let state = store.getState();
         ReactDOM.render(
             <React.StrictMode>
-                <App state={state} store={store}
-                     dispatch={store.dispatch.bind(store)}/>
+                <Provider store={store}>
+                <App state={state}/>
+                </Provider>
             </React.StrictMode>,
             document.getElementById('root')
         )
-    );
-};
-renderTree(store.getState());
-store.subscribe(() => {
-    let state = store.getState();
-    renderTree(state);
-});
+
 
 serviceWorker.unregister();
