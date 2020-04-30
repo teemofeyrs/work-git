@@ -7,15 +7,14 @@ import * as serviceWorker from './serviceWorker';
 import store from './redux/rudux-store';
 import Provider from "react-redux/lib/components/Provider";
 
-let state = store.getState();
-        ReactDOM.render(
-            <React.StrictMode>
-                <Provider store={store}>
-                <App state={state}/>
-                </Provider>
-            </React.StrictMode>,
-            document.getElementById('root')
-        )
 
+ReactDOM.render(
+    <React.StrictMode>
+        <Provider store={store}>
+            <App/>
+        </Provider>
+    </React.StrictMode>,
+    document.getElementById('root')
+);
 
 serviceWorker.unregister();

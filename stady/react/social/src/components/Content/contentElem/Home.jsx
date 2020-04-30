@@ -1,13 +1,13 @@
 import React from 'react';
 import classesHome from './Home.module.css';
 import ProfileInfo from "../Parts/ProfileInfo";
-import Posts from "../Parts/Posts";
+import PostsContainer from "../Parts/PostsContainer";
 
 const Home = (props) => {
     return(
         <div className={classesHome.home}>
             <ProfileInfo/>
-            <Posts state={props.state}/>
+            <PostsContainer />
         </div>
     );
 };
