@@ -16,7 +16,6 @@ const Dialog = (props) => {
 
 const Dialogs = (props) => {
     let dialogsElem =  props.dialogs.map( data => <Dialog img={data.img} name={data.name}/>)
-
     return (
         <div className={classesDialogs.dialogs}>
                 <div className={classesDialogs.title}>

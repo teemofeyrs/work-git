@@ -75,18 +75,27 @@ let initialMessage = {
     newMessageText: ''
 };
 
-const messagesReduser = (state = initialMessage, action) => {
-     if(action.type === 'ON-MESSAGE-TEXT-CHANGE'){
-         state.newPostText = action.text;
-    }else if(action.type === 'ADD-MESSAGE'){
-        let message = {
-            id: 1,
-            img: 'https://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg',
-            massage: state.newPostText
-        };
-         state.messageData.push(message);
-         state.newPostText = '';
+const messagesReducers = (state = initialMessage, action) => {
+    switch (action.type) {
+        case ON_MESSAGE_CHANGE:
+            let stateCopy = {...state};
+            stateCopy.newPostText = action.text;
+            return stateCopy;
+        case ADD_MESSAGE: {
+            debugger;
+            let stateCopy = {...state};
+            stateCopy.messageData = [...state.messageData];
+            let message = {
+                id: 1,
+                img: 'https://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg',
+                massage: state.newPostText
+            };
+            stateCopy.messageData.push(message);
+            stateCopy.newPostText = '';
+            return stateCopy;
+        }
+        default:
+            return state;
     }
-    return state;
 };
-export default messagesReduser;
+export default messagesReducers;

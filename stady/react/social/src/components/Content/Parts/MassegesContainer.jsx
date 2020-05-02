@@ -1,12 +1,13 @@
-import React from 'react';
-import {AddMessageCreator, OnMessageChangeCreator} from "../../../redux/messagesReduser";
+
+import {AddMessageCreator, OnMessageChangeCreator} from "../../../redux/messagesReducers";
 import Masseges from "./Masseges";
 import {connect} from "react-redux";
 
 
 let mapStateToProps = (state) => {
     return{
-        newMessageText: state.newMessageText,
+        newPostText: state.messagePage.newPostText,
+        messageData: state.messagePage.messageData
     };
 }
 let mapDispatchToProps = (dispatch) =>{

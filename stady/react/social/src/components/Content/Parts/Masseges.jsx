@@ -19,7 +19,7 @@ const MassegeOpon = (props) => {
 };
 
 const Masseges = (props) => {
-    let messages = props.state.messageData.map(data => ((data.id === 1) ?
+    let messages = props.messageData.map(data => ((data.id === 1) ?
         <MassegeMy img={data.img} message={data.massage}/> :
         <MassegeOpon img={data.img} message={data.massage}/>));
     const onMessageChange = (e) => {

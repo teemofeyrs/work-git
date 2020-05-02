@@ -5,16 +5,22 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import store from './redux/rudux-store';
-import Provider from "react-redux/lib/components/Provider";
+import {Provider} from 'react-redux';
 
 
-ReactDOM.render(
-    <React.StrictMode>
+let rerenderEntireTree = () => {
+    ReactDOM.render(
         <Provider store={store}>
-            <App/>
-        </Provider>
-    </React.StrictMode>,
-    document.getElementById('root')
-);
+            <React.StrictMode>
+                <App/>
+            </React.StrictMode>
+        </Provider>,
+        document.getElementById('root')
+    );
+};
+rerenderEntireTree();
+store.subscribe(() => {
+    rerenderEntireTree();
+})
 
 serviceWorker.unregister();

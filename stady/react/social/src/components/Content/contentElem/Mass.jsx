@@ -1,15 +1,13 @@
 import React from 'react';
 import classesMasseges from './Masseges.module.css';
-import Dialogs from "../Parts/Dialogs";
-import Masseges from "../Parts/Masseges";
 import MessagesContainer from "../Parts/MassegesContainer";
+import DialogsContainer from "../Parts/DialogsContainer";
 
 const Mass = (props) => {
-    debugger;
-    return(
+    return (
         <div className={classesMasseges.masseges}>
-            <Dialogs dialogs={props.state.messagePage.dialogs}/>
-           <MessagesContainer />
+            <DialogsContainer/>
+            <MessagesContainer/>
         </div>
     );
 };

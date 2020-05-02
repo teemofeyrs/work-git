@@ -1,5 +1,5 @@
-import profileReduser from "./profileReduser";
-import messagesReduser from "./messagesReduser";
+import profileReducers from "./profileReducers";
+import messagesReducers from "./messagesReducers";
 
 
 let store = {
@@ -105,8 +105,8 @@ let store = {
         console.log('State changed');
     },
     dispatch(action){
-        this._state.profilePage = profileReduser(this._state.profilePage, action);
-        this._state.messagePage = messagesReduser(this._state.messagePage, action);
+        this._state.profilePage = profileReducers(this._state.profilePage, action);
+        this._state.messagePage = messagesReducers(this._state.messagePage, action);
         this._callSubscriber(this._state);
     },
         subscribe (observer){

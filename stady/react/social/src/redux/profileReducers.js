@@ -31,23 +31,32 @@ let initialState = {
     ],
     newPostText: 'post text',
 };
-const profileReduser = (state = initialState, action) => {
+const profileReducers = (state = initialState, action) => {
 
-    if(action.type === 'ADD-POST'){
-        let newPost = {
-            img: 'https://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg',
-            name: 'John Doe',
-            textPost: state.newPostText,
-            likes: 0,
-            comments: 0,
-            views: 0
-        };
-        state.posts.unshift(newPost);
-        state.newPostText = '';
-    }else if(action.type === 'ON-POST-TEXT-CHANGE'){
-        state.newPostText = action.text;
+    switch (action.type) {
+        case ADD_POST:
+            let stateCopy = {...state};
+                stateCopy.posts = [...state.posts];
+            let newPost = {
+                img: 'https://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg',
+                name: 'John Doe',
+                textPost: state.newPostText,
+                likes: 0,
+                comments: 0,
+                views: 0
+            };
+            stateCopy.posts.unshift(newPost);
+            stateCopy.newPostText = '';
+            return stateCopy;
+        case ON_POST_CHANGE:
+        {
+            let stateCopy = {...state};
+            stateCopy.newPostText = action.text;
+            return stateCopy;
+        }
+        default:
+            return state;
     }
-    return state;
 };
 
-export default profileReduser;
+export default profileReducers;
