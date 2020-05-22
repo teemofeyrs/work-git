@@ -1,8 +1,12 @@
 const FOLLOW_USERS = 'FOLLOW_USERS';
 const UN_FOLLOW_USERS = 'UN_FOLLOW_USERS';
 const HIRE = 'HIRE';
-const MASSEGE = 'MASSEGE';
+const MESSAGE = 'MESSAGE';
 const SET_USERS = 'SET_USERS';
+const SET_TOTAL_USER_COUNT = 'SET_TOTAL_USER_COUNT';
+const SET_CURRENT_USER_PAGE = 'SET_CURRENT_USER_PAGE';
+const IS_FETCHING = 'IS_FETCHING';
+
 
 export let followUserAC = (userId) => {
     return {type: FOLLOW_USERS, userId};
@@ -16,10 +20,25 @@ export let hireUserAC = (userId) => {
 export let setUsersAC = (users) => {
     return{type: SET_USERS, users}
 }
+export let setTotalUserCountAC = (totalCount) =>{
+    return {
+        type: SET_TOTAL_USER_COUNT, totalCount
+    }
+}
+export let setCurrentUserPageAC = (currentPage) => {
+    return{type: SET_CURRENT_USER_PAGE, currentUserPage: currentPage}
+}
+export let isFetchingAC = (isFetching) => {
+    return{type: IS_FETCHING, isFetching}
+}
 let initialState = {
     users: [
 
     ],
+    pageSize: 12,
+    totalUsersCount: 0,
+    currentUserPage: 1,
+    isFetching: false,
 };
 const usersReducers = (state = initialState, action) => {
     switch (action.type) {
@@ -48,13 +67,25 @@ const usersReducers = (state = initialState, action) => {
         case HIRE: {
             return {...state, hire: true};
         }
-        case MASSEGE: {
+        case MESSAGE: {
 
             return {...state};
         }
         case SET_USERS:
             return {
                 ...state, users: action.users
+            }
+        case SET_TOTAL_USER_COUNT:
+            return {
+                ...state, totalUsersCount: action.totalCount,
+            }
+        case SET_CURRENT_USER_PAGE:
+            return {
+                ...state, currentUserPage: action.currentUserPage,
+            }
+        case IS_FETCHING:
+            return {
+                ...state, isFetching: action.isFetching,
             }
         default:
             return state;

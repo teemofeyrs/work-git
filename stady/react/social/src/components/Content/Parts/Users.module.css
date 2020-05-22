@@ -7,3 +7,12 @@
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px;
 }
+.span
+{
+    margin: 10px;
+    color: #dd3e2b;
+}
+.currentUser
+{
+    font-weight: bold;
+}

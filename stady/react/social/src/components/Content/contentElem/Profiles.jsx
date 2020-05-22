@@ -1,11 +1,10 @@
 import React from 'react';
 import classesProfiles from './Profiles.module.css';
-import UsersContainer from "../Parts/UsersContainer";
+import UsersContainerAPI from "../Parts/UsersContainerAPI";
 
 const Profiles = () => {
     return(
-
-        <UsersContainer/>
+        <UsersContainerAPI/>
     );
 };
 export default Profiles;

@@ -5,7 +5,7 @@ import Users from "./Users";
 
 let mapStateToProps = (state) => {
     return{
-        users: state.users.users,
+        users: state.usersPage.users,
     };
 }
 let mapDispatchToProps = (dispatch) => {
