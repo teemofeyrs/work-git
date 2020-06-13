@@ -12,34 +12,33 @@ import * as axios from "axios";
 import User from "./User";
 import classesUsers from "./Users.module.css";
 import classesUser from "./User.module.css";
-import Preloader from "./Preloader/Preloader";
+
 
 class UsersClass extends React.Component {
     constructor(props) {
         super(props);
         this.totalUsersCount = props.totalUsersCount;
         this.pageSize = props.pageSize;
-        this.currentUserPage = props.currentUserPage;
+        this.currentPage = props.currentPage;
         this.isFetching = props.isFetching;
     }
     componentDidMount() {
-        this.props.isFetchingChange(true);
+        /*this.props.isFetchingChange(true);*/
         axios.get(`https://social-network.samuraijs.com/api/1.0/users?count=${this.pageSize}&page=${this.currentUserPage}`)
             .then( response => {
-                this.props.isFetchingChange(false);
+                /*this.props.isFetchingChange(false);*/
                 this.props.setUsersTotalCount(response.data.totalCount)
                 this.props.setUsers(response.data.items);
             })
     }
     onPageChanged = (page) => {
-        this.props.isFetchingChange(true);
+        /*this.props.isFetchingChange(true);*/
         this.props.setCurrentUserPage(page);
         axios.get(`https://social-network.samuraijs.com/api/1.0/users?count=${this.pageSize}&page=${page}`)
             .then( response => {
-                this.props.isFetchingChange(false);
+               /* this.props.isFetchingChange(false);*/
                 this.props.setUsers(response.data.items);
             });
-        this.props.setCurrentUserPage(page);
     }
     render() {
         let users = this.props.users.map((u) => (<User user={u}
@@ -50,15 +49,14 @@ class UsersClass extends React.Component {
         for (let i = 1; i <= pageCount; i++){
             pages.push(i);
         }
-        debugger;
         return (
             <div>
-                <div>
+                {/*<div>
                     {  (this.isFetching)&&<Preloader/> }
-               </div>
+               </div>*/}
                 <div className={classesUser.pagination}>
                     {
-                        pages.map( p => (<span className={(this.currentUserPage === p) && (classesUser.currentUserPage)}
+                        pages.map( p => (<span className={(this.currentPage === p) && (classesUser.currentUserPage)}
                         onClick={() => {this.onPageChanged(p)}}>{p}</span> ))
                     }
                 </div>
@@ -69,7 +67,7 @@ class UsersClass extends React.Component {
 
         );
     }
-};
+}
 
 let mapStateToProps = (state) => {
     return {

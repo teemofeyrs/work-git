@@ -26,7 +26,7 @@ export let setTotalUserCountAC = (totalCount) =>{
     }
 }
 export let setCurrentUserPageAC = (currentPage) => {
-    return{type: SET_CURRENT_USER_PAGE, currentUserPage: currentPage}
+    return{type: SET_CURRENT_USER_PAGE, currentPage}
 }
 export let isFetchingAC = (isFetching) => {
     return{type: IS_FETCHING, isFetching}
@@ -37,7 +37,7 @@ let initialState = {
     ],
     pageSize: 12,
     totalUsersCount: 0,
-    currentUserPage: 1,
+    currentPage: 1,
     isFetching: false,
 };
 const usersReducers = (state = initialState, action) => {
@@ -81,7 +81,7 @@ const usersReducers = (state = initialState, action) => {
             }
         case SET_CURRENT_USER_PAGE:
             return {
-                ...state, currentUserPage: action.currentUserPage,
+                ...state, currentPage: action.currentPage,
             }
         case IS_FETCHING:
             return {
