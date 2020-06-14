@@ -26,10 +26,10 @@ export let setTotalUserCountAC = (totalCount) =>{
     }
 }
 export let setCurrentUserPageAC = (currentPage) => {
-    return{type: SET_CURRENT_USER_PAGE, currentPage}
+    return{ type: SET_CURRENT_USER_PAGE, currentPage }
 }
-export let isFetchingAC = (isFetching) => {
-    return{type: IS_FETCHING, isFetching}
+export let isFetchingAC = (boolean) => {
+    return{ type: IS_FETCHING, isFetching: boolean }
 }
 let initialState = {
     users: [
@@ -68,7 +68,6 @@ const usersReducers = (state = initialState, action) => {
             return {...state, hire: true};
         }
         case MESSAGE: {
-
             return {...state};
         }
         case SET_USERS:
@@ -76,17 +75,11 @@ const usersReducers = (state = initialState, action) => {
                 ...state, users: action.users
             }
         case SET_TOTAL_USER_COUNT:
-            return {
-                ...state, totalUsersCount: action.totalCount,
-            }
+            return {...state, totalUsersCount: action.totalCount}
         case SET_CURRENT_USER_PAGE:
-            return {
-                ...state, currentPage: action.currentPage,
-            }
+            return { ...state, currentPage: action.currentPage }
         case IS_FETCHING:
-            return {
-                ...state, isFetching: action.isFetching,
-            }
+            return { ...state, isFetching: action.isFetching }
         default:
             return state;
     }

@@ -1,6 +1,6 @@
 import React from "react";
 import classesPreloader from './classesPreloader.module.css';
-import spinner from './../../../../assets/img/Spinner.gif';
+import spinner from './../../../../assets/img/Spinner-1s-304px.png';
 
 let Preloader = () => {
     return (
