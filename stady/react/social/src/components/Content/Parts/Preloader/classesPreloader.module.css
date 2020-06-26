@@ -1,8 +1,8 @@
-.fetch
+.preloader
 {
     position: absolute;
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     top: 0;
     left: 0;
     display: flex;
@@ -11,7 +11,7 @@
     background: rgba(255, 50, 50, 0.42);
     z-index: 1000000;
 }
-.fetch img
+.preloader img
 {
     background: transparent;
     display: block;

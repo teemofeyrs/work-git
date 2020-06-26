@@ -11,6 +11,7 @@ import Profiles from "./components/Content/contentElem/Profiles";
 import Jobs from "./components/Content/contentElem/Jobs";
 import Mass from "./components/Content/contentElem/Mass";
 import Notification from "./components/Content/contentElem/Notification";
+import UserProfile from "./components/Content/contentElem/UserProfile";
 
 const App = (props) => {
   return (
@@ -24,9 +25,9 @@ const App = (props) => {
                     <Route path='/projects'><Projects/></Route>
                     <Route path='/profiles'><Profiles/></Route>
                     <Route path='/jobs'><Jobs/></Route>
-                    <Route path='/messages'><Mass/>
-                    </Route>
+                    <Route path='/messages'><Mass/></Route>
                     <Route path='/notification'><Notification/></Route>
+                    <Route path='/user-profile/:userId?'><UserProfile/></Route>
                 </Switch>
               </div>
           </div>

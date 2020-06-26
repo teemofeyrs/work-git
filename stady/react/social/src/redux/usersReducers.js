@@ -8,27 +8,27 @@ const SET_CURRENT_USER_PAGE = 'SET_CURRENT_USER_PAGE';
 const IS_FETCHING = 'IS_FETCHING';
 
 
-export let followUserAC = (userId) => {
+export let followUser = (userId) => {
     return {type: FOLLOW_USERS, userId};
 };
-export let unFollowUserAC = (userId) => {
+export let unFollowUser = (userId) => {
     return {type: UN_FOLLOW_USERS, userId};
 };
-export let hireUserAC = (userId) => {
+export let hireUser = (userId) => {
     return {type: HIRE, userId};
 };
-export let setUsersAC = (users) => {
+export let setUsers = (users) => {
     return{type: SET_USERS, users}
 }
-export let setTotalUserCountAC = (totalCount) =>{
+export let setUsersTotalCount = (totalCount) =>{
     return {
         type: SET_TOTAL_USER_COUNT, totalCount
     }
 }
-export let setCurrentUserPageAC = (currentPage) => {
+export let setCurrentUserPage = (currentPage) => {
     return{ type: SET_CURRENT_USER_PAGE, currentPage }
 }
-export let isFetchingAC = (boolean) => {
+export let isFetchingChange = (boolean) => {
     return{ type: IS_FETCHING, isFetching: boolean }
 }
 let initialState = {
