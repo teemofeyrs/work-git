@@ -4,7 +4,10 @@ import UsersContainerAPI from "../Parts/UsersContainerAPI";
 
 const Profiles = () => {
     return(
-        <UsersContainerAPI/>
+        <div className={classesProfiles.profile}>
+            <UsersContainerAPI/>
+        </div>
+
     );
 };
 export default Profiles;

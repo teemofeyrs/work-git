@@ -7,7 +7,9 @@ const UserProfile = () => {
     return(
         <div>
             <div className={classesUserProfile.banner}></div>
-            <UserInfoContainer/>
+            <div className={classesUserProfile.userInfo}>
+                <UserInfoContainer/>
+            </div>
         </div>
     );
 };

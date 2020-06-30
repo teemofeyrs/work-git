@@ -20,10 +20,40 @@ a{
 }
 .content
 {
-  max-width: 1140px;
+  position: relative;
   margin: 0 auto;
-  padding: 60px 35px;
+  background-color: #f2f2f2;
 }
 
+/* social color*/
+
+.fa-facebook-square
+{
+  color: #3b5999;
+}
+.fa-twitter-square
+{
+  color: #55acee;
+}
+.fa-google-plus-square
+{
+  color: #dd4b39;
+}
+.fa-behance-squar
+{
+  color: #131418;
+}
+.fa-pinterest-square
+{
+  color: #bd081c;
+}
+.fa-instagram
+{
+  color: #e4405f;
+}
+.fa-youtube-play
+{
+  color: #cd201f;
+}
  
 

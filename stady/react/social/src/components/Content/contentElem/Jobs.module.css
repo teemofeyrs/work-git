@@ -1,4 +1,7 @@
 div.jobs
 {
+    max-width: 1140px;
+    padding: 60px 35px;
+    margin: 0 auto;
     color: cyan;
 }

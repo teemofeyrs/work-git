@@ -4,6 +4,7 @@ import * as axios from "axios";
 import {SetUser} from "../../../redux/userProfileReducers";
 import Preloader from "../Parts/Preloader/Preloader";
 import {withRouter} from "react-router-dom";
+import UserPersonalPage from "./UserPersonalPage/UserPersonalPage";
 
 export class UserInfoContainerWhithUrl extends React.Component {
     componentDidMount() {
@@ -20,10 +21,7 @@ export class UserInfoContainerWhithUrl extends React.Component {
         }
         return (
             <div>
-                <img src={this.props.userInfo.photos.large} alt={this.props.userInfo.fullName}/>
-                <div>{this.props.userInfo.aboutMe}</div>
-                <div>{this.props.userInfo.lookingForAJobDescription}</div>
-                <div>{this.props.userInfo.fullName}</div>
+                <UserPersonalPage userInfo={this.props.userInfo}/>
             </div>
         )
     }
