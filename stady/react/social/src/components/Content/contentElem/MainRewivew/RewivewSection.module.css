@@ -1,4 +1,59 @@
 .main
 {
-    background-color: #5195fb;
+    background-color: #f2f2f2;
+}
+.main h3
+{
+    color: #000000;
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+.main h5
+{
+    margin-bottom: 10px;
+    color: #686868;
+    font-size: 18px;
+    font-weight: 600;
+}
+.tabsManue
+{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 45px;
+    margin-top: 20px;
+}
+.tabsManue ul
+{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.tabsManue ul li
+{
+    display: table-cell;
+    text-align: center;
+    color: #b2b2b2;
+    cursor: pointer;
+}
+.tabsManue ul li:hover,
+.tabsManue ul li.active
+{
+    color: #e44d3a;
+}
+.tabsManue ul li i
+{
+    font-size: 32px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.tabsManue ul li span
+{
+    cursor: pointer;
+    display: block;
+    font-weight: 400;
+    font-size: 16px;
 }

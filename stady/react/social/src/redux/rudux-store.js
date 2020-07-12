@@ -1,9 +1,16 @@
-import {combineReducers, createStore} from "redux";
+import {combineReducers, compose, createStore} from "redux";
 import messagesReducers from "./messagesReducers";
 import profileReducers from "./profileReducers";
 import usersReducers from "./usersReducers";
 import userProfileReducers from "./userProfileReducers";
+import Immutable from 'immutable';
 
+const composeEnhancers = typeof window === 'object' && typeof window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ !== 'undefined' ?
+    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
+        serialize: {
+            immutable: Immutable
+        }
+    }) : compose;
 
 let reducers = combineReducers({
     profilePage: profileReducers,
@@ -11,6 +18,6 @@ let reducers = combineReducers({
     usersPage: usersReducers,
     user: userProfileReducers
 });
-let store = createStore(reducers);
+let store = createStore(reducers, composeEnhancers());
 window.store = store;
 export default store;

@@ -26,9 +26,9 @@ export class UserInfoContainerWhithUrl extends React.Component {
         )
     }
 }
-    let mapStateToProps = (state) => {
+    let mapStateToProps = ({user}) => {
         return {
-            userInfo: state.user.userInfo
+            userInfo: user.userInfo
         }
     }
     const UserUrlContainer = withRouter(UserInfoContainerWhithUrl)
