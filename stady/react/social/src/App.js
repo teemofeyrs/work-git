@@ -12,15 +12,18 @@ import Jobs from "./components/Content/contentElem/Jobs";
 import Mass from "./components/Content/contentElem/Mass";
 import Notification from "./components/Content/contentElem/Notification";
 import UserProfile from "./components/Content/contentElem/UserProfile";
+import AuthMe from './components/Auth/AuthMe'
 
 const App = (props) => {
   return (
       <Router>
+        <Switch>
+          <Route path='/auth'><AuthMe/></Route>
           <div className="App">
               <Header />
               <div className='content'>
                 <Switch>
-                    <Route path='/' exact><Home/></Route>
+                    <Route path='/home'><Home/></Route>
                     <Route path='/companies'><Companies/></Route>
                     <Route path='/projects'><Projects/></Route>
                     <Route path='/profiles'><Profiles/></Route>
@@ -31,6 +34,7 @@ const App = (props) => {
                 </Switch>
               </div>
           </div>
+        </Switch>
       </Router>
   );
 };
