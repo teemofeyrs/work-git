@@ -2,6 +2,7 @@ import React from 'react';
 import * as axios from "axios";
 import { setAuthorization } from '../../../redux/reducers/authorizationRedusers';
 import { connect } from 'react-redux'
+import LoginPage from "../loginPageContainer/LoginPage/LoginPage";
 
 class AuthMeContainer extends React.Component {
   componentDidMount () {
@@ -19,7 +20,7 @@ class AuthMeContainer extends React.Component {
 
   render () {
     return (
-      <div>{this.props.auth.id}</div>
+      <LoginPage/>
     )
   }
 }

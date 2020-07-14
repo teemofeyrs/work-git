@@ -1,0 +1,138 @@
+.container
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e75348;
+    padding: 100px 0 20px;
+}
+.mainField
+{
+    position: relative;
+    max-width: 870px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: #fff;
+}
+.mainField:after
+{
+    content: '';
+    position: absolute;
+    top: -16px;
+    left: 56px;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    border-radius: 100px;
+}
+.mainField:before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 100%;
+    width: 1px;
+    background-color: #f0f0f0;
+}
+.article
+{
+    padding: 70px 5px 92px 5px;
+}
+.article:before
+{
+    content: '';
+    position: absolute;
+    top: -37px;
+    left: 43px;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    border-radius: 100px;
+}
+.article .logo
+{
+    width: 100%;
+    padding-left: 45px;
+    margin-bottom: 120px;
+}
+.article .logo img
+{
+    display: block;
+    margin-bottom: 30px;
+}
+.article .logo p
+{
+    margin: 0;
+    padding: 0;
+    color: #666666;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    width: 100%;
+}
+.article .bannerImg img
+{
+    display: block;
+    padding-left: 10px;
+    width: 100%;
+}
+.loginField
+{
+    position: relative;
+    width: 100%;
+    padding: 30px 0;
+}
+.loginField:before
+{
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    right: 70px;
+    width: 30px;
+    height: 30px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    border-radius: 100px;
+    background-color: #fff;
+}
+.loginField:after
+{
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    right: 55px;
+    width: 20px;
+    height: 20px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    border-radius: 100px;
+    background-color: #fff;
+}
+.footer
+{
+    position: sticky;
+    bottom: 0;
+    left: 0;
+}

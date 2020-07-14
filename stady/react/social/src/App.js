@@ -18,7 +18,7 @@ const App = (props) => {
   return (
       <Router>
         <Switch>
-          <Route path='/auth'><AuthMe/></Route>
+          <Route path='/' exact><AuthMe/></Route>
           <div className="App">
               <Header />
               <div className='content'>
