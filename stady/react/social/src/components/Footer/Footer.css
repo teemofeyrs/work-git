@@ -1,0 +1,51 @@
+.footer
+{
+    margin: 0 auto;
+    padding: 0 60px;
+    display: flex;
+    justify-content: space-around;
+}
+.footer li
+{
+    display: inline-block;
+    padding: 0 10px;
+    border-right: 1px solid #fff;
+}
+.footer li:last-child
+{
+    border-right: none;
+}
+.footer li,
+.footer li a,
+.footer li a:hover,
+.footer li a:visited
+{
+    color: #fff;
+    outline: none;
+    text-decoration: none;
+}
+.footer li a:hover
+{
+    text-decoration: none;
+    outline: none;
+}
+.footer div
+{
+    display: inline-block;
+    padding: 0 10px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+}
+.footer div
+.footerSign
+{
+    max-width: 870px;
+}
+.footerSign li a
+{
+    display: inline-block;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+}

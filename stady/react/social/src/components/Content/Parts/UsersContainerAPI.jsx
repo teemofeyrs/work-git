@@ -1,19 +1,14 @@
 import React from "react";
 import {connect} from "react-redux";
-import {
-    followUser,
-    hireUser,isFetchingChange,
-    setCurrentUserPage,
-    setUsersTotalCount,
-    setUsers,
-    unFollowUser
-} from "../../../redux/usersReducers";
-import * as axios from "axios";
+import { follow,hireUser,
+    setCurrentUserPage,unFollow,
+    followingProgress, getUsers } from "../../../redux/usersReducers";
 import User from "./User";
 import classesUsers from "./Users.module.css";
 import classesUser from "./User.module.css";
 import Preloader from "./Preloader/Preloader";
-
+import {AuthRedirect} from "../../../HOC/authRedirect";
+import {compose} from "redux";
 
 class UsersClass extends React.Component {
     constructor(props) {
@@ -24,41 +19,36 @@ class UsersClass extends React.Component {
         this.isFetching = props.isFetching;
     }
     componentDidMount() {
-        this.props.isFetchingChange(true);
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?count=${this.pageSize}&page=${this.currentUserPage}`)
-            .then( response => {
-                this.props.isFetchingChange(false);
-                this.props.setUsersTotalCount(response.data.totalCount)
-                this.props.setUsers(response.data.items);
-            })
+        this.props.getUsers(this.pageSize, this.currentPage)
     }
+
     onPageChanged = (page) => {
-        this.props.isFetchingChange(true);
         this.props.setCurrentUserPage(page);
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?count=${this.pageSize}&page=${page}`)
-            .then( response => {
-                this.props.isFetchingChange(false);
-                this.props.setUsers(response.data.items);
-            });
+        this.props.getUsers(this.pageSize, page)
     }
+
     render() {
         let users = this.props.users.map((u) => (<User user={u}
-                                                       followUser={this.props.followUser}
-                                                       unFollowUser={this.props.unFollowUser}/>));
-        let pageCount = Math.ceil( this.props.totalUsersCount / this.props.pageSize);
+                                                       followingInProgress={this.props.followingInProgress}
+                                                       follow={this.props.follow}
+                                                       unFollow={this.props.unFollow}
+                                                       followingProgress={this.props.followingProgress}/>));
+        let pageCount = Math.ceil(this.props.totalUsersCount / this.props.pageSize);
         let pages = [];
-        for (let i = 1; i <= pageCount; i++){
+        for (let i = 1; i <= pageCount; i++) {
             pages.push(i);
         }
         return (
             <div>
                 <div>
-                    { ( (this.props.isFetching) ? <Preloader/> : undefined )}
-               </div>
+                    {((this.props.isFetching) ? <Preloader/> : undefined)}
+                </div>
                 <div className={classesUser.pagination}>
                     {
-                        pages.map( p => (<span className={ this.props.currentPage === p && classesUser.currentUserPage }
-                        onClick={() => {this.onPageChanged(p)}}>{p}</span> ))
+                        pages.map(p => (<span className={this.props.currentPage === p && classesUser.currentUserPage}
+                                              onClick={() => {
+                                                  this.onPageChanged(p)
+                                              }}>{p}</span>))
                     }
                 </div>
                 <div className={classesUsers.users}>
@@ -77,40 +67,13 @@ let mapStateToProps = (state) => {
         pageSize: state.usersPage.pageSize,
         currentPage: state.usersPage.currentPage,
         isFetching: state.usersPage.isFetching,
+        followingInProgress: state.usersPage.followingInProgress,
     };
 }
-/*let mapDispatchToProps = (dispatch) => {
-    return {
-        follow: (userID) => {
-            dispatch(followUserAC(userID))
-        },
-        unFollow: (userID) => {
-            dispatch(unFollowUserAC(userID))
-        },
-        hire: (userID) => {
-            dispatch(hireUserAC(userID))
-        },
-        setUsers: (users) => {
-            dispatch(setUsersAC(users))
-        },
-        setUsersTotalCount: (totalCount) => {
-            dispatch(setTotalUserCountAC(totalCount))
-        },
-        setCurrentUserPage: (currentPage) => {
-            dispatch(setCurrentUserPageAC(currentPage))
-        },
-        isFetchingChange: (fetching) => {
-            dispatch(isFetchingAC(fetching))
-        }
-    };
-}*/
-const UsersContainer = connect(mapStateToProps, {
-    followUser,
-    unFollowUser,
-    hireUser,
-    setUsers,
-    setUsersTotalCount,
-    setCurrentUserPage,
-    isFetchingChange})(UsersClass);
+const UsersContainer = compose(
+    connect(mapStateToProps, {
+        follow, unFollow,hireUser,
+        setCurrentUserPage,followingProgress,getUsers}),
+    AuthRedirect)(UsersClass);
 
 export default UsersContainer;

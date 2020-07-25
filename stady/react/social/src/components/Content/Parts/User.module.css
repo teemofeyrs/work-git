@@ -64,6 +64,10 @@ button
     margin-right: 6px;
     cursor: pointer;
 }
+button:disabled
+{
+    opacity: 0.5;
+}
 .follow
 {
     background: #53d690;

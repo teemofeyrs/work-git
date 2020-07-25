@@ -5,6 +5,7 @@ import {SetUser} from "../../../redux/userProfileReducers";
 import Preloader from "../Parts/Preloader/Preloader";
 import {withRouter} from "react-router-dom";
 import UserPersonalPage from "./UserPersonalPage/UserPersonalPage";
+import {compose} from "redux";
 
 export class UserInfoContainerWhithUrl extends React.Component {
     componentDidMount() {
@@ -31,5 +32,7 @@ export class UserInfoContainerWhithUrl extends React.Component {
             userInfo: user.userInfo
         }
     }
-    const UserUrlContainer = withRouter(UserInfoContainerWhithUrl)
-    export const UserInfoContainer = connect(mapStateToProps, {SetUser})(UserUrlContainer);
+export const UserInfoContainer = compose(
+        connect(mapStateToProps, {SetUser}),
+        withRouter
+    )(UserInfoContainerWhithUrl);

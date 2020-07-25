@@ -1,5 +1,5 @@
 
-import {AddMessageCreator, OnMessageChangeCreator} from "../../../redux/messagesReducers";
+import {AddMessageCreator, OnMessageChangeCreator} from "../../../redux/reducers/messagesReducers";
 import Masseges from "./Masseges";
 import {connect} from "react-redux";
 

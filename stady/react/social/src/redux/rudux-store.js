@@ -1,10 +1,11 @@
-import {combineReducers, compose, createStore} from "redux";
-import messagesReducers from "./messagesReducers";
-import profileReducers from "./profileReducers";
+import {applyMiddleware, combineReducers, compose, createStore} from "redux";
+import messagesReducers from "./reducers/messagesReducers";
+import profileReducers from "./reducers/profileReducers";
 import usersReducers from "./usersReducers";
 import userProfileReducers from "./userProfileReducers";
 import Immutable from 'immutable';
-import authorizationRedusers from './reducers/authorizationRedusers'
+import authorizationRedusers from './reducers/authorizationRedusers';
+import thunkMiddleware from 'redux-thunk';
 
 const composeEnhancers = typeof window === 'object' && typeof window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ !== 'undefined' ?
     window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
@@ -20,6 +21,6 @@ let reducers = combineReducers({
     user: userProfileReducers,
     auth: authorizationRedusers,
 });
-let store = createStore(reducers, composeEnhancers());
+let store = createStore(reducers, applyMiddleware(thunkMiddleware));
 window.store = store;
 export default store;

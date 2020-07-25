@@ -1,21 +1,31 @@
+import {AuthApi} from "../../api/api";
+
 const SET_AUTHORIZATION = 'SET_AUTHORIZATION';
 
-
-
 export let setAuthorization = ({id, email, login}) => {
-  return {type: SET_AUTHORIZATION, data:{id, email, login} };
+  return {type: SET_AUTHORIZATION, id, email, login };
 };
+export const me = () => {
+    return (dispatch) => {
+        AuthApi.authMe().then(response => {
+                if (response.data.resultCode === 0)
+                    dispatch(setAuthorization(response.data.data));
+            })
+    }
+}
+
 
 let initialState = {
     id: null,
     email: null,
-    login: null
+    login: null,
+    isAuth: false
 };
 const authorizationRedusers = (state = initialState, action) => {
   switch (action.type) {
     case SET_AUTHORIZATION: {
 
-      return {...state, ...action.data};
+      return {...state, ...action, isAuth: true};
     }
 
     default:

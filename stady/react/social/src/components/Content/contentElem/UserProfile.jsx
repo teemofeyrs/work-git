@@ -1,6 +1,8 @@
 import React from 'react';
 import classesUserProfile from './UserProfile.module.css';
 import {UserInfoContainer} from "./UserInfoContainer";
+import {compose} from "redux";
+import {AuthRedirect} from "../../../HOC/authRedirect";
 
 
 const UserProfile = () => {
@@ -14,4 +16,4 @@ const UserProfile = () => {
     );
 };
 
-export default UserProfile;
+export default compose(AuthRedirect)(UserProfile);

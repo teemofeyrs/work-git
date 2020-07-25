@@ -9,6 +9,8 @@ import {
 import Header from './components/header/Header';
 import ButtonPage from './components/content/button page/ButtonPage';
 import ButtonGroupPage from './components/content/button group page/ButtonGroupPage';
+import IconPage from "./components/content/icon page/IconPage";
+import ImagePage from "./components/content/image page/ImagePage";
 
 const App = () => {
   return (
@@ -18,7 +20,9 @@ const App = () => {
           <div className='content'>
               <Switch>
                   <Route path='/' exact component={ButtonPage}/>
-                  <Route path='/buttongroup' exact component={ButtonGroupPage}/>
+                  <Route path='/buttongroup'  component={ButtonGroupPage}/>
+                  <Route path='/icon' component={IconPage}/>
+                  <Route path='/image' component={ImagePage}/>
 
               </Switch>
           </div>

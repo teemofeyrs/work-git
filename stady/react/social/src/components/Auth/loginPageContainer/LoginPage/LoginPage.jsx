@@ -4,6 +4,7 @@ import logo from './../../../../assets/img/logo.png'
 import Footer from "../../../Footer/Footer";
 
 const LoginPage = (props) => {
+    const footerItems = ['Help Center', 'About', 'Privat Policy', 'Community Guadelines', 'Cookies Policy']
     return (
         <Fragment>
             <div className={classLoginPage.container}>
@@ -21,8 +22,12 @@ const LoginPage = (props) => {
                     <div className={classLoginPage.loginField}>
                         <div className={classLoginPage.tabGroup}>
                             <ul>
-                                <li><button>Sign in</button></li>
-                                <li><button>Sign Up</button></li>
+                                <li>
+                                    <button>Sign in</button>
+                                </li>
+                                <li>
+                                    <button>Sign Up</button>
+                                </li>
                             </ul>
                         </div>
                         <div className={classLoginPage.signInForm}>
@@ -30,7 +35,9 @@ const LoginPage = (props) => {
                         </div>
                     </div>
                 </div>
-                {/*<Footer className={classLoginPage.footer}/>*/}
+            </div>
+            <div className={classLoginPage.containerFooter}>
+                <Footer className={'footerSign'} array={footerItems}/>
             </div>
         </Fragment>
     )

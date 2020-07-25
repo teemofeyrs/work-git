@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
     background-color: #e75348;
-    padding: 100px 0 20px;
+    padding: 100px 0 70px;
 }
 .mainField
 {
@@ -130,9 +130,12 @@
     border-radius: 100px;
     background-color: #fff;
 }
-.footer
+.containerFooter
 {
-    position: sticky;
-    bottom: 0;
-    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 70px 0 40px;
+    background-color: #e75348;
 }

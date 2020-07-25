@@ -1,5 +1,5 @@
-import profileReducers from "./profileReducers";
-import messagesReducers from "./messagesReducers";
+import profileReducers from "./reducers/profileReducers";
+import messagesReducers from "./reducers/messagesReducers";
 
 
 let store = {
