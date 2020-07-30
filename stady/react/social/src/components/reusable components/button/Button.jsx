@@ -12,7 +12,7 @@ const Button = ({className, children, onClick, disabled, active, ...attr}) => {
   )
   const Tag = attr.href ? 'a' : 'button';
   return(
-    <Tag className={styles} onClick={onClick} disabled={disabled} active={active}>{children}</Tag>
+    <Tag className={styles} onClick={onClick} disabled={disabled} active={active} {...attr}>{children}</Tag>
   );
 }
 Button.propTypes = {

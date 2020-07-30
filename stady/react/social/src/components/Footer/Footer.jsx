@@ -31,7 +31,7 @@ const Footer = ({className, children, array}) => {
     )
 };
 
-Footer.PropTypes = {
+Footer.propTypes = {
     className: PropTypes.string,
     children: PropTypes.node,
     array: PropTypes.array

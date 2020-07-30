@@ -4,8 +4,8 @@ import './SignUpForm.css';
 const LoginOutForm = (props) => {
     return(
         <Fragment>
-            <h3>Sing up</h3>
-            <p>NOT SUPPORTED by API SERVICE</p>
+            <h3 className='signUpFrom'>Sing up</h3>
+            <p className='notSupported'>NOT SUPPORTED by API SERVICE</p>
         </Fragment>
     );
 };

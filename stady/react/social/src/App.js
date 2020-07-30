@@ -4,8 +4,8 @@ import {
     BrowserRouter as Router, Route, Switch
 } from "react-router-dom";
 import Header from './components/Header/Header';
-import Home from "./components/Content/contentElem/Home";
-import Companies from "./components/Content/contentElem/Companies";
+import Home from "./components/Content/contentElem/Home/Home";
+import Companies from "./components/Content/contentElem/Companies/Companies";
 import Projects from "./components/Content/contentElem/Projects";
 import Profiles from "./components/Content/contentElem/Profiles";
 import Jobs from "./components/Content/contentElem/Jobs";

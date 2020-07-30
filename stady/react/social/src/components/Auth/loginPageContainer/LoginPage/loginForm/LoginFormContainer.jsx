@@ -1,8 +1,5 @@
 import React, {Component, Fragment} from 'react';
-import PropTypes from 'prop-types';
-import LoginForm from "./LoginForm";
 import LoginResourses from "./LoginResourses";
-
 import LoginFormRedux from "./LoginForm";
 
 class LoginFormContainer extends Component {
@@ -20,7 +17,7 @@ class LoginFormContainer extends Component {
 
         return (
             <Fragment>
-                <h3>Sign In</h3>
+                <h3 className='loginForm'>Sign In</h3>
                 <LoginFormRedux onSubmit={ this.onSubmitForm}/>
                 <LoginResourses/>
             </Fragment>

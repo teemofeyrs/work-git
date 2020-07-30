@@ -15,8 +15,8 @@ const LoginForm = (props) => {
                    component={"input"}
                    type="password"
                    placeholder="password"/>
-            <Input name='email' id='email'/>
-            <Input name='password' id='email'/>
+            <Input name='email' id='mail'/>
+            <Input name='password' id='pass'/>
             <Input name='radio' id='checkbox' label='Remember me'/>
             <Button active>Sing In</Button>
         </form>
