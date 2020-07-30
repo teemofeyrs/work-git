@@ -1,0 +1,24 @@
+h3
+{
+    color: #000000;
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+h3:before
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: #e44d3a;
+}
+p
+{
+    width: 100%;
+    padding: 10px;
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './button.css';
 import classNames from 'classnames';
 
@@ -22,7 +23,11 @@ Button.propTypes = {
   active: PropTypes.bool,
 };
 Button.defaultProps = {
-
+  children: 'Button',
+  className: '',
+  disabled: false,
+  onClick: ()=>{ },
+  active: false,
 };
 
 export default Button;

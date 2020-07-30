@@ -1,0 +1,21 @@
+.nav-item {
+    display: block;
+    margin: 0;
+    border: 1px solid #EDEDED;
+    cursor: pointer;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: #e5e5e5;
+    overflow: hidden;
+    outline: none;
+}
+.nav-item.active {
+    background-color: #e44d3a;
+    color: #fff;
+    border-bottom-color: transparent;
+}
+
+.vertical .nav-item {
+    border-radius: 5px 0 0 5px;
+}

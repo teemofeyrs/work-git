@@ -2,6 +2,7 @@ import React, {Fragment} from "react";
 import classLoginPage from './LoginPage.module.css';
 import logo from './../../../../assets/img/logo.png'
 import Footer from "../../../Footer/Footer";
+import Login from "../Login";
 
 const LoginPage = (props) => {
     const footerItems = ['Help Center', 'About', 'Privat Policy', 'Community Guadelines', 'Cookies Policy']
@@ -20,22 +21,11 @@ const LoginPage = (props) => {
                         </div>
                     </div>
                     <div className={classLoginPage.loginField}>
-                        <div className={classLoginPage.tabGroup}>
-                            <ul>
-                                <li>
-                                    <button>Sign in</button>
-                                </li>
-                                <li>
-                                    <button>Sign Up</button>
-                                </li>
-                            </ul>
-                        </div>
-                        <div className={classLoginPage.signInForm}>
-
-                        </div>
+                        <Login/>
+                    </div>
                     </div>
                 </div>
-            </div>
+
             <div className={classLoginPage.containerFooter}>
                 <Footer className={'footerSign'} array={footerItems}/>
             </div>

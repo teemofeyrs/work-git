@@ -12,7 +12,6 @@ const Footer = ({className, children, array}) => {
     const liElements = array.map(item => {
         return<li key={item}><a href='#'>{item}</a></li>
     } );
-    debugger;
     return (
         <Fragment>
             <ul className={classes}>

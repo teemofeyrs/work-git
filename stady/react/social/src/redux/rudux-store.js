@@ -6,6 +6,7 @@ import userProfileReducers from "./userProfileReducers";
 import Immutable from 'immutable';
 import authorizationRedusers from './reducers/authorizationRedusers';
 import thunkMiddleware from 'redux-thunk';
+import { reducer as formReducer } from 'redux-form';
 
 const composeEnhancers = typeof window === 'object' && typeof window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ !== 'undefined' ?
     window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
@@ -20,6 +21,7 @@ let reducers = combineReducers({
     usersPage: usersReducers,
     user: userProfileReducers,
     auth: authorizationRedusers,
+    form: formReducer,
 });
 let store = createStore(reducers, applyMiddleware(thunkMiddleware));
 window.store = store;
