@@ -10,13 +10,15 @@ let mapStateToProps = (state) => {
 }
 let mapDispatchToProps = (dispatch) => {
     return {
-        addPost: () =>{
-            dispatch(AddPostCreator());
-        } ,
-        onChange: (text) => {
-            dispatch(OnPostChangeCreator(text));
-        }
+        addPost: (formData) => {
+            console.log(formData)
+            dispatch(AddPostCreator(formData.addNewPost));
+        },
     };
 }
-const AddPostsContainer = connect(mapStateToProps, mapDispatchToProps)(AddPost);
+const AddPostForm = (props) => {
+    return (<AddPost onSubmit={props.addPost}/>)
+};
+
+const AddPostsContainer = connect(mapStateToProps, mapDispatchToProps)(AddPostForm);
 export default AddPostsContainer;

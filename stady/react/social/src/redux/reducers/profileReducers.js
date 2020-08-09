@@ -1,7 +1,7 @@
 const ADD_POST = 'ADD-POST';
 const ON_POST_CHANGE = 'ON-POST-TEXT-CHANGE';
-export let AddPostCreator = () => {
-    return {type: ADD_POST};
+export let AddPostCreator = (postText) => {
+    return {type: ADD_POST, postText};
 };
 export let OnPostChangeCreator = (text) => {
     return {type: ON_POST_CHANGE, text: text};
@@ -35,12 +35,13 @@ const profileReducers = (state = initialState, action) => {
 
     switch (action.type) {
         case ADD_POST:
+            if(!action.postText) return state;
             let stateCopy = {...state};
                 stateCopy.posts = [...state.posts];
             let newPost = {
                 img: 'https://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg',
                 name: 'John Doe',
-                textPost: state.newPostText,
+                textPost: action.postText,
                 likes: 0,
                 comments: 0,
                 views: 0

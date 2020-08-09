@@ -1,4 +1,4 @@
-.input {
+.textarea {
     box-sizing: border-box;
     width: 100%;
     padding: 5px 15px 5px 40px;
@@ -7,51 +7,39 @@
     border: 1px solid #e5e5e5;
     margin-bottom: 20px;
 }
-.input:focus {
-    border: 1px solid #e5e5e5;
-    outline: 1px solid #e5e5e5;
+.textarea:focus {
+    border: 1px solid #e4e4e4;
+    outline: none;
 }
-.input[disabled] {
+.textarea[disabled] {
     cursor: not-allowed;
 }
 
-.input[name="checkbox"],
-.input[name="radio"] {
-    width: 5px;
-    height: 5px;
-}
-
-.input.error {
+.textarea.error {
     border-color: #e44d3a;
     background-color: rgba(212, 55, 40, 0.2);
     outline: #e44d3a;
 }
 
-.inputWrapper {
+.textareaWrapper {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     position: relative;
 }
 
-.labelsWrapper {
-    margin-bottom: 5px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.inputRequired {
+.textareaRequired {
     color: #e44d3a;
 }
 
-.inputRequired,
-.inputLabel {
+.textareaRequired
+ {
     font-weight: 600;
     font-size: 10px;
     text-transform: uppercase;
 }
 
-.inputError {
+.textareaError {
     margin-top: 5px;
     color: #e44d3a;
     font-size: 12px;

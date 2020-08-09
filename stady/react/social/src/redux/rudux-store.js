@@ -23,6 +23,8 @@ let reducers = combineReducers({
     auth: authorizationRedusers,
     form: formReducer,
 });
-let store = createStore(reducers, applyMiddleware(thunkMiddleware));
+
+
+let store = createStore(reducers, composeEnhancers(applyMiddleware(thunkMiddleware)));
 window.store = store;
 export default store;

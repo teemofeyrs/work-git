@@ -5,32 +5,25 @@ import classNames from 'classnames';
 import './Input.css';
 
 const Input = ({
-                  name, id, className, label, error, ...attrs
+                  name, id, className, input,label,  ...attrs
                }) => {
-    const classes = classNames(
+    let classes;
+    classes = classNames(
         'input',
         className,
-        { error },
     );
 
     return (
         <div className="inputWrapper">
-            <div className="labelsWrapper">
-                {label
-                && <label className="inputLabel" htmlFor={id}>{label}</label>
-                }
-                {attrs.required
-                && <span className="inputRequired">Required</span>
-                }
-            </div>
+            {label ? <label htmlFor={id}>{label}</label> : null }
             <input
+                {...input}
                 type={name}
                 id={id}
                 className={classes}
                 {...attrs}
             />
-            {error
-            && <span className="inputError">{error}</span>
+            {attrs.touched && attrs.error && <span className="inputError">{attrs.error}</span>
             }
         </div>
     );
@@ -40,6 +33,7 @@ Input.propTypes = {
     name: PropTypes.string,
     id: PropTypes.string.isRequired,
     className: PropTypes.string,
+    textarea: PropTypes.bool,
     label: PropTypes.string,
     error: PropTypes.string,
 };
@@ -47,8 +41,8 @@ Input.propTypes = {
 Input.defaultProps = {
     name: 'text',
     className: '',
-    label: '',
-    error: '',
+    label: null,
+    error: null,
 };
 
 export default Input;

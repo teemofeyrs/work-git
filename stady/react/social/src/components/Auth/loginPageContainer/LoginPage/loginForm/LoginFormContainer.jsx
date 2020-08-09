@@ -1,28 +1,23 @@
-import React, {Component, Fragment} from 'react';
+import React, { Fragment} from 'react';
 import LoginResourses from "./LoginResourses";
 import LoginFormRedux from "./LoginForm";
+import {login} from "../../../../../redux/reducers/authorizationRedusers";
+import {connect} from "react-redux";
 
-class LoginFormContainer extends Component {
-    static propTypes = {
+const LoginFormContainer = ({login}) => {
 
-    };
-
-    static defaultProps = {
-
-    };
-    onSubmitForm(formData) {
-        console.log(formData)
+     let onSubmitForm = ({email, password, rememberMe}) => {
+        console.log(email, password, rememberMe);
+        login(email, password, rememberMe);
     }
-    render() {
 
         return (
             <Fragment>
                 <h3 className='loginForm'>Sign In</h3>
-                <LoginFormRedux onSubmit={ this.onSubmitForm}/>
+                <LoginFormRedux onSubmit={onSubmitForm}/>
                 <LoginResourses/>
             </Fragment>
-            );
-    }
+        );
 }
 
-export default LoginFormContainer;
+export default connect(null, {login})(LoginFormContainer);

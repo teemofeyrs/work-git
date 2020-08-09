@@ -5,7 +5,8 @@ const SET_AUTHORIZATION = 'SET_AUTHORIZATION';
 export let setAuthorization = ({id, email, login}) => {
   return {type: SET_AUTHORIZATION, id, email, login };
 };
-export const me = () => {
+export const auth = () => {
+
     return (dispatch) => {
         AuthApi.authMe().then(response => {
                 if (response.data.resultCode === 0)
@@ -13,7 +14,13 @@ export const me = () => {
             })
     }
 }
-
+export const login = (email, password, rememberMe) => (dispatch) => {
+    AuthApi.login(email, password, rememberMe).then(response => {
+          if (response.data.resultCode === 0)
+              dispatch(auth());
+        }
+    )
+}
 
 let initialState = {
     id: null,

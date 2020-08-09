@@ -1,32 +1,44 @@
 .addPost
 {
+    width: 100%;
+}
+.addPost form
+{
     position: relative;
     min-width: 525px;
-    height: 101px;
     padding: 15px;
     margin-bottom: 15px;
     display: grid;
     grid-template-columns: 4fr 1fr;
-    justify-items: space-between;
+    justify-items: stretch;
     align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
     background-color: #fff;
     border-top: 4px solid #e44d3a;
     border-left: 1px solid #e4e4e4;
     border-bottom: 1px solid #e4e4e4;
     border-right: 1px solid #e4e4e4;
 }
-.addPost textarea
+.addPost form > div
 {
-    border: 1px solid #e4e4e4;;
+    width: 70%;
+}
+.addPost form div textarea
+{
+    width: 360px;
+    border: 1px solid #e4e4e4;
     outline: none;
     border-radius: 5px;
     max-height: 50%;
     overflow: hidden;
-    padding: 5px;
+    padding: 5px 15px;
     margin: 10px;
 }
 .addPost button
 {
+    float: right;
     display: block;
     border: none;
     outline: none;

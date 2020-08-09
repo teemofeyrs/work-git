@@ -1,6 +1,5 @@
 import React, {Fragment} from "react";
 import classLoginPage from './LoginPage.module.css';
-import logo from './../../../../assets/img/logo.png'
 import Footer from "../../../Footer/Footer";
 import Login from "../Login";
 

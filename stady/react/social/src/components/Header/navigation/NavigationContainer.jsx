@@ -1,12 +1,12 @@
 import React from "react";
 import {connect} from "react-redux";
 import Navigation from "./Navigation";
-import {me} from "../../../redux/reducers/authorizationRedusers";
+import {auth} from "../../../redux/reducers/authorizationRedusers";
 
 class NavigationContainer extends React.Component {
 
     componentDidMount() {
-        this.props.me();
+        this.props.auth();
     }
 
     render() {
@@ -21,4 +21,4 @@ let mapStateToProps = ({auth}) => {
     isAuth: auth.isAuth
     };
 }
-export default connect(mapStateToProps, { me })(NavigationContainer);
+export default connect(mapStateToProps, { auth })(NavigationContainer);
