@@ -12,24 +12,26 @@
     list-style: none;
     display: inline-block;
     text-align: center;
-   
     position: relative;
+    cursor: pointer;
 }
 .navigation ul li:last-child
 {
+
     margin-left: 13px;
     border-left: 1px solid #dd3e2b;
     border-right: 1px solid #dd3e2b;
     box-sizing: border-box;
-   
+    cursor: pointer;
 }
 .navigation ul li img
 {
     display: inline-block;
     margin-right: 5px;
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
+    cursor: pointer;
 }
 .navigation ul li a
 {
@@ -41,6 +43,7 @@
     font-size: 1.1em;
     color: #fff;
     transition: 0.4s;
+    cursor: pointer;
 }
 .navigation ul li a:hover,
 .navigation ul li a.activeLink
@@ -59,4 +62,17 @@
     color: #fff;
     cursor: pointer;
     transition: 0.4s;
+}
+.navigation ul li:last-child:hover
+{
+    position: relative;
+    text-decoration: none;
+    color: #e44d3a;;
+    background: #fff;
+    cursor: pointer;
+}
+.navigation ul li:last-child span
+{
+    z-index: 5;
+    cursor: pointer;
 }

@@ -1,24 +1,26 @@
 import React from "react";
 import {connect} from "react-redux";
 import Navigation from "./Navigation";
-import {auth} from "../../../redux/reducers/authorizationRedusers";
+import {logOut} from "../../../redux/reducers/authorizationRedusers";
+import {compose} from "redux";
+import {AuthRedirect} from "../../../HOC/authRedirect";
 
 class NavigationContainer extends React.Component {
 
-    componentDidMount() {
-        this.props.auth();
-    }
-
     render() {
         return (
-            <Navigation {...this.props}/>
+            <Navigation toggleSettings={this.props.toggleSettings}
+                        myInfo={this.props.myInfo}
+                        logOut={this.props.logOut}/>
         );
     }
 }
 
-let mapStateToProps = ({auth}) => {
+let mapStateToProps = (state) => {
     return {
-    isAuth: auth.isAuth
+        myInfo: { ...state.myInfo},
     };
 }
-export default connect(mapStateToProps, { auth })(NavigationContainer);
+export default compose( connect(mapStateToProps, { logOut }),
+    AuthRedirect
+    )(NavigationContainer);

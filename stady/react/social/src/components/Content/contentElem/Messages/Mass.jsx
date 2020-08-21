@@ -1,7 +1,7 @@
 import React from 'react';
 import classesMasseges from './Masseges.module.css';
-import MessagesContainer from "../Parts/MassegesContainer";
-import DialogsContainer from "../Parts/DialogsContainer";
+import MessagesContainer from "../../Parts/MassegesContainer";
+import DialogsContainer from "../../Parts/DialogsContainer";
 
 const Mass = (props) => {
     return (

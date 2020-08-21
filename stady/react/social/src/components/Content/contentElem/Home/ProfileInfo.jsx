@@ -1,16 +1,17 @@
 import React from "react";
 import classesProfileInfo from './ProfileInfo.module.css';
-import {Link} from "react-router-dom";
-
-const ProfileInfo = () => {
+import {NavLink} from "react-router-dom";
+import imageProfile from './.././../../../assets/img/no-profile.png';
+const ProfileInfo = (props) => {
     return (
         <div className={classesProfileInfo.userProfile}>
             <div className={classesProfileInfo.mainInfo}>
-                <img src='https://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg'
+                <img src={imageProfile}
                      alt='user'/>
                      <div className={classesProfileInfo.title}>
-                         <h3>John Dow</h3>
-                         <span>Graphic Designer at Self Employed</span>
+                         <h3>{props.myInfo.fullName}</h3>
+                         <span>{props.myInfo.aboutMe}</span>
+                         <span>{props.myStaus}</span>
                      </div>
             </div>
             <div className={classesProfileInfo.details}>
@@ -24,7 +25,7 @@ const ProfileInfo = () => {
                         <span>155</span>
                     </li>
                     <li>
-                        <Link  to="/">View Profile</Link>
+                        <NavLink to={`/user-profile/${props.myInfo.userId}`}>View Profile</NavLink>
                     </li>
                 </ul>
             </div>

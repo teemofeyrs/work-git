@@ -13,7 +13,7 @@ const Textarea = ({
         className,
 
     );
-debugger
+
     return (
         <div className="textareaWrapper">
             <textarea

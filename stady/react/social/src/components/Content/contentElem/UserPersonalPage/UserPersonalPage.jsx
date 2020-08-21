@@ -3,7 +3,7 @@ import classesUserPersonalPage from './UserPersonalPage.module.css';
 import {NavLink, Route, Switch} from "react-router-dom";
 import Home from "../Home/Home";
 import MainRewivew from './../MainRewivew/MainRewivew';
-import FastInfo from "../FastInfo/FastInfo";
+import FastInfo from "./FastInfo/FastInfo";
 import Portfolio from "../../Parts/Portfolio/Portfolio";
 
 const UserPersonalPage = (props) => {

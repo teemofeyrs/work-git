@@ -1,5 +1,5 @@
 /* variable */
-import {UsersApi} from "../api/api";
+import {UsersApi} from "../../apiDAL/api";
 
 const FOLLOW_USERS = 'FOLLOW_USERS';
 const UN_FOLLOW_USERS = 'UN_FOLLOW_USERS';

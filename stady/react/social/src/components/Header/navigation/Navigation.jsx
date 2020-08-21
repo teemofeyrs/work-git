@@ -1,24 +1,29 @@
-import React, {Fragment} from 'react';
-import { Link} from "react-router-dom";
+import React, {Fragment, useState} from 'react';
+import { NavLink} from "react-router-dom";
 import classesNav from './Navigation.module.css';
-
+import noProfile from './../../../assets/img/no-profile.png';
+import DropSettings from "./DropSettings/DropSettings";
 const Navigation = (props) => {
+
+
     return (
             <nav className={classesNav.navigation}>
                 <ul>
-                    <li><Link  to="/"><i className="fa fa-home" aria-hidden="true"> </i><br/>Home</Link ></li>
-                    <li><Link  to="/companies"><i className="fa fa-building" aria-hidden="true"> </i><br/>Companies</Link ></li>
-                    <li><Link  to="/projects"><i className="fa fa-puzzle-piece" aria-hidden="true"> </i><br/>Progects</Link></li>
-                    <li><Link  to="/profiles"><i className="fa fa-users" aria-hidden="true"> </i><br/>Profiles</Link></li>
-                    <li><Link  to="/jobs"><i className="fa fa-briefcase" aria-hidden="true"> </i><br/>Jobs</Link></li>
-                    <li><Link  to="/messages"><i className="fa fa-envelope-o" aria-hidden="true"> </i><br/>Messages</Link></li>
-                    <li><Link  to="/notification"><i className="fa fa-bolt" aria-hidden="true"> </i><br/>Notification</Link></li>
-                    <li>{ props.isAuth ?
+                    <li><NavLink  to="/"><i className="fa fa-home" aria-hidden="true"> </i><br/>Home</NavLink ></li>
+                    <li><NavLink  to="/companies"><i className="fa fa-building" aria-hidden="true"> </i><br/>Companies</NavLink ></li>
+                    <li><NavLink  to="/projects"><i className="fa fa-puzzle-piece" aria-hidden="true"> </i><br/>Progects</NavLink></li>
+                    <li><NavLink  to="/profiles"><i className="fa fa-users" aria-hidden="true"> </i><br/>Profiles</NavLink></li>
+                    <li><NavLink  to="/jobs"><i className="fa fa-briefcase" aria-hidden="true"> </i><br/>Jobs</NavLink></li>
+                    <li><NavLink  to="/messages"><i className="fa fa-envelope-o" aria-hidden="true"> </i><br/>Messages</NavLink></li>
+                    <li><NavLink  to="/notification"><i className="fa fa-bolt" aria-hidden="true"> </i><br/>Notification</NavLink></li>
+                    <li id='toggleSettings' >
                         <Fragment>
-                            <img  src={'https://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg'}  alt='user'/>
-                            <span className='userName'>John</span>
+                            <img id='userToggleImg'  src={(!props.myInfo.photos) ? noProfile : !props.myInfo.photos.small ?
+                                                        noProfile : props.myInfo.photos.small}  alt='user'/>
+                            <span className='userName'>{props.myInfo.fullName}</span>
+                            { props.toggleSettings && <DropSettings logOut={props.logOut}/>}
                         </Fragment>
-                         :  <Fragment><p>Not login</p></Fragment>}</li>
+                    </li>
                 </ul>
             </nav>
     );

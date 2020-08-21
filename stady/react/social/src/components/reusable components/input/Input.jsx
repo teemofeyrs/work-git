@@ -5,8 +5,9 @@ import classNames from 'classnames';
 import './Input.css';
 
 const Input = ({
-                  name, id, className, input,label,  ...attrs
+                  name, id, className, input,label, meta: {error, touched}, ...attrs
                }) => {
+
     let classes;
     classes = classNames(
         'input',
@@ -16,6 +17,7 @@ const Input = ({
     return (
         <div className="inputWrapper">
             {label ? <label htmlFor={id}>{label}</label> : null }
+            {touched && error && <span className="inputError">{error}</span>}
             <input
                 {...input}
                 type={name}
@@ -23,8 +25,6 @@ const Input = ({
                 className={classes}
                 {...attrs}
             />
-            {attrs.touched && attrs.error && <span className="inputError">{attrs.error}</span>
-            }
         </div>
     );
 };

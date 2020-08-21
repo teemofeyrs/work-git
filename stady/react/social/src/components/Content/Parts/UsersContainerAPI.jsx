@@ -2,7 +2,7 @@ import React from "react";
 import {connect} from "react-redux";
 import { follow,hireUser,
     setCurrentUserPage,unFollow,
-    followingProgress, getUsers } from "../../../redux/usersReducers";
+    followingProgress, getUsers } from "../../../redux/reducers/usersReducers";
 import User from "./User";
 import classesUsers from "./Users.module.css";
 import classesUser from "./User.module.css";

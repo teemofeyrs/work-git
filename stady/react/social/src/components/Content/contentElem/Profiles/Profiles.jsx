@@ -1,6 +1,6 @@
 import React from 'react';
 import classesProfiles from './Profiles.module.css';
-import UsersContainerAPI from "../Parts/UsersContainerAPI";
+import UsersContainerAPI from "../../Parts/UsersContainerAPI";
 
 const Profiles = () => {
     return(

@@ -4,12 +4,12 @@ import Navigation from './navigation/Navigation';
 import clsassesHeader from './Header.module.css';
 import NavigationContainer from "./navigation/NavigationContainer";
 
-const Header = () => {
+const Header = (props) => {
     return (
         <div className={clsassesHeader.header}>
             <div className={clsassesHeader.wrapper}>
                 <LogoSearch />
-                <NavigationContainer />
+                <NavigationContainer toggleSettings={props.toggleSettings}/>
             </div>
         </div>
 

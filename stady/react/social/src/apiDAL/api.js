@@ -8,14 +8,13 @@ const instanceApi = axios.create({
 
 export const AuthApi =  {
     authMe() {
-        debugger
        return  instanceApi.get(`auth/me`);
     },
     login(email, password, rememberMe = false){
         return instanceApi.post('auth/login', {email, password, rememberMe});
     },
     logout(){
-        return instanceApi.delete('auth/login' ).then(response => response);
+        return instanceApi.delete('auth/login');
     }
 }
 export const UsersApi = {
@@ -29,4 +28,12 @@ export const UsersApi = {
         return instanceApi.delete(`follow/${id}`).then(response => response.data);
     }
 
+}
+export const ProfileApi = {
+    getProfile(userId){
+        return  instanceApi.get(`profile/${userId}`);
+    },
+    getStatus(profileId){
+        return instanceApi.get(`/status/${profileId}`)
+    }
 }
