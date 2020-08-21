@@ -13,7 +13,6 @@ export let dischargeInit = () => {
     return {type: AFTER_LOGOUT};
 };
 export const toInitialize = () => async (dispatch) => {
-    debugger
        let promiseAuth = await dispatch(auth());
        Promise.all([promiseAuth]).then(() => {
            dispatch(initialization())

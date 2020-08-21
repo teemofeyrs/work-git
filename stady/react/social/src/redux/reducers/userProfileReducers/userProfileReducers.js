@@ -5,20 +5,20 @@ const PROFILE_SET_STATUS = 'profile/SET_STATUS';
 /* action creator*/
 export let SetUser = (userInfo) => {
     return{
-        type: SET_USER, userInfo
+        type: PROFILE_SET_USER, userInfo
     }
 }
 export let SetStatus = (status) => {
     return{
-        type: SET_USER, status
+        type: PROFILE_SET_STATUS, status
     }
 }
 /* initial state*/
 const initialState = {
     userInfo: [],
-    userStatus: '',
+    userStatus: null,
 }
-/* redux thunck*/
+/* redux thunk*/
 export const userInit = (id) => (dispatch) => {
     ProfileApi.getProfile(id).then( response => {
         dispatch(SetUser(response.data));
@@ -27,8 +27,11 @@ export const userInit = (id) => (dispatch) => {
 export const profileStatusInit = (id) => async (dispatch) => {
    let response = await ProfileApi.getStatus(id);
         dispatch(SetStatus(response.data));
-
 }
+export const changeStatusOnApi = (status) => async (dispatch) => {
+    let response = await ProfileApi.setStatus(status);
+    if(response.resultCode === 0) dispatch(SetStatus(status));
+};
 /*reducer*/
 const userProfileReducers = (state= initialState, action) =>{
     switch (action.type) {
@@ -39,7 +42,7 @@ const userProfileReducers = (state= initialState, action) =>{
         }
         case PROFILE_SET_STATUS: {
             return {
-                ...state, status: action.status
+                ...state, userStatus: action.status
             }
         }
         default:
