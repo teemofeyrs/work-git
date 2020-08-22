@@ -1,0 +1,12 @@
+span.status
+{
+    margin: 0;
+    color: #686868;
+    font-size: 18px;
+}
+input.statusInput
+{
+    border: none;
+    border-bottom: 1px solid #bd081c;
+    outline: none;
+}

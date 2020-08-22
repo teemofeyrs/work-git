@@ -1,4 +1,5 @@
 import React from 'react'
+import statusClasses from './Status.module.css';
 
 const Status = ({status, editMode,setStatus, ChangeStatus, SetNewStatus}) => {
   let handlerStatusChange = (e) => {
@@ -6,11 +7,13 @@ const Status = ({status, editMode,setStatus, ChangeStatus, SetNewStatus}) => {
     setStatus(newValue)
   }
     if (!editMode) {
-    return <span onClick={ChangeStatus}>{status || 'No Status'}</span>
+    return <span onDoubleClick={ChangeStatus} className={statusClasses.status}>{status || 'No Status'}</span>
+
   }else{
       return <input autoFocus={true}
-                    onChange={ (e) => {handlerStatusChange(e)}}
-                    onBlur={SetNewStatus} type='text' value={status}/>
+                    onChange={handlerStatusChange}
+                    onBlur={SetNewStatus} type='text' value={status}
+                    className={statusClasses.statusInput}/>
   }
 };
 export default Status;

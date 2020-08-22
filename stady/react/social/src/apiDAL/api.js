@@ -37,6 +37,15 @@ export const ProfileApi = {
         return instanceApi.get(`profile/status/${profileId}`)
     },
     setStatus(newStatus){
-        return instanceApi.put(`profile/status/`, {newStatus})
+        return instanceApi.put(`profile/status/`, {status : newStatus})
+    },
+    uploadPhoto(file){
+        let formData = new FormData();
+        formData.append("image", file);
+        return instanceApi.put(`profile/photo`,  formData, {
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            }
+        })
     }
 }

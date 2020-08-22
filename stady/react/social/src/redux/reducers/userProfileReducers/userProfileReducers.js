@@ -28,9 +28,9 @@ export const profileStatusInit = (id) => async (dispatch) => {
    let response = await ProfileApi.getStatus(id);
         dispatch(SetStatus(response.data));
 }
-export const changeStatusOnApi = (status) => async (dispatch) => {
-    let response = await ProfileApi.setStatus(status);
-    if(response.resultCode === 0) dispatch(SetStatus(status));
+export const changeStatusOnApi = (newStatus) => async (dispatch) => {
+    let response = await ProfileApi.setStatus(newStatus);
+    if(response.resultCode === 0) dispatch(SetStatus(newStatus));
 };
 /*reducer*/
 const userProfileReducers = (state= initialState, action) =>{

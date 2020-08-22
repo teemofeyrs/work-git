@@ -7,15 +7,22 @@ import {
     changeStatusOnApi,
     profileStatusInit
 } from '../../../../redux/reducers/userProfileReducers/userProfileReducers'
-import { getMyId, getProfileStatus } from '../../../../redux/selectors/selectors'
+import {getMyId, getMyInfo, getProfileStatus} from '../../../../redux/selectors/selectors'
+import {updatePhoto} from "../../../../redux/reducers/myProfileReducers";
+import Preloader from "../../Parts/Preloader/Preloader";
 
 class ProfileInfoContainer extends Component{
 componentDidMount() {
-    debugger
  this.props.profileStatusInit(this.props.myId);
+}
+componentDidUpdate(prevProps, prevState) {
+
 }
 
     render() {
+        if(!this.props.myInfo.userId) {
+            return <Preloader/>
+        }
         return (
             <ProfileInfo {...this.props}/>
         );
@@ -23,12 +30,12 @@ componentDidMount() {
 }
 let mapDispatchToProps = (state) => {
     return {
-        myInfo: { ...state.myInfo},
+        myInfo: getMyInfo(state),
         myId: getMyId(state),
         myStatus: getProfileStatus(state)
     }
 }
 export default compose(
-    connect(mapDispatchToProps, {profileStatusInit,changeStatusOnApi }),
+    connect(mapDispatchToProps, {profileStatusInit,changeStatusOnApi, updatePhoto}),
     AuthRedirect
 )(ProfileInfoContainer);

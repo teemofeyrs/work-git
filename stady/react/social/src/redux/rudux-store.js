@@ -6,7 +6,7 @@ import userProfileReducers from "./reducers/userProfileReducers/userProfileReduc
 import Immutable from 'immutable';
 import authorizationRedusers from './reducers/authorizationRedusers';
 import thunkMiddleware from 'redux-thunk';
-import { reducer as formReducer } from 'redux-form';
+import {reducer as formReducer} from 'redux-form';
 import myProfileReducers from "./reducers/myProfileReducers";
 import appRedusers from "./reducers/appRedusers";
 

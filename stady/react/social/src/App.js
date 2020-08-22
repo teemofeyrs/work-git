@@ -29,6 +29,9 @@ class App extends React.PureComponent {
     }
     componentDidUpdate(prevProps) {
         if (prevProps.initApp !== this.props.initApp) this.props.indificateMe(this.props.myId);
+        if(prevProps.isAuth !== this.props.isAuth){
+            return this.props.history.push('/login')
+        }
     }
     setToggleSettings = (e) => {
         if (e.target.id !== 'toggleSettings' && this.state.toggleSettings === true) {
@@ -42,12 +45,11 @@ class App extends React.PureComponent {
 
     render() {
         if (!this.props.initApp) {
-            if(!this.props.isAuth) {
-                return <AuthMe/>
-            }
             return <Preloader/>
         }
-
+        if(!this.props.isAuth) {
+            return <AuthMe/>
+        }
 
         return (
             <Router>
