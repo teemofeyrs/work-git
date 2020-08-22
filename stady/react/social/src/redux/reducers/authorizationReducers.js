@@ -2,15 +2,19 @@ import {AuthApi} from "../../apiDAL/api";
 import {stopSubmit} from "redux-form";
 import {dischargeInit} from "./appRedusers";
 
+/* variable */
 const SET_AUTHORIZATION = 'auth/SET_AUTHORIZATION';
 const LOGOUT = 'auth/LOGOUT';
 
+/*Action Creators */
 export let setAuthorization = ({id, email, login}) => {
   return {type: SET_AUTHORIZATION, id, email, login };
 };
 export let afterLogout = () => {
     return {type: LOGOUT };
 };
+
+/*redux thunk*/
 export const auth = () => async (dispatch) => {
     const response = await AuthApi.authMe();
     if (response.data.resultCode === 0) {
@@ -33,13 +37,17 @@ export const logOut = () => (dispatch) => {
 
     });
 }
+
+/* Initialization state*/
 let initialState = {
     id: null,
     email: null,
     login: null,
     isAuth: false
 };
-const authorizationRedusers = (state = initialState, action) => {
+
+/*authorization reducers*/
+const authorizationReducers = (state = initialState, action) => {
   switch (action.type) {
     case SET_AUTHORIZATION: {
       return {...state, ...action, isAuth: true};
@@ -53,4 +61,4 @@ const authorizationRedusers = (state = initialState, action) => {
   }
 };
 
-export default authorizationRedusers;
+export default authorizationReducers;

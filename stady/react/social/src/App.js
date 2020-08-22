@@ -17,7 +17,7 @@ import {compose} from "redux";
 import {gerInitApp, getIsAuth, getMyId} from "./redux/selectors/selectors";
 import Preloader from "./components/Content/Parts/Preloader/Preloader";
 import {indificateMe} from "./redux/reducers/myProfileReducers";
-import {auth} from "./redux/reducers/authorizationRedusers";
+import {auth} from "./redux/reducers/authorizationReducers";
 
 class App extends React.PureComponent {
     constructor(props) {
@@ -30,7 +30,7 @@ class App extends React.PureComponent {
     componentDidUpdate(prevProps) {
         if (prevProps.initApp !== this.props.initApp) this.props.indificateMe(this.props.myId);
         if(prevProps.isAuth !== this.props.isAuth){
-            return this.props.history.push('/login')
+
         }
     }
     setToggleSettings = (e) => {

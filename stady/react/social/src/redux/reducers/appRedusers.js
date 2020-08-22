@@ -1,16 +1,15 @@
-import {AuthApi} from "../../apiDAL/api";
-import {stopSubmit} from "redux-form";
-import {auth} from "./authorizationRedusers";
-import {indificateMe} from "./myProfileReducers";
+import { auth } from './authorizationReducers'
 
-const SET_INITIALIZATION = 'SET_INITIALIZATION';
-const AFTER_LOGOUT = 'AFTER_LOGOUT';
+/* variable */
+const APP_SET_INITIALIZATION = 'APP/SET_INITIALIZATION';
+const APP_AFTER_LOGOUT = 'APP/AFTER_LOGOUT';
 
+/*Action Creators */
 export let initialization = () => {
-  return {type: SET_INITIALIZATION };
+  return {type: APP_SET_INITIALIZATION };
 };
 export let dischargeInit = () => {
-    return {type: AFTER_LOGOUT};
+    return {type: APP_AFTER_LOGOUT};
 };
 export const toInitialize = () => async (dispatch) => {
        let promiseAuth = await dispatch(auth());
@@ -19,16 +18,18 @@ export const toInitialize = () => async (dispatch) => {
        })
     console.log(promiseAuth);
 }
-
+/* Initialization state*/
 let initialState = {
     initApp: false,
 };
+
+/*app reducers*/
 const initializationRedusers = (state = initialState, action) => {
   switch (action.type) {
-    case SET_INITIALIZATION: {
+    case APP_SET_INITIALIZATION: {
       return {...state, initApp: true};
     }
-    case AFTER_LOGOUT: {
+    case APP_AFTER_LOGOUT: {
       return {...state, initApp: false};
     }
     default:

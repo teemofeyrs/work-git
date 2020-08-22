@@ -1,7 +1,7 @@
 import React, { Fragment} from 'react';
 import LoginResourses from "./LoginResourses";
 import LoginFormRedux from "./LoginForm";
-import {login} from "../../../../../redux/reducers/authorizationRedusers";
+import {login} from "../../../../../redux/reducers/authorizationReducers";
 import {connect} from "react-redux";
 
 const LoginFormContainer = ({login}) => {

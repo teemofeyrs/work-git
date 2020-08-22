@@ -4,7 +4,7 @@ import profileReducers from "./reducers/profileReducers";
 import usersReducers from "./reducers/usersReducers";
 import userProfileReducers from "./reducers/userProfileReducers/userProfileReducers";
 import Immutable from 'immutable';
-import authorizationRedusers from './reducers/authorizationRedusers';
+import authorizationReducers from './reducers/authorizationReducers';
 import thunkMiddleware from 'redux-thunk';
 import {reducer as formReducer} from 'redux-form';
 import myProfileReducers from "./reducers/myProfileReducers";
@@ -23,7 +23,7 @@ let reducers = combineReducers({
     messagePage: messagesReducers,
     usersPage: usersReducers,
     user: userProfileReducers,
-    auth: authorizationRedusers,
+    auth: authorizationReducers,
     form: formReducer,
     myInfo: myProfileReducers,
 });

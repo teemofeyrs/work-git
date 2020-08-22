@@ -1,7 +1,7 @@
 import React from "react";
 import {connect} from "react-redux";
 import Navigation from "./Navigation";
-import {logOut} from "../../../redux/reducers/authorizationRedusers";
+import {logOut} from "../../../redux/reducers/authorizationReducers";
 import {compose} from "redux";
 import {AuthRedirect} from "../../../HOC/authRedirect";
 
