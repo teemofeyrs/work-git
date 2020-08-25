@@ -4,9 +4,9 @@ import Navigation from "./Navigation";
 import {logOut} from "../../../redux/reducers/authorizationReducers";
 import {compose} from "redux";
 import {AuthRedirect} from "../../../HOC/authRedirect";
+import {getMyInfo} from "../../../redux/selectors/selectors";
 
 class NavigationContainer extends React.Component {
-
     render() {
         return (
             <Navigation toggleSettings={this.props.toggleSettings}
@@ -18,7 +18,7 @@ class NavigationContainer extends React.Component {
 
 let mapStateToProps = (state) => {
     return {
-        myInfo: { ...state.myInfo},
+        myInfo: getMyInfo(state),
     };
 }
 export default compose( connect(mapStateToProps, { logOut }),

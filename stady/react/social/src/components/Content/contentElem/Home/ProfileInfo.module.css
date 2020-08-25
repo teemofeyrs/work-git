@@ -1,7 +1,7 @@
 .userProfile {
     margin: 0;
     padding: 0;
-    max-height: 450px;
+    /*min-height: 450px;*/
     min-width: 260px;
     background-color: #fff;
     margin-bottom: 20px;
@@ -11,7 +11,7 @@
 }
 
 .mainInfo {
-    min-height: 240px;
+    min-height: 200px;
     position: relative;
 }
 
@@ -70,68 +70,155 @@
     bottom: 0;
     left: 0;
     text-align: center;
-    padding: 63px 0 27px 0;
+    padding: 63px 0  0;
 }
-
-.title h3 {
-    color: #000000;
-    font-size: 24px;
-    text-transform: capitalize;
-    font-weight: 600;
-    margin-bottom: 8px;
-}
-
-.title span {
-    color: #686868;
-    font-size: 14px;
-}
-
 .details {
     position: relative;
 }
 
 .details ul {
+    position: relative;
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
 }
 
+.details ul p {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    top: 0;
+    right: 15px;
+    height: 30px;
+    width: 30px;
+    transform: translate(-50%, -50%);
+    border: 1px solid #e5e5e5;
+    border-radius: 50%;
+    background-color: #ffffff;
+    z-index: 100;
+    cursor: pointer;
+}
+.details ul p i
+{
+    display: block;
+    height: 100%;
+    font-size: 16px;
+    color: #e44d3a;
+    z-index: 101;
+    cursor: pointer;
+}
 .details ul li {
     display: block;
     text-align: center;
-    height: 81px;
+    min-height: 81px;
     border-bottom: 1px solid #e5e5e5;
     border-top: 1px solid #e5e5e5;
-    padding: 15px 0;
+    padding: 15px 10px;
 }
-
+.details ul li.contactsForm
+{
+    height: auto;
+}
+.details ul li.contactsForm div.contacts
+{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0 0 20px;
+}
+.details ul li.contactsForm div.contacts div.wrapper
+{
+    max-width: 140px;
+}
+.details ul form button
+{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    top: 0;
+    right: 15px;
+    height: 30px;
+    width: 30px;
+    transform: translate(-50%, -50%);
+    border: 1px solid #e5e5e5;
+    border-radius: 50%;
+    background-color: #ffffff;
+    z-index: 100;
+    cursor: pointer;
+}
+.details ul form button i
+{
+    display: block;
+    height: 100%;
+    font-size: 16px;
+    color: #e44d3a;
+    z-index: 101;
+    cursor: pointer;
+}
+.details ul form li.commonError
+{
+    background-color: rgba(227, 13, 13, 0.1);
+    color: #922016;
+    font-size: 18px;
+}
+.details ul li input
+{
+    margin: 0 auto;
+    width: 80%;
+    border: none;
+    border-bottom: 1px solid #e44d3a;
+    outline: none;
+    padding: 0 10px;
+    color: #666666;
+}
 .details ul li:first-child {
     border-bottom: none;
 }
 
 .details ul li h4 {
     margin: 0 0 10px 0;
-    color: #686868;
+    color: #151515;
     font-size: 20px;
+    font-weight: bold;
 }
 
+.details ul li div.contacts {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+}
+.details ul li div.contacts b {
+    margin-top: 5px;
+    text-align: left;
+    color: #a5a4a4;
+}
+.details ul li div.contacts span
+{
+    color: #64e2f3;
+    cursor: pointer;
+}
 .details ul li span {
     color: #000000;
-    font-size: 20px;
+    font-size: 16px;
 }
 
-.details ul li:last-child {
+.details ul .lastLi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding-top: 10px;
-    height: 47px;
     border: none;
 }
 
-.details ul li a {
+.details ul li.lastLi a {
     text-decoration: none;
     outline: none;
     color: #e44d3a;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 600;
     padding: 15px 0;
 }

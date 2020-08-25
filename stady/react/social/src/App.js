@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import {BrowserRouter as Router, Route, Switch, Redirect} from "react-router-dom";
 import Header from './components/Header/Header';
 import Home from "./components/Content/contentElem/Home/Home";
 import Companies from "./components/Content/contentElem/Companies/Companies";
@@ -20,17 +20,18 @@ import {indificateMe} from "./redux/reducers/myProfileReducers";
 import {auth} from "./redux/reducers/authorizationReducers";
 
 class App extends React.PureComponent {
+
     constructor(props) {
         super(props);
         this.state = {toggleSettings: false};
     }
+
     componentDidMount() {
         this.props.toInitialize();
     }
     componentDidUpdate(prevProps) {
         if (prevProps.initApp !== this.props.initApp) this.props.indificateMe(this.props.myId);
         if(prevProps.isAuth !== this.props.isAuth){
-
         }
     }
     setToggleSettings = (e) => {
@@ -44,13 +45,12 @@ class App extends React.PureComponent {
     }
 
     render() {
+        if(this.props.initApp && !this.props.isAuth) {
+            return <AuthMe/>
+        }
         if (!this.props.initApp) {
             return <Preloader/>
         }
-        if(!this.props.isAuth) {
-            return <AuthMe/>
-        }
-
         return (
             <Router>
                 <Switch>

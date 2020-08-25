@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, {PureComponent} from 'react'
 import ProfileInfo from './ProfileInfo'
 import { connect } from 'react-redux'
 import { compose } from 'redux'
@@ -8,15 +8,13 @@ import {
     profileStatusInit
 } from '../../../../redux/reducers/userProfileReducers/userProfileReducers'
 import {getMyId, getMyInfo, getProfileStatus} from '../../../../redux/selectors/selectors'
-import {updatePhoto} from "../../../../redux/reducers/myProfileReducers";
+import {updateDataProfile, updatePhoto} from "../../../../redux/reducers/myProfileReducers";
 import Preloader from "../../Parts/Preloader/Preloader";
 
-class ProfileInfoContainer extends Component{
+
+class ProfileInfoContainer extends PureComponent{
 componentDidMount() {
  this.props.profileStatusInit(this.props.myId);
-}
-componentDidUpdate(prevProps, prevState) {
-
 }
 
     render() {
@@ -36,6 +34,6 @@ let mapDispatchToProps = (state) => {
     }
 }
 export default compose(
-    connect(mapDispatchToProps, {profileStatusInit,changeStatusOnApi, updatePhoto}),
+    connect(mapDispatchToProps, {profileStatusInit,changeStatusOnApi, updatePhoto, updateDataProfile}),
     AuthRedirect
 )(ProfileInfoContainer);

@@ -1,7 +1,7 @@
 import React from 'react';
 import classesHome from './Home.module.css';
 
-import PostsContainer from "../../Parts/PostsContainer";
+import PostsContainer from "../Posts/posts/PostsContainer";
 import ProfileInfoContainer from "./ProfileInfoContainer";
 
 const Home = (props) => {

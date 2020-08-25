@@ -1,6 +1,6 @@
 import React from "react";
 import Post from "./Post";
-import AddPostsContainer from "./AddPostsContainer";
+import AddPostsContainer from "../AddPostsContainer";
 
 const Posts = (props) => {
     let postEl = props.posts.map(data => <Post key={data.name} posts={data}/>);

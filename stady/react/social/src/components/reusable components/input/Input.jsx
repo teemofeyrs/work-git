@@ -18,11 +18,10 @@ const Input = ({
         <div className="inputWrapper">
             {label ? <label htmlFor={id}>{label}</label> : null }
             {touched && error && <span className="inputError">{error}</span>}
-            <input
-                {...input}
-                type={name}
+            <input type={name}
                 id={id}
-                className={classes}
+                className={classes + error && 'error'}
+                {...input}
                 {...attrs}
             />
         </div>
@@ -33,9 +32,7 @@ Input.propTypes = {
     name: PropTypes.string,
     id: PropTypes.string.isRequired,
     className: PropTypes.string,
-    textarea: PropTypes.bool,
     label: PropTypes.string,
-    error: PropTypes.string,
 };
 
 Input.defaultProps = {

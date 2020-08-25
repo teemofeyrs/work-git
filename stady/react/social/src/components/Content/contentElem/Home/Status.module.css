@@ -1,6 +1,7 @@
 span.status
 {
-    margin: 0;
+    display: block;
+    margin-top: 25px;
     color: #686868;
     font-size: 18px;
 }

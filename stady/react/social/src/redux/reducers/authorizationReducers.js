@@ -34,7 +34,6 @@ export const logOut = () => (dispatch) => {
     AuthApi.logout().then( () => {
         dispatch(afterLogout());
         dispatch(dischargeInit());
-
     });
 }
 

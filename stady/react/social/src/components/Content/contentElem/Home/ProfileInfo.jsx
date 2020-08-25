@@ -4,11 +4,14 @@ import {NavLink} from "react-router-dom";
 import Status from './Status'
 import Icon from "../../../reusable components/icon/Icon";
 import imageProfile from './../../../../assets/img/no-profile.png';
+import ProfileData from "./ProfileData/ProfileData";
+import ProfileDataFormRedux from "./ProfileData/ProfileDataForm";
 
 
-const ProfileInfo = ({myInfo, myStatus, changeStatusOnApi, updatePhoto}) => {
+const ProfileInfo = ({myInfo, myStatus, changeStatusOnApi, updatePhoto,updateDataProfile, ...props}) => {
     const [status, setStatus] = useState(myStatus);
     const [editMode, setEditMode] = useState(false);
+    const [editProfile, setEditProfile] = useState(false);
     const ChangeStatus = () => {
         setEditMode(true);
     }
@@ -27,14 +30,19 @@ const ProfileInfo = ({myInfo, myStatus, changeStatusOnApi, updatePhoto}) => {
             updatePhoto(e.target.files[0]);
         }
     }
+    const editDataProfile = () => {
+        setEditProfile(true);
+    }
+    const onEditProfile = (formData) => {
+        updateDataProfile(formData).then(() => {
+                setEditProfile(false);} )
+    }
     return (
         <div className={classesProfileInfo.userProfile}>
             <div className={classesProfileInfo.mainInfo}>
                 <img src={(myInfo.photos.small || imageProfile)} alt='user'/>
                 <label><Icon name={'camera'}/> <input onChange={addNewPhoto} type='file'/></label>
                 <div className={classesProfileInfo.title}>
-                    <h3>{myInfo.fullName}</h3>
-                    <span>{myInfo.aboutMe}</span>
                     <Status status={status}
                             editMode={editMode}
                             ChangeStatus={ChangeStatus}
@@ -44,15 +52,13 @@ const ProfileInfo = ({myInfo, myStatus, changeStatusOnApi, updatePhoto}) => {
             </div>
             <div className={classesProfileInfo.details}>
                 <ul>
-                    <li>
-                        <h4>Following</h4>
-                        <span>34</span>
-                    </li>
-                    <li>
-                        <h4>Followers</h4>
-                        <span>155</span>
-                    </li>
-                    <li>
+                    {!editProfile ? <p><Icon onClick={editDataProfile} name={'pencil'}/></p> : null}
+
+                    {!editProfile ? <ProfileData myInfo={myInfo}/> :
+                                    <ProfileDataFormRedux initialValues={myInfo}
+                                                     onSubmit={onEditProfile}
+                                                     myInfo={myInfo} {...props}/>}
+                    <li className={classesProfileInfo.lastLi}>
                         <NavLink to={`/user-profile/${myInfo.userId}`}>View Profile</NavLink>
                     </li>
                 </ul>
@@ -60,4 +66,11 @@ const ProfileInfo = ({myInfo, myStatus, changeStatusOnApi, updatePhoto}) => {
         </div>
     );
 };
+
+export const Contacts = ({contactsTitle, contactsValue}) => {
+    return(<div className={classesProfileInfo.contacts}>
+            <b>{contactsTitle} : </b><span>{contactsValue || <i>'No Information'</i>}</span>
+        </div>
+    )
+}
 export default ProfileInfo;

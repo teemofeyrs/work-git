@@ -1,9 +1,9 @@
 import React, {Fragment} from "react";
 import classesAddPost from './AddPost.module.css';
 import {Field, reduxForm} from "redux-form";
-import Input from "../../reusable components/input/Input";
-import {maxLength100, required} from './../../../tools/validators/validate';
-import Textarea from "../../reusable components/textarea/Textarea";
+import Input from "../../../reusable components/input/Input";
+import {maxLength100, required} from '../../../../tools/validators/validate';
+import Textarea from "../../../reusable components/textarea/Textarea";
 let AddPost = (props) => {
 
     return (

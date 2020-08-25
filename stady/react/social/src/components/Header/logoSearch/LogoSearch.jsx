@@ -1,10 +1,12 @@
 import React from 'react';
 import classesLogo from './LogoSearch.module.css';
+import logo from './../../../assets/img/logo.png';
 
 const LogoSearch = () => {
     return (
         <div className={classesLogo.logoSearch}>
-            <img src="https://b2.pngbarn.com/png/761/249/90/worker-icon-jobs-and-occupations-icon-painter-icon-logo-neon-blackandwhite-automotive-decal-symbol-png-clip-art.png" alt="" />
+            <img src={logo} alt="logo" />
+            <p>J | Offer</p>
         </div>
     );
 }

@@ -7,7 +7,6 @@ import {connect} from "react-redux";
 const LoginFormContainer = ({login}) => {
 
      let onSubmitForm = ({email, password, rememberMe}) => {
-        console.log(email, password, rememberMe);
         login(email, password, rememberMe);
     }
 
