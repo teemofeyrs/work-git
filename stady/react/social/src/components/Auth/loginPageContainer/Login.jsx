@@ -4,12 +4,12 @@ import TabBarItem from "../../reusable components/tabBar/TabBarItem";
 import LoginFormContainer from "./LoginPage/loginForm/LoginFormContainer";
 import SignUpForm from "./LoginPage/logOutForm/SignUpForm";
 
-const Login = ({captcha}) => {
+const Login = ({captchaUrl}) => {
     return (
         <Fragment>
             <TabBar>
                 <TabBarItem label="Sign in">
-                    <LoginFormContainer captcha={captcha}/>
+                    <LoginFormContainer/>
                 </TabBarItem>
                 <TabBarItem label="Sign up">
                     <SignUpForm/>

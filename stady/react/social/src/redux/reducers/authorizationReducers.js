@@ -52,7 +52,7 @@ let initialState = {
     email: null,
     login: null,
     isAuth: false,
-    captcha: null
+    captchaUrl: null
 };
 
 /*authorization reducers*/

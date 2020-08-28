@@ -7,7 +7,7 @@ import {Checkbox} from "../../../../reusable components/checkbox/Checkbox";
 import './LoginFormContainer.css';
 
 const LoginForm = (props) => {
-    const {handleSubmit} = props;
+    const {handleSubmit, captchaUrl} = props;
     return (
         <form onSubmit={handleSubmit}>
             {props.error && <div className='commonError'><span>{props.error}</span></div>}
@@ -32,8 +32,8 @@ const LoginForm = (props) => {
                    component={Checkbox}
                    type="checkbox"
                    value="rememberMe"/>
-            {props.captcha && <div className='captchaField'>
-                <img src={props.captcha} alt="captcha"/>
+            {captchaUrl && <div className='captchaField'>
+                <img src={captchaUrl} alt="captcha"/>
                 <Field id='captcha'
                        name="captcha"
                        type="text"

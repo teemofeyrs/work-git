@@ -9,10 +9,14 @@ class AuthMeContainer extends React.Component {
   componentDidMount () {
     this.props.auth();
   }
+ componentDidUpdate (prevProps, prevState, snapshot) {
+
+ }
 
   render () {
-    if(this.props.isAuth) return <Redirect to='/'/>
-
+    if(this.props.isAuth) {
+      return <Redirect to='/'/>
+    }
     return <LoginPage/>
     }
 

@@ -3,7 +3,7 @@ import classLoginPage from './LoginPage.module.css';
 import Footer from "../../../Footer/Footer";
 import Login from "../Login";
 
-const LoginPage = ({captcha}) => {
+const LoginPage = ({captchaUrl}) => {
     const footerItems = ['Help Center', 'About', 'Privat Policy', 'Community Guadelines', 'Cookies Policy']
     return (
         <Fragment>
@@ -20,7 +20,7 @@ const LoginPage = ({captcha}) => {
                         </div>
                     </div>
                     <div className={classLoginPage.loginField}>
-                        <Login captcha={captcha}/>
+                        <Login/>
                     </div>
                     </div>
                 </div>
