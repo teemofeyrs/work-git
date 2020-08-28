@@ -5,7 +5,7 @@ const FastInfo = (props) => {
     return(
         <div className={classesFastInfo.fastInfo}>
             <div className={classesFastInfo.userPhoto}>
-                <img src={props.userInfo.photos.large || noProfile} alt={props.userInfo.fullName}/>
+                <img src={props.userInfo.photos.small || noProfile} alt={props.userInfo.fullName}/>
             </div>
             <div className={classesFastInfo.userStatus}>
                 <div>

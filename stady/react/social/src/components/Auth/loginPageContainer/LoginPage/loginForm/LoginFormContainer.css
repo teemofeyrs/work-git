@@ -1,3 +1,9 @@
+form
+{
+    display: flex;
+    flex-direction: column;
+
+}
 form .commonError
 {
     margin: 5px 0 10px;
@@ -5,6 +11,17 @@ form .commonError
     color: #bd081c;
     border-bottom: 1px solid #bd081c;
     font-size: 1.2rem;
+}
+form input[type='email'],
+form input[type='password']
+{
+    margin-top: 10px;
+    min-width: 200px;
+    padding: 5px 10px;
+    border: 1px solid #7a7a7a;
+    border-radius: 3px;
+    color: #7a7a7a;
+    outline: none;
 }
 .loginForm h3
 {
@@ -24,4 +41,30 @@ form .commonError
     width: 30px;
     height: 2px;
     background-color: #e44d3a;
+}
+div.captchaField
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    padding: 10px 15px;
+}
+div.captchaField img
+{
+    width: 120px;
+    height: 80px;
+}
+div.captchaField input[type='text']
+{
+    width: 80px;
+    padding: 5px 10px;
+    border: 1px solid #7a7a7a;
+    border-radius: 3px;
+    color: #7a7a7a;
+}
+div.captchaField input[type='text']:focus
+{
+    outline: none;
 }

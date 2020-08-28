@@ -45,7 +45,7 @@ class App extends React.PureComponent {
     }
 
     render() {
-        if(this.props.initApp && !this.props.isAuth) {
+        if(!this.props.initApp && !this.props.isAuth) {
             return <AuthMe/>
         }
         if (!this.props.initApp) {

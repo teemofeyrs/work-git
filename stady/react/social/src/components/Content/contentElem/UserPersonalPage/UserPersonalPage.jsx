@@ -6,14 +6,14 @@ import MainRewivew from './../MainRewivew/MainRewivew';
 import FastInfo from "./FastInfo/FastInfo";
 import Portfolio from "../../Parts/Portfolio/Portfolio";
 
-const UserPersonalPage = (props) => {
+const UserPersonalPage = ({userInfo}) => {
     return(
         <div className={classesUserPersonalPage.UserPersonalPage}>
             <div className={classesUserPersonalPage.fastInfo}>
-                <FastInfo userInfo={props.userInfo}/>
+                <FastInfo userInfo={userInfo}/>
             </div>
             <div className={classesUserPersonalPage.userRewivew}>
-                <MainRewivew userInfo={props.userInfo}/>
+                <MainRewivew userInfo={userInfo}/>
                 <div className={classesUserPersonalPage.contentUserRewivew}>
                     <Switch>
                         <Route path='/profile' exact><Home/></Route>

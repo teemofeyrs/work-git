@@ -5,6 +5,8 @@ import Preloader from "../../Parts/Preloader/Preloader";
 import {withRouter} from "react-router-dom";
 import UserPersonalPage from "./UserPersonalPage";
 import {compose} from "redux";
+import {AuthRedirect} from "../../../../HOC/authRedirect";
+import {getMyInfo} from "../../../../redux/selectors/selectors";
 
 export class UserInfoContainerWhithUrl extends React.Component {
     componentDidMount() {
@@ -22,12 +24,13 @@ export class UserInfoContainerWhithUrl extends React.Component {
         )
     }
 }
-    let mapStateToProps = ({user}) => {
+    let mapStateToProps = (state) => {
         return {
-            userInfo: user.userInfo
+            userInfo: getMyInfo(state),
         }
     }
 export const UserInfoContainer = compose(
         connect(mapStateToProps, {userInit}),
-        withRouter
+        withRouter,
+       AuthRedirect
     )(UserInfoContainerWhithUrl);

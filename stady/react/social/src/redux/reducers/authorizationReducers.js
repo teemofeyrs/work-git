@@ -3,17 +3,22 @@ import {stopSubmit} from "redux-form";
 import {dischargeInit} from "./appRedusers";
 
 /* variable */
-const SET_AUTHORIZATION = 'auth/SET_AUTHORIZATION';
-const LOGOUT = 'auth/LOGOUT';
+const AUTH_SET_AUTHORIZATION = 'auth/SET_AUTHORIZATION';
+const AUTH_LOGOUT = 'auth/LOGOUT';
+const AUTH_SET_CAPTCHA = 'auth/SET_CAPTCHA';
 
 /*Action Creators */
 export let setAuthorization = ({id, email, login}) => {
-  return {type: SET_AUTHORIZATION, id, email, login };
+  return {type: AUTH_SET_AUTHORIZATION, id, email, login };
 };
 export let afterLogout = () => {
-    return {type: LOGOUT };
+    return {type: AUTH_LOGOUT };
 };
-
+export const setCaptcha = (url) => {
+    return {
+        type: AUTH_SET_CAPTCHA, url
+    }
+}
 /*redux thunk*/
 export const auth = () => async (dispatch) => {
     const response = await AuthApi.authMe();
@@ -21,11 +26,15 @@ export const auth = () => async (dispatch) => {
         dispatch(setAuthorization(response.data.data))
     }
 }
-export const login = (email, password, rememberMe) => async (dispatch) => {
-    const response = await AuthApi.login(email, password, rememberMe);
-    if (response.data.resultCode === 0)
+export const login = (email, password, rememberMe, captcha) => async (dispatch) => {
+    const response = await AuthApi.login(email, password, rememberMe, captcha);
+    if (response.data.resultCode === 0){
         dispatch(auth())
-    else {
+    }else if(response.data.resultCode === 10){
+        AuthApi.getCapthaUrl().then((response) =>{
+            dispatch(setCaptcha(response.data.url))
+        })
+    }else {
         let massage = response.data.messages.length ? response.data.messages[0] : 'Some Error;'
         dispatch(stopSubmit('sign in form', {_error: massage}));
     }
@@ -42,18 +51,23 @@ let initialState = {
     id: null,
     email: null,
     login: null,
-    isAuth: false
+    isAuth: false,
+    captcha: null
 };
 
 /*authorization reducers*/
 const authorizationReducers = (state = initialState, action) => {
   switch (action.type) {
-    case SET_AUTHORIZATION: {
+    case AUTH_SET_AUTHORIZATION: {
       return {...state, ...action, isAuth: true};
     }
-      case LOGOUT: {
-          debugger
+      case AUTH_LOGOUT: {
           return {...state, id:null, email: null, login: null,  isAuth: false};
+      }
+      case AUTH_SET_CAPTCHA: {
+          return {
+              ...state, captcha: action.url
+          }
       }
     default:
       return state;

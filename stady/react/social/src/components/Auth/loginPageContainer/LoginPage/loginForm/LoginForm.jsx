@@ -2,7 +2,7 @@ import React from "react";
 import Input from "../../../../reusable components/input/Input";
 import Button from "../../../../reusable components/button/Button";
 import {Field, reduxForm} from "redux-form";
-import {required} from "../../../../../tools/validators/validate";
+import {maxLength8, required} from "../../../../../tools/validators/validate";
 import {Checkbox} from "../../../../reusable components/checkbox/Checkbox";
 import './LoginFormContainer.css';
 
@@ -16,6 +16,7 @@ const LoginForm = (props) => {
                    type="email"
                    component={Input}
                    validate={[required]}
+                   placeholder={'Enter your email...'}
             />
             <Field
                 id='password'
@@ -23,6 +24,7 @@ const LoginForm = (props) => {
                 type="password"
                 component={Input}
                 validate={[required]}
+                placeholder={'Enter your password...'}
             />
             <Field id='rememberMe'
                    name="rememberMe"
@@ -30,6 +32,14 @@ const LoginForm = (props) => {
                    component={Checkbox}
                    type="checkbox"
                    value="rememberMe"/>
+            {props.captcha && <div className='captchaField'>
+                <img src={props.captcha} alt="captcha"/>
+                <Field id='captcha'
+                       name="captcha"
+                       type="text"
+                       component={Input}
+                       validate={[maxLength8]}/>
+            </div>}
             <Button active>Sing In</Button>
         </form>
     );

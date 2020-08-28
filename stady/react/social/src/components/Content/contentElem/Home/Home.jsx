@@ -4,7 +4,7 @@ import classesHome from './Home.module.css';
 import PostsContainer from "../Posts/posts/PostsContainer";
 import ProfileInfoContainer from "./ProfileInfoContainer";
 
-const Home = (props) => {
+const Home = () => {
     return(
         <div className={classesHome.home}>
             <ProfileInfoContainer/>

@@ -5,6 +5,9 @@ export const getIsAuth = (state) => {
 export const getMyId = (state) => {
     return state.auth.id;
 };
+export const getCaptchaSelec = (state) => {
+    return state.auth.captcha;
+};
 
 /* myInfo selectors*/
 export const getFullName = (state) => {

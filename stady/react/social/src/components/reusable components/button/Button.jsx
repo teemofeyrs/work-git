@@ -18,15 +18,11 @@ const Button = ({className, children, onClick, disabled, active, ...attr}) => {
 Button.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
-  disabled: PropTypes.bool,
-  onClick: PropTypes.func,
   active: PropTypes.bool,
 };
 Button.defaultProps = {
   children: 'Button',
   className: '',
-  disabled: false,
-  onClick: () => { },
   active: false,
 };
 

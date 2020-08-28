@@ -1,17 +1,21 @@
 import React from "react";
-export const Checkbox = ({
-                         input,
-                         label,
-                         type,
-                         meta: { touched, error, warning }
-                     }) => (
-    <div>
-        <label>{label}</label>
-        <div>
-            <input {...input} placeholder={label} type={type} />
-            {touched &&
-            ((error && <span>{error}</span>) ||
-                (warning && <span>{warning}</span>))}
-        </div>
-    </div>
-)
+import './Checkbox.css';
+import classNames from 'classnames';
+
+export const Checkbox = ({input, label, type, className,  meta: {touched, error, warning} }) => {
+    let style = classNames(
+        'checkbox',
+        className
+    )
+    return (<div className={"checkboxContainer"}>
+        <label>{label}
+            <div>
+                <input className={style} {...input} placeholder={label} type={type}/>
+                {touched &&
+                ((error && <span>{error}</span>) ||
+                    (warning && <span>{warning}</span>))}
+            </div>
+        </label>
+
+    </div>)
+};

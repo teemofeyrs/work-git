@@ -10,11 +10,14 @@ export const AuthApi =  {
     authMe() {
        return  instanceApi.get(`auth/me`);
     },
-    login(email, password, rememberMe = false){
-        return instanceApi.post('auth/login', {email, password, rememberMe});
+    login(email, password, rememberMe = false, captchaValue){
+        return instanceApi.post('auth/login', {email, password, rememberMe, captchaValue});
     },
     logout(){
         return instanceApi.delete('auth/login');
+    },
+    getCapthaUrl(){
+      return instanceApi.get('security/get-captcha-url');
     }
 }
 export const UsersApi = {

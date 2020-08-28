@@ -198,8 +198,10 @@
 }
 .details ul li div.contacts span
 {
-    color: #64e2f3;
+    color: #5c70ff;
     cursor: pointer;
+    width: calc(100% - 40px);
+    overflow: hidden;
 }
 .details ul li span {
     color: #000000;
