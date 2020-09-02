@@ -2,6 +2,9 @@ div.companies{
     position: relative;
     margin: 0 auto;
     max-width: 1140px;
-    padding: 60px 35px;
-    color: yellow;
+    min-height: calc(100vh - 80px);
+    background-image: url("./../../../../assets/img/page_under_construction.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

@@ -16,7 +16,6 @@ const Navigation = (props) => {
                     <li><NavLink  to="/profiles"><Icon name={'users'}/><br/>Profiles</NavLink></li>
                     <li><NavLink  to="/jobs"><Icon name={'briefcase'}/><br/>Jobs</NavLink></li>
                     <li><NavLink  to="/messages"><Icon name={'envelope-o'}/><br/>Messages</NavLink></li>
-                    <li><NavLink  to="/notification"><Icon name={'bolt'}/><br/>Notification</NavLink></li>
                     <li id='toggleSettings' >
                         <Fragment>
                             <img id='userToggleImg'  src={(!props.myInfo.photos) ? noProfile : !props.myInfo.photos.small ?

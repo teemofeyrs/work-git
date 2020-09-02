@@ -3,7 +3,7 @@ import classesJobs from './Jobs.module.css';
 
 const Jobs = () => {
     return(
-        <div className={classesJobs.jobs}>Jobs</div>
+        <div className={classesJobs.jobs}/>
     );
 };
 export default Jobs;

@@ -7,7 +7,7 @@ const Status = ({status, editMode,setStatus, ChangeStatus, SetNewStatus}) => {
     setStatus(newValue)
   }
     if (!editMode) {
-    return <span onDoubleClick={ChangeStatus} className={statusClasses.status}>{status || 'No Status'}</span>
+    return <span onClick={ChangeStatus} className={statusClasses.status}>{status || 'No Status'}</span>
 
   }else{
       return <input autoFocus={true}

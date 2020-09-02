@@ -5,8 +5,8 @@ import logo from './../../../assets/img/logo.png';
 const LogoSearch = () => {
     return (
         <div className={classesLogo.logoSearch}>
-            <img src={logo} alt="logo" />
-            <p>J | Offer</p>
+           {/* <img src={logo} alt="logo" />*/}
+            <p className={classesLogo.logoDescription}>Job&nbsp;<span>|</span>&nbsp;Offer</p>
         </div>
     );
 }

@@ -27,7 +27,6 @@ export const updatePhoto = (photoFile) => async (dispatch) => {
 
 };
 export const updateDataProfile = (profile) => async (dispatch, getState) => {
-    debugger
     let userId = getState().auth.id;
     let response = await ProfileApi.editDataProfile(profile);
     if(response.data.resultCode === 0){

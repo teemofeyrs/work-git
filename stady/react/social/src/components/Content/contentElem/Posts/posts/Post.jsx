@@ -1,15 +1,15 @@
 import React from "react";
 import classesPost from './Post.module.css';
 
-const Post = (props) => {
+const Post = ({myInfo, posts}) => {
     return (
         <div className={classesPost.post}>
             <div className={classesPost.profileDetails}>
                 <div className={classesPost.postTopbar}>
                     <div className={classesPost.profile}>
-                        <img src={props.posts.img} alt="user"/>
+                        <img src={myInfo.photos.small} alt="user"/>
                         <div>
-                            <h3>{props.posts.name}</h3>
+                            <h3>{myInfo.fullName}</h3>
                             <span>3 min ago</span>
                         </div>
                         <div className={classesPost.toggle}>
@@ -26,22 +26,22 @@ const Post = (props) => {
                 </div>
             </div>
             <div className={classesPost.postContent}>
-                <p>{props.posts.textPost}</p>
+                <p>{posts.textPost}</p>
                 <span>view more</span>
             </div>
             <div className={classesPost.postStatus}>
                 <ul className={classesPost.likeCom}>
                     <li>
                         <span>Like</span>
-                        <span>{props.posts.likes}</span>
+                        <span>{posts.likes}</span>
                     </li>
                     <li>
                         <span>Comment</span>
-                        <span>{props.posts.comments}</span>
+                        <span>{posts.comments}</span>
                     </li>
                     <li>
                         <span>Views</span>
-                        <span>{props.posts.views}</span>
+                        <span>{posts.views}</span>
                     </li>
                 </ul>
             </div>

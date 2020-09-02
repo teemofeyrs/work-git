@@ -1,24 +1,25 @@
 import React from "react";
 import AddPost from "./AddPost";
-import {AddPostCreator, OnPostChangeCreator} from "../../../../redux/reducers/profileReducers";
 import {connect} from "react-redux";
+import {getNewPostText} from "../../../../redux/selectors/selectors";
+import {AddPostAC} from "../../../../redux/reducers/profileReducers";
+
+class AddPostForm extends React.Component {
+
+    addPost = ({addNewPost}) => {
+        debugger
+        this.props.AddPostAC(addNewPost);
+    }
+    render() {
+
+        return (<AddPost onSubmit={this.addPost}/>)
+    }
+}
 
 let mapStateToProps = (state) => {
     return {
-        newPostText: state.profilePage.newPostText,
+        newPostText: getNewPostText(state),
     };
 }
-let mapDispatchToProps = (dispatch) => {
-    return {
-        addPost: (formData) => {
-            console.log(formData)
-            dispatch(AddPostCreator(formData.addNewPost));
-        },
-    };
-}
-const AddPostForm = (props) => {
-    return (<AddPost onSubmit={props.addPost}/>)
-};
-
-const AddPostsContainer = connect(mapStateToProps, mapDispatchToProps)(AddPostForm);
+const AddPostsContainer = connect(mapStateToProps, {AddPostAC})(AddPostForm);
 export default AddPostsContainer;
