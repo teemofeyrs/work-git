@@ -1,7 +1,5 @@
 import React from 'react';
 import classesHome from './Home.module.css';
-
-import PostsContainer from "../Posts/posts/PostsContainer";
 import ProfileInfoContainer from "./ProfileInfoContainer";
 import {compose} from "redux";
 import {connect} from "react-redux";
@@ -9,6 +7,7 @@ import {getMyId, getMyInfo, getPosts} from "../../../../redux/selectors/selector
 import {profileStatusInit} from "../../../../redux/reducers/profileReducers";
 import Preloader from "../../Parts/Preloader/Preloader";
 import Posts from "../Posts/posts/Posts";
+import Portfolio from "../../Parts/Portfolio/Portfolio";
 
 class Home extends React.Component {
 
@@ -25,6 +24,7 @@ class Home extends React.Component {
             <div className={classesHome.home}>
                 <ProfileInfoContainer myInfo={myInfo}/>
                 <Posts myInfo={myInfo} posts={posts}/>
+                <Portfolio/>
             </div>
         );
     }

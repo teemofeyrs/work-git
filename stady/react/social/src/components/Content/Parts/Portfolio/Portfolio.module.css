@@ -1,6 +1,8 @@
 .mainBlock
 {
     background-color: #ffffff;
+    height: fit-content;
+    padding-bottom: 10px;
 }
 .header
 {

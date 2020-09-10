@@ -1,7 +1,7 @@
 import React from "react";
 import classesAddPost from './AddPost.module.css';
 import {Field, reduxForm} from "redux-form";
-import {maxLength100, required} from '../../../../tools/validators/validate';
+import {maxLength100} from '../../../../tools/validators/validate';
 import Textarea from "../../../reusable components/textarea/Textarea";
 
 let AddPost = (props) => {
@@ -10,7 +10,7 @@ let AddPost = (props) => {
         <div className={classesAddPost.addPost}>
             <form onSubmit={props.handleSubmit}>
                 <Field name='addNewPost' type='textarea'
-                       validate={[required, maxLength100]}
+                       validate={[maxLength100]}
                        component={addPostArea} placeholder={'add your post'}
                 />
                 <button>Add post</button>
