@@ -15,8 +15,8 @@
     cursor: not-allowed;
 }
 
-.textarea.error {
-    border-color: #e44d3a;
+form div.error textarea {
+    border: 2px solid #e44d3a;
     background-color: rgba(212, 55, 40, 0.2);
     outline: #e44d3a;
 }
@@ -42,5 +42,7 @@
 .textareaError {
     margin-top: 5px;
     color: #e44d3a;
-    font-size: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.5s ease-in-out;
 }

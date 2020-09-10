@@ -1,12 +1,11 @@
-import React, {useEffect, useState} from 'react'
-import classesProfileInfo from './ProfileInfo.module.css';
-import {NavLink} from "react-router-dom";
+import React, { useEffect, useState } from 'react'
+import classesProfileInfo from './ProfileInfo.module.css'
+import { NavLink } from 'react-router-dom'
 import Status from './Status'
-import Icon from "../../../reusable components/icon/Icon";
-import imageProfile from './../../../../assets/img/no-profile.png';
-import ProfileData from "./ProfileData/ProfileData";
-import ProfileDataFormRedux from "./ProfileData/ProfileDataForm";
-
+import Icon from '../../../reusable components/icon/Icon'
+import imageProfile from './../../../../assets/img/no-profile.png'
+import ProfileData from './ProfileData/ProfileData'
+import ProfileDataFormRedux from './ProfileData/ProfileDataForm'
 
 const ProfileInfo = ({myInfo, myStatus, changeStatusOnApi, updatePhoto,updateDataProfile, ...props}) => {
     const [status, setStatus] = useState(myStatus);

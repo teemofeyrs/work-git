@@ -17,15 +17,6 @@ const Footer = ({className, children, array}) => {
             <ul className={classes}>
                 {liElements}
                 <div>&copy; Copyright 2020</div>
-                {/*<li><a href="">Help Center</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Privat Policy</a></li>
-                <li><a href="">Community Guadelines</a></li>
-                <li><a href="">Cookies Policy</a></li>
-                <li><a href="">Career</a></li>
-                <li><a href="">Forum</a></li>
-                <li><a href="">Language</a></li>
-                <li><a href="">Copyright Policy</a></li>*/}
             </ul>
         </Fragment>
     )

@@ -2,11 +2,9 @@ import React from "react";
 import Post from "./Post";
 import AddPostsContainer from "../AddPostsContainer";
 
-const Posts = (props) => {
-    let postEl = props.posts.map(data => <Post key={data.name} posts={data}/>);
-    let AddNewPost = (formData) => {
-       console.log(formData)
-    }
+const Posts = ({myInfo, posts}) => {
+    let postEl = posts.map(data => <Post key={data.id} myInfo={myInfo} posts={data}/>);
+
     return (
         <div>
             <AddPostsContainer/>

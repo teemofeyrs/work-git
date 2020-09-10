@@ -12,7 +12,6 @@
     grid-template-columns: 4fr 1fr;
     justify-items: stretch;
     align-items: center;
-    position: relative;
     width: 100%;
     height: 100%;
     background-color: #fff;
@@ -51,4 +50,57 @@
     line-height: 40px;
     font-weight: 500;
     cursor: pointer;
+}
+/*Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+
+}
+
+/*Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+
+}
+
+/*Medium devices (tablets, less than 992px)*/
+@media (max-width: 991.98px) {
+    .addPost form
+    {
+        min-width: 400px;
+        padding: 10px;
+        margin-bottom: 15px;
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        justify-items: stretch;
+        align-items: center;
+        width: 100%;
+    }
+    .addPost form > div
+    {
+        width: 90%;
+    }
+    .addPost form div textarea
+    {
+        width: 100%;
+    }
+    .addPost button
+    {
+        font-size: 14px;
+        padding: 0 10px;
+        line-height: 16px;
+    }
+}
+
+/* Large devices (desktops, less than 1200px)*/
+@media (max-width: 1199.98px) {
+    .addPost form
+    {
+        min-width: 400px;
+        padding: 10px;
+        margin-bottom: 15px;
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        justify-items: stretch;
+        align-items: center;
+        width: 100%;
+    }
 }

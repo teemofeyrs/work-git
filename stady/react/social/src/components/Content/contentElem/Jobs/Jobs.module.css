@@ -1,7 +1,11 @@
 div.jobs
 {
-    max-width: 1140px;
-    padding: 60px 35px;
+    position: relative;
     margin: 0 auto;
-    color: cyan;
+    max-width: 1140px;
+    min-height: calc(100vh - 80px);
+    background-image: url("./../../../../assets/img/page_under_construction.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

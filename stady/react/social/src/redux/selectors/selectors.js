@@ -24,10 +24,20 @@ export const gerInitApp = (state) => {
 
 /* profile selectors*/
 export const getProfileStatus = (state) => {
-    return state.user.userStatus;
+    return state.profilePage.userStatus;
 }
-
+export const getPosts = (state) => {
+    return state.profilePage.posts;
+}
+export  const getNewPostText = (state) => {
+    return state.profilePage.newPostText;
+}
 /* users selectors*/
 export const getUsers = (state) => {
     return state.usersPage.users;
+}
+
+/*user profile selectors*/
+export const getUserProfileInfo = (state) => {
+    return state.user.userInfo;
 }

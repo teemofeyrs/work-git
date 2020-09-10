@@ -4,24 +4,19 @@ import classNames from 'classnames';
 
 import './Textarea.css';
 
-const Textarea = ({
-                   id, className, ...attrs
-               }) => {
+const Textarea = ({ id, input, className,touched, error ,...attrs }) => {
     let classes;
+    let hasError = touched && error;
     classes = classNames(
         'textarea',
         className,
-
     );
 
     return (
-        <div className="textareaWrapper">
-            <textarea
-                id={id}
-                className={classes}
-                {...attrs}
-            />
-            {attrs.touched && attrs.error && <span className="textareaError">{attrs.error}</span>
+        <div className={'textareaWrapper' + ' ' + (hasError ? 'error': '')}>
+            <textarea {...input} id={id} className={classes} name={attrs.name}
+                      placeholder={attrs.placeholder}/>
+            {hasError && <span className={"textareaError"}>{error}</span>
             }
         </div>
     );

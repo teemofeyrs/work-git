@@ -1,7 +1,6 @@
-import React from "react";
-import {Redirect} from "react-router-dom";
-import {isAssociative} from "immutable";
-import {connect} from "react-redux";
+import React from 'react'
+import { Redirect } from 'react-router-dom'
+import { connect } from 'react-redux'
 
 let mapSateToProps = (state) => ({
     isAuth: state.auth.isAuth

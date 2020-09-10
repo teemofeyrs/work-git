@@ -1,17 +1,16 @@
 import React from 'react';
 import LogoSearch from './logoSearch/LogoSearch';
-import clsassesHeader from './Header.module.css';
+import classesHeader from './Header.module.css';
 import NavigationContainer from "./navigation/NavigationContainer";
 
 const Header = (props) => {
     return (
-        <div className={clsassesHeader.header}>
-            <div className={clsassesHeader.wrapper}>
+        <div className={classesHeader.header}>
+            <div className={classesHeader.wrapper}>
                 <LogoSearch />
                 <NavigationContainer toggleSettings={props.toggleSettings}/>
             </div>
         </div>
-
     );
 }
 

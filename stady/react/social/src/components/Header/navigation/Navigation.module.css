@@ -1,3 +1,74 @@
+.navigation{
+    position: relative;
+    display: flex;
+}
+.navigation div.shotToggleMenu
+{
+    position: absolute;
+    width: 100vw;
+    height: 600px;
+    background-color: rgba(255, 255, 255, 0.6);
+    top: 0;
+    right: 0;
+    z-index: 1000;
+}
+.navigation div.shotToggleMenu ul
+{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+.navigation div.shotToggleMenu ul li
+{
+    display: block;
+    list-style: none;
+    width: 100%;
+}
+.navigation div.shotToggleMenu ul li a
+{
+    font-size: 1.7em;
+    line-height: 50px;
+    display: block;
+    width: 100%;
+    color: #e44d3a;
+}
+.navigation div.shotToggleMenu ul li a:hover
+{
+    color: #ffffff;
+    background-color: #e44d3a;
+}
+.navigation div.shotToggleMenu i
+{
+    position: absolute;
+    border-radius: 50%;
+    padding: 5px;
+    top: 30px;
+    right: 30px;
+    font-size: 1.5em;
+    color: #e44d3a;
+    cursor: pointer;
+}
+.navigation div.shotToggleMenu i:hover
+{
+    background-color: #e44d3a;
+    color: #ffffff;
+}
+.navigation button.toggleBtn
+{
+    display: none;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 0;
+    padding: 10px;
+    font-size: 1.7em;
+    color: #fff;
+    background-color: #e44d3a;
+    transition: 0.4s;
+    cursor: pointer;
+}
 .navigation ul
 {   margin: 0;
     padding: 0;
@@ -15,16 +86,15 @@
     position: relative;
     cursor: pointer;
 }
-.navigation ul li:last-child
+.navigation div.toggleSettings
 {
-
     margin-left: 13px;
     border-left: 1px solid #dd3e2b;
     border-right: 1px solid #dd3e2b;
     box-sizing: border-box;
     cursor: pointer;
 }
-.navigation ul li img
+.navigation div.toggleSettings img
 {
     display: inline-block;
     margin-right: 5px;
@@ -49,21 +119,22 @@
 .navigation ul li a.activeLink
 {
     text-decoration: none;
-    color: #e44d3a;;
+    color: #e44d3a;
     background: #fff;
 }
-.navigation ul li:last-child
+.navigation div.toggleSettings
 {
     padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.1em;
+    background-color: #e44d3a;
     color: #fff;
     cursor: pointer;
     transition: 0.4s;
 }
-.navigation ul li:last-child:hover
+.navigation div.toggleSettings:hover
 {
     position: relative;
     text-decoration: none;
@@ -71,8 +142,33 @@
     background: #fff;
     cursor: pointer;
 }
-.navigation ul li:last-child span
+.navigation div.toggleSettings span
 {
     z-index: 5;
     cursor: pointer;
+}
+/*Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+
+}
+
+/*Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    .navigation ul{
+        display: none;
+    }
+    .navigation button.toggleBtn
+    {
+        display: block;
+    }
+}
+
+/*Medium devices (tablets, less than 992px)*/
+@media (max-width: 991.98px) {
+
+}
+
+/* Large devices (desktops, less than 1200px)*/
+@media (max-width: 1199.98px) {
+
 }

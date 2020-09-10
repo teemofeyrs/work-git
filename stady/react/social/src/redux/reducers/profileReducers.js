@@ -1,14 +1,36 @@
+import {ProfileApi} from "../../apiDAL/api";
+
 const ADD_POST = 'ADD-POST';
-const ON_POST_CHANGE = 'ON-POST-TEXT-CHANGE';
-export let AddPostCreator = (postText) => {
+/*const ON_POST_CHANGE = 'ON-POST-TEXT-CHANGE';*/
+const PROFILE_SET_STATUS = 'profile/SET_STATUS';
+
+/* action creator*/
+export let AddPostAC = (postText) => {
     return {type: ADD_POST, postText};
 };
-export let OnPostChangeCreator = (text) => {
+/*export let OnPostChange = (text) => {
     return {type: ON_POST_CHANGE, text: text};
+};*/
+export let SetStatus = (status) => {
+    return{
+        type: PROFILE_SET_STATUS, status
+    }
+}
+/* redux thunk*/
+export const profileStatusInit = (id) => async (dispatch) => {
+    let response = await ProfileApi.getStatus(id);
+    dispatch(SetStatus(response.data));
+}
+export const changeStatusOnApi = (newStatus) => async (dispatch) => {
+    let response = await ProfileApi.setStatus(newStatus);
+    if(response.data.resultCode === 0) dispatch(SetStatus(newStatus));
 };
+
+/* initial state*/
 let initialState = {
     posts: [
         {
+            id:1,
             img: 'https://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg',
             name: 'John Doe',
             textPost: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been\n' +
@@ -21,6 +43,7 @@ let initialState = {
             views: 35
         },
         {
+            id:2,
             img: 'https://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg',
             name: 'John Doe',
             textPost: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been,',
@@ -30,7 +53,10 @@ let initialState = {
         }
     ],
     newPostText: 'post text',
+    userStatus: null,
 };
+
+
 const profileReducers = (state = initialState, action) => {
 
     switch (action.type) {
@@ -39,6 +65,7 @@ const profileReducers = (state = initialState, action) => {
             let stateCopy = {...state};
                 stateCopy.posts = [...state.posts];
             let newPost = {
+                id: action.postText,
                 img: 'https://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg',
                 name: 'John Doe',
                 textPost: action.postText,
@@ -49,11 +76,16 @@ const profileReducers = (state = initialState, action) => {
             stateCopy.posts.unshift(newPost);
             stateCopy.newPostText = '';
             return stateCopy;
-        case ON_POST_CHANGE:
+       /* case ON_POST_CHANGE:
         {
             let stateCopy = {...state};
             stateCopy.newPostText = action.text;
             return stateCopy;
+        }*/
+        case PROFILE_SET_STATUS: {
+            return {
+                ...state, userStatus: action.status
+            }
         }
         default:
             return state;

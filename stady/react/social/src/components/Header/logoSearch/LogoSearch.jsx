@@ -1,12 +1,10 @@
-import React from 'react';
-import classesLogo from './LogoSearch.module.css';
-import logo from './../../../assets/img/logo.png';
+import React from 'react'
+import classesLogo from './LogoSearch.module.css'
 
 const LogoSearch = () => {
     return (
         <div className={classesLogo.logoSearch}>
-            <img src={logo} alt="logo" />
-            <p>J | Offer</p>
+            <p className={classesLogo.logoDescription}>Job&nbsp;<span>|</span>&nbsp;Offer</p>
         </div>
     );
 }
