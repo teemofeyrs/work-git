@@ -104,6 +104,10 @@
 {
     margin: 10px 0 10px;
 }
+.postContent p
+{
+    width: 100%;
+}
 .postContent span{
     color: #dd3e2b;
 }

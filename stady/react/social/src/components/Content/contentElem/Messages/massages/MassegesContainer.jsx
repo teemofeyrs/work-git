@@ -1,8 +1,6 @@
-
-import {AddMessageCreator, OnMessageChangeCreator} from "../../../../../redux/reducers/messagesReducers";
-import Masseges from "./Masseges";
-import {connect} from "react-redux";
-
+import { AddMessageCreator, OnMessageChangeCreator } from '../../../../../redux/reducers/messagesReducers'
+import Masseges from './Masseges'
+import { connect } from 'react-redux'
 
 let mapStateToProps = (state) => {
     return{

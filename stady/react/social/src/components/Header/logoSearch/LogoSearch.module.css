@@ -22,3 +22,23 @@
     letter-spacing: 0.4rem;
     font-weight: bold;
 }
+/*Medium devices (tablets, less than 992px)*/
+@media (max-width: 991.98px) {
+    .logoSearch .logoDescription
+    {
+        font-size: 2.5rem;
+        letter-spacing: 0.2rem;
+    }
+}
+/*Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+    .logoSearch .logoDescription
+    {
+        font-size: 2rem;
+        letter-spacing: 0.1rem;
+    }
+}
+
+
+
+

@@ -3,7 +3,7 @@ import classesPagination from './Pagination.module.css'
 
 const Pagination = ({totalUsersCount, pageSize, currentPage, onPageChanged}) => {
         const [portionNumber, setPortionNumber] = useState(1)
-        let portionSize = 20;
+        let portionSize = 10;
         let itemCount = Math.ceil(totalUsersCount / pageSize);
         let portionCount = Math.ceil(itemCount / portionSize);
         let leftPortionBorder = (portionNumber - 1) * portionSize +1;

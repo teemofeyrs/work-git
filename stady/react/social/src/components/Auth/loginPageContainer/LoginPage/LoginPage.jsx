@@ -1,18 +1,15 @@
-import React, {Fragment} from "react";
-import classLoginPage from './LoginPage.module.css';
-import Footer from "../../../Footer/Footer";
-import Login from "../Login";
+import React from 'react'
+import classLoginPage from './LoginPage.module.css'
+import Login from '../Login'
 
 const LoginPage = ({captchaUrl}) => {
-    const footerItems = ['Help Center', 'About', 'Privat Policy', 'Community Guadelines', 'Cookies Policy']
     return (
-        <Fragment>
             <div className={classLoginPage.container}>
                 <div className={classLoginPage.mainField}>
                     <div className={classLoginPage.article}>
                         <div className={classLoginPage.logo}>
-                            <img src='http://gambolthemes.net/workwise-new/images/cm-logo.png' alt="logo"/>
-                            <p>WorkOffer, is a global freelancing platform and social networking where businesses and
+                            <p className={classLoginPage.logoDescription}>Job&nbsp;<span>|</span>&nbsp;Offer</p>
+                            <p className={classLoginPage.info}>JobOffer, is a global freelancing platform and social networking where businesses and
                                 independent professionals connect and collaborate remotely</p>
                         </div>
                         <div className={classLoginPage.bannerImg}>
@@ -23,12 +20,7 @@ const LoginPage = ({captchaUrl}) => {
                         <Login/>
                     </div>
                     </div>
-                </div>
-
-            <div className={classLoginPage.containerFooter}>
-                <Footer className={'footerSign'} array={footerItems}/>
             </div>
-        </Fragment>
     )
 };
 export default LoginPage;
