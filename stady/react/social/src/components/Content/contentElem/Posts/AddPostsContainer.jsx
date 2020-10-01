@@ -3,12 +3,14 @@ import AddPost from './AddPost'
 import { connect } from 'react-redux'
 import { getNewPostText } from '../../../../redux/selectors/selectors'
 import { AddPostAC } from '../../../../redux/reducers/profileReducers'
+import {reset} from 'redux-form';
 
 class AddPostForm extends React.Component {
 
     addPost = ({addNewPost}) => {
-        debugger
+        const { reset } = this.props;
         this.props.AddPostAC(addNewPost);
+        reset('addNewPost')
     }
     render() {
 
@@ -21,5 +23,5 @@ let mapStateToProps = (state) => {
         newPostText: getNewPostText(state),
     };
 }
-const AddPostsContainer = connect(mapStateToProps, {AddPostAC})(AddPostForm);
+const AddPostsContainer = connect(mapStateToProps, {AddPostAC, reset})(AddPostForm);
 export default AddPostsContainer;

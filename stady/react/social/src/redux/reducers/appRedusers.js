@@ -16,7 +16,6 @@ export const toInitialize = () => async (dispatch) => {
        Promise.all([promiseAuth]).then(() => {
            dispatch(initialization())
        })
-    console.log(promiseAuth);
 }
 /* Initialization state*/
 let initialState = {

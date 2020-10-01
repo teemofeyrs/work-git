@@ -76,12 +76,6 @@ const profileReducers = (state = initialState, action) => {
             stateCopy.posts.unshift(newPost);
             stateCopy.newPostText = '';
             return stateCopy;
-       /* case ON_POST_CHANGE:
-        {
-            let stateCopy = {...state};
-            stateCopy.newPostText = action.text;
-            return stateCopy;
-        }*/
         case PROFILE_SET_STATUS: {
             return {
                 ...state, userStatus: action.status
